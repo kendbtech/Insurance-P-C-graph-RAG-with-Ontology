@@ -1,0 +1,3155 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/pc/graph/clauses> {
+    pcd:MM-CM-CP-2025_FRONT_T1 a pc:Chunk ;
+        rdfs:label "MM-CM-CP-2025 table Field / Value" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 Front matter table p.1] Field: Document ID ; Value: MM-CM-CP-2025 | Field: Version ; Value: 2.0 | Field: Effective Date ; Value: 05/01/2025 | Field: Applies To Forms ; Value: MM-CP-0010, MM-CP-1030, MM-CP-E101, MM-CP-E205, MM-CP-E310, MM-CP-E415, MM-CP-FL-01 | Field: States In Scope ; Value: FL, TX" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "Front matter / table" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-1_1.1_x1 a pc:Clause ;
+        pc:clauseText "unless the delay prejudiced our investigation." ;
+        pc:exceptionTo pcd:MM-CM-CP-2025_SECTION-1_1.1 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - FIRST NOTICE OF LOSS (FNOL) / 1.1 (exception)" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-1_1.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 1.2" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 1 - FIRST NOTICE OF LOSS (FNOL) 1.2 p.1] 1.2 The adjuster must acknowledge receipt of every claim in writing within 14 calendar days in Florida and within 15 business days in Texas, per the applicable state claims-handling requirements referenced in Filings MM-FL-2025-0142 and MM-TX-2025-0098." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.2 The adjuster must acknowledge receipt of every claim in writing within 14 calendar days in Florida and within 15 business days in Texas, per the applicable state claims-handling requirements referenced in Filings MM-FL-2025-0142 and MM-TX-2025-0098." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:FL,
+            pc:Claim,
+            pc:ClaimsManual ;
+        pc:mentions pcd:FL,
+            pcd:MM-FL-2025-0142,
+            pcd:MM-TX-2025-0098,
+            pcd:TX ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - FIRST NOTICE OF LOSS (FNOL) / 1.2" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-1_1.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 1.3" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 1 - FIRST NOTICE OF LOSS (FNOL) 1.3 p.1] 1.3 At FNOL the adjuster must record: policy number, form edition of MM-CP-0010 in force, all attached endorsements, date of loss, cause of loss, and the scheduled location involved." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.3 At FNOL the adjuster must record: policy number, form edition of MM-CP-0010 in force, all attached endorsements, date of loss, cause of loss, and the scheduled location involved." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Claim,
+            pc:ClaimsManual,
+            pc:Form ;
+        pc:mentions pcd:MM-CP-0010 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - FIRST NOTICE OF LOSS (FNOL) / 1.3" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-2_2.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 2.1" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 2 - COVERAGE VERIFICATION 2.1 p.1] 2.1 The adjuster must verify that the form edition and endorsements on the policy match the editions approved in the applicable State Filing before issuing any coverage position." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.1 The adjuster must verify that the form edition and endorsements on the policy match the editions approved in the applicable State Filing before issuing any coverage position." ;
+        pc:confidence 0.714 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:ClaimsManual,
+            pc:Form,
+            pc:StateAmendatoryEndorsement ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - COVERAGE VERIFICATION / 2.1" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-2_2.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 2.2" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 2 - COVERAGE VERIFICATION 2.2 p.1] 2.2 For any loss involving water, the adjuster must determine whether the cause of loss is Flood as excluded by EXCL-FLD in MM-CP-1030 Section B.1.g, and then check whether MM-CP-E101 is attached and whether the damaged premises is a scheduled location under that endorsement." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.2 For any loss involving water, the adjuster must determine whether the cause of loss is Flood as excluded by EXCL-FLD in MM-CP-1030 Section B.1.g, and then check whether MM-CP-E101 is attached and whether the damaged premises is a scheduled location under that endorsement." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:Flood,
+            pc:Claim,
+            pc:FloodZone ;
+        pc:mentions pcd:EXCL-FLD,
+            pcd:Flood,
+            pcd:MM-CP-1030,
+            pcd:MM-CP-E101,
+            pcd:Water ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - COVERAGE VERIFICATION / 2.2" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-2_2.3_x1 a pc:Clause ;
+        pc:clauseText "unless the Schedule shows a COV-D Flood Sublimit." ;
+        pc:exceptionTo pcd:MM-CM-CP-2025_SECTION-2_2.3 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - COVERAGE VERIFICATION / 2.3 (exception)" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-2_2.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 2.4" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 2 - COVERAGE VERIFICATION 2.4 p.1] 2.4 If MM-CP-E101 is not attached, or the premises is not a scheduled location, Flood damage is not covered and a reservation of rights letter must be issued within 10 business days." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "2.4 If MM-CP-E101 is not attached, or the premises is not a scheduled location, Flood damage is not covered and a reservation of rights letter must be issued within 10 business days." ;
+        pc:confidence 0.579 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pc:FloodZone,
+            pc:Location ;
+        pc:mentions pcd:Flood,
+            pcd:MM-CP-E101 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - COVERAGE VERIFICATION / 2.4" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-2_T1 a pc:Chunk ;
+        rdfs:label "MM-CM-CP-2025 table Cause of Loss / Exclusion Code / Restoring Endorsement" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 2 - COVERAGE VERIFICATION table p.1] Cause of Loss: Flood / surface water ; Exclusion Code: EXCL-FLD ; Restoring Endorsement: MM-CP-E101 (scheduled locations only) ; Coverage Position: Covered only if E101 attached and location scheduled | Cause of Loss: Earth movement ; Exclusion Code: EXCL-EQ ; Restoring Endorsement: None available ; Coverage Position: Not covered | Cause of Loss: Mechanical breakdown ; Exclusion Code: B.2.d ; Restoring Endorsement: MM-CP-E205 ; Coverage Position: Covered up to $100,000 if E205 attached | Cause of Loss: Windstorm / hail ; Exclusion Code: None (covered peril) ; Restoring Endorsement: MM-CP-E310 changes deductible ; Coverage Position: Covered, apply 2% or 5% deductible | Cause of Loss: Fire with impaired sprinkler ; Exclusion Code: MM-CP-E415 4.3 ; Restoring Endorsement: None ; Coverage Position: Not covered if insured knew of impairment and did not notify | Cause of Loss: Fungus / mold ; Exclusion Code: EXCL-MOLD ; Restoring Endorsement: None available ; Coverage Position: Not covered except limited $15,000 clean-up" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - COVERAGE VERIFICATION / table" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-3_3.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 3.1" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 3 - RESERVES AND AUTHORITY 3.1 p.3] 3.1 An adjuster must not set a reserve or issue a payment above his or her authority." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "3.1 An adjuster must not set a reserve or issue a payment above his or her authority." ;
+        pc:confidence 0.545 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pc:Adjuster,
+            pc:AuthorityLevel,
+            pc:ClaimsManual ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 3 - RESERVES AND AUTHORITY / 3.1" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-3_3.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 3.2" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 3 - RESERVES AND AUTHORITY 3.2 p.3] 3.2 Initial reserves must be set within 5 business days of FNOL and reviewed every 30 days." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "3.2 Initial reserves must be set within 5 business days of FNOL and reviewed every 30 days." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:Permission,
+            pc:Claim,
+            pc:FilingStatus ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 3 - RESERVES AND AUTHORITY / 3.2" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-3_T1 a pc:Chunk ;
+        rdfs:label "MM-CM-CP-2025 table Adjuster Level / Reserve Authority / Payment Authority" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 3 - RESERVES AND AUTHORITY table p.3] Adjuster Level: Adjuster I ; Reserve Authority: $25,000 ; Payment Authority: $15,000 ; Escalation: Adjuster II | Adjuster Level: Adjuster II ; Reserve Authority: $100,000 ; Payment Authority: $75,000 ; Escalation: Claims Supervisor | Adjuster Level: Claims Supervisor ; Reserve Authority: $500,000 ; Payment Authority: $350,000 ; Escalation: Claims Manager | Adjuster Level: Claims Manager ; Reserve Authority: $2,000,000 ; Payment Authority: $1,500,000 ; Escalation: VP Claims; notify reinsurance above $1,000,000" ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 3 - RESERVES AND AUTHORITY / table" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-4_4.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 4.1" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 4 - PROOF OF LOSS AND PAYMENT 4.1 p.3] 4.1 Under MM-CP-0010 Section E.3(d) the insured must submit a signed, sworn proof of loss within 60 days of our request. The adjuster may extend this period in writing." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "4.1 Under MM-CP-0010 Section E.3(d) the insured must submit a signed, sworn proof of loss within 60 days of our request. The adjuster may extend this period in writing." ;
+        pc:confidence 0.533 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Claim,
+            pc:Coverage,
+            pc:Form ;
+        pc:mentions pcd:MM-CP-0010 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - PROOF OF LOSS AND PAYMENT / 4.1" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-4_4.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 4.2" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 4 - PROOF OF LOSS AND PAYMENT 4.2 p.3] 4.2 Under Section E.4 we must state our coverage position within 30 days of receiving the proof of loss and pay undisputed amounts within 30 days." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.2 Under Section E.4 we must state our coverage position within 30 days of receiving the proof of loss and pay undisputed amounts within 30 days." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Claim,
+            pc:Coverage,
+            pc:PolicyForm ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - PROOF OF LOSS AND PAYMENT / 4.2" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-4_4.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 4.3" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 4 - PROOF OF LOSS AND PAYMENT 4.3 p.3] 4.3 When a percentage deductible applies under MM-CP-E310 or MM-CP-E101, the adjuster must document the Limit of Insurance used to calculate the deductible and the resulting dollar amount." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.3 When a percentage deductible applies under MM-CP-E310 or MM-CP-E101, the adjuster must document the Limit of Insurance used to calculate the deductible and the resulting dollar amount." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:ClaimsManual,
+            pc:Form,
+            pc:RatingFactor ;
+        pc:mentions pcd:MM-CP-E101,
+            pcd:MM-CP-E310 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - PROOF OF LOSS AND PAYMENT / 4.3" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-5_5.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 5.1" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS 5.1 p.3] 5.1 For any theft, vandalism, sprinkler leakage or water damage claim the adjuster must determine whether the building was vacant for more than 60 consecutive days before the loss (MM-CP-0010 Section E.5). If so, the loss is not covered." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.1 For any theft, vandalism, sprinkler leakage or water damage claim the adjuster must determine whether the building was vacant for more than 60 consecutive days before the loss (MM-CP-0010 Section E.5). If so, the loss is not covered." ;
+        pc:confidence 0.688 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pcd:SprinklerLeakage,
+            pc:Claim ;
+        pc:mentions pcd:MM-CP-0010,
+            pcd:SprinklerLeakage,
+            pcd:Theft,
+            pcd:Vandalism,
+            pcd:Water ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS / 5.1" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-5_5.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 5.2" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS 5.2 p.3] 5.2 For fire losses at premises with MM-CP-E415, the adjuster must obtain evidence that the scheduled protective safeguards were operational, or that any impairment was reported to us within 48 hours." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.2 For fire losses at premises with MM-CP-E415, the adjuster must obtain evidence that the scheduled protective safeguards were operational, or that any impairment was reported to us within 48 hours." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:Fire,
+            pc:ProtectionClass,
+            pc:ProtectiveSafeguard ;
+        pc:mentions pcd:Fire,
+            pcd:MM-CP-E415 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS / 5.2" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-6_6.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 6.1" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 6 - SUBROGATION AND SALVAGE 6.1 p.3] 6.1 The adjuster must evaluate subrogation potential on every claim above $10,000 and must preserve evidence." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "6.1 The adjuster must evaluate subrogation potential on every claim above $10,000 and must preserve evidence." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Adjuster,
+            pc:Claim,
+            pc:ClaimsManual ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 6 - SUBROGATION AND SALVAGE / 6.1" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-6_6.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 6.2" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 6 - SUBROGATION AND SALVAGE 6.2 p.3] 6.2 Salvage must be offered for sale within 30 days of payment where the recovery is expected to exceed $2,500." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "6.2 Salvage must be offered for sale within 30 days of payment where the recovery is expected to exceed $2,500." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:COV-D,
+            pcd:Pending,
+            pcd:Theft ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 6 - SUBROGATION AND SALVAGE / 6.2" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CP-0010_FRONT_T1 a pc:Chunk ;
+        rdfs:label "MM-CP-0010 table Field / Value" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 Front matter table p.1] Field: Form Number ; Value: MM-CP-0010 | Field: Edition Date ; Value: 01/2025 | Field: Line of Business ; Value: Commercial Property (CP) | Field: Companion Form ; Value: MM-CP-1030 Causes of Loss - Special Form (Ed. 01/2025) | Field: Approved States ; Value: FL (Filing MM-FL-2025-0142), TX (Filing MM-TX-2025-0098)" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "Front matter / table" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-A_A.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 A.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION A - COVERAGE A.1 p.1] A.1 Insuring Agreement. We will pay for direct physical loss of or damage to Covered Property at the premises described in the Declarations caused by or resulting from any Covered Cause of Loss. Covered Causes of Loss are defined in the Causes of Loss form MM-CP-1030 attached to this policy." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "A.1 Insuring Agreement. We will pay for direct physical loss of or damage to Covered Property at the premises described in the Declarations caused by or resulting from any Covered Cause of Loss. Covered Causes of Loss are defined in the Causes of Loss form MM-CP-1030 attached to this policy." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Claim,
+            pc:Coverage,
+            pc:PolicyForm ;
+        pc:mentions pcd:MM-CP-1030 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / A.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-A_A.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 A.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION A - COVERAGE A.2 p.1] A.2 Covered Property. Covered Property, as used in this Coverage Part, means the type of property described in this section and limited in A.3 Property Not Covered, if a Limit of Insurance is shown in the Declarations for that type of property." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "A.2 Covered Property. Covered Property, as used in this Coverage Part, means the type of property described in this section and limited in A.3 Property Not Covered, if a Limit of Insurance is shown in the Declarations for that type of property." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:COV-A,
+            pcd:COV-C,
+            pc:Coverage ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / A.2" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-A_A.3_x1 a pc:Clause ;
+        pc:clauseText "except vehicles you manufacture, process or warehouse;" ;
+        pc:exceptionTo pcd:MM-CP-0010_SECTION-A_A.3 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / A.3 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-A_A.3_x2 a pc:Clause ;
+        pc:clauseText "except as provided in the Coverage Extensions." ;
+        pc:exceptionTo pcd:MM-CP-0010_SECTION-A_A.3 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / A.3 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-A_A.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 A.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION A - COVERAGE A.4 p.1] A.4 Additional Coverages. Debris Removal: We will pay your expense to remove debris of Covered Property caused by a Covered Cause of Loss, subject to a limit of 25% of the amount we pay for the direct physical loss plus the deductible. Preservation of Property: If it is necessary to move Covered Property to preserve it from loss, we will pay for any direct physical loss while it is being moved or stored at another location for up to 30 days." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "A.4 Additional Coverages. Debris Removal: We will pay your expense to remove debris of Covered Property caused by a Covered Cause of Loss, subject to a limit of 25% of the amount we pay for the direct physical loss plus the deductible. Preservation of Property: If it is necessary to move Covered Property to preserve it from loss, we will pay for any direct physical loss while it is being moved or stored at another location for up to 30 days." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-C,
+            pcd:COV-D,
+            pc:Coverage ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / A.4" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-A_T1 a pc:Chunk ;
+        rdfs:label "MM-CP-0010 table Coverage Code / Coverage Name / Description" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION A - COVERAGE table p.1] Coverage Code: COV-A ; Coverage Name: Building ; Description: The building or structure described in the Declarations, including completed additions, fixtures, permanently installed machinery and equipment. ; Default Deductible: $2,500 | Coverage Code: COV-B ; Coverage Name: Your Business Personal Property ; Description: Furniture, fixtures, machinery, stock and all other personal property owned by you and used in your business, located in or within 100 feet of the described premises. ; Default Deductible: $2,500 | Coverage Code: COV-C ; Coverage Name: Personal Property of Others ; Description: Personal property of others that is in your care, custody or control and located in or within 100 feet of the described premises. ; Default Deductible: $2,500 | Coverage Code: COV-D ; Coverage Name: Business Income and Extra Expense ; Description: Actual loss of Business Income you sustain due to the necessary suspension of operations during the period of restoration. ; Default Deductible: 72-hour waiting period" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / table" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-B_B.1_x1 a pc:Clause ;
+        pc:clauseText "unless an endorsement attached to this policy states otherwise." ;
+        pc:exceptionTo pcd:MM-CP-0010_SECTION-B_B.1 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION B - EXCLUSIONS AND LIMITATIONS / B.1 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-C_C.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 C.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION C - LIMITS OF INSURANCE C.1 p.2] C.1 The most we will pay for loss or damage in any one occurrence is the applicable Limit of Insurance shown in the Declarations." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "C.1 The most we will pay for loss or damage in any one occurrence is the applicable Limit of Insurance shown in the Declarations." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-C,
+            pc:Coverage,
+            pc:PolicyForm ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION C - LIMITS OF INSURANCE / C.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-D_D.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 D.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION D - DEDUCTIBLE D.1 p.2] D.1 We will not pay for loss or damage in any one occurrence until the amount of loss or damage exceeds the Deductible shown in the Declarations. We will then pay the amount of loss or damage in excess of the Deductible, up to the applicable Limit of Insurance." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "D.1 We will not pay for loss or damage in any one occurrence until the amount of loss or damage exceeds the Deductible shown in the Declarations. We will then pay the amount of loss or damage in excess of the Deductible, up to the applicable Limit of Insurance." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pc:Claim,
+            pc:Exclusion,
+            pc:PolicyForm ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION D - DEDUCTIBLE / D.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-D_D.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 D.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION D - DEDUCTIBLE D.2 p.2] D.2 Where a percentage deductible endorsement such as MM-CP-E310 is attached, the percentage deductible replaces the flat deductible for the peril named in that endorsement." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "D.2 Where a percentage deductible endorsement such as MM-CP-E310 is attached, the percentage deductible replaces the flat deductible for the peril named in that endorsement." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Endorsement,
+            pc:RatingFactor ;
+        pc:mentions pcd:MM-CP-E310 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION D - DEDUCTIBLE / D.2" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-E_E.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 E.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION E - LOSS CONDITIONS E.1 p.3] E.1 Abandonment. There can be no abandonment of any property to us." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "E.1 Abandonment. There can be no abandonment of any property to us." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:Prohibition,
+            pc:AuthorityLevel,
+            pc:FormApproval ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION E - LOSS CONDITIONS / E.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-E_E.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 E.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION E - LOSS CONDITIONS E.2 p.3] E.2 Appraisal. If we and you disagree on the value of the property or the amount of loss, either may make written demand for an appraisal of the loss. Each party will select a competent and impartial appraiser within 20 days of the demand." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "E.2 Appraisal. If we and you disagree on the value of the property or the amount of loss, either may make written demand for an appraisal of the loss. Each party will select a competent and impartial appraiser within 20 days of the demand." ;
+        pc:confidence 0.5 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Claim,
+            pc:FormApproval,
+            pc:StateAmendatoryEndorsement ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION E - LOSS CONDITIONS / E.2" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-E_E.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 E.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION E - LOSS CONDITIONS E.3 p.3] E.3 Duties In The Event Of Loss Or Damage. You must see that the following are done in the event of loss or damage to Covered Property: (a) Notify the police if a law may have been broken. (b) Give us prompt notice of the loss or damage, and in no event later than 72 hours after you become aware of it, including a description of the property involved. (c) Take all reasonable steps to protect the Covered Property from further damage. (d) Send us a signed, sworn proof of loss containing the information we request within 60 days after our request. (e) Cooperate with us in the investigation or settlement of the claim, and permit us to inspect the property and examine your books and records." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "E.3 Duties In The Event Of Loss Or Damage. You must see that the following are done in the event of loss or damage to Covered Property: (a) Notify the police if a law may have been broken. (b) Give us prompt notice of the loss or damage, and in no event later than 72 hours after you become aware of it, including a description of the property involved. (c) Take all reasonable steps to protect the Covered Property from further damage. (d) Send us a signed, sworn proof of loss containing the information we request within 60 days after our request. (e) Cooperate with us in the investigation or settlement of the claim, and permit us to inspect the property and examine your books and records." ;
+        pc:confidence 0.824 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:COV-C,
+            pcd:COV-D,
+            pc:Claim ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION E - LOSS CONDITIONS / E.3" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-E_E.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 E.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION E - LOSS CONDITIONS E.4 p.3] E.4 Loss Payment. We will give notice of our intentions within 30 days after we receive the sworn proof of loss. We will pay for covered loss or damage within 30 days after we receive the sworn proof of loss, if you have complied with all of the terms of this Coverage Part and we have reached agreement with you on the amount of loss, or an appraisal award has been made." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "E.4 Loss Payment. We will give notice of our intentions within 30 days after we receive the sworn proof of loss. We will pay for covered loss or damage within 30 days after we receive the sworn proof of loss, if you have complied with all of the terms of this Coverage Part and we have reached agreement with you on the amount of loss, or an appraisal award has been made." ;
+        pc:confidence 0.7 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Claim,
+            pc:Coverage ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION E - LOSS CONDITIONS / E.4" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-E_E.5_x1 a pc:Clause ;
+        pc:clauseText "With respect to Covered Causes of Loss other than those listed, we will reduce the amount we would otherwise pay by 15%." ;
+        pc:exceptionTo pcd:MM-CP-0010_SECTION-E_E.5 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION E - LOSS CONDITIONS / E.5 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-F_F.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 F.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION F - ADDITIONAL CONDITIONS F.1 p.3] F.1 Coinsurance. If a Coinsurance percentage is shown in the Declarations and the value of Covered Property at the time of loss times the Coinsurance percentage is greater than the Limit of Insurance, we will pay only the proportion of the loss that the Limit of Insurance bears to the required amount." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "F.1 Coinsurance. If a Coinsurance percentage is shown in the Declarations and the value of Covered Property at the time of loss times the Coinsurance percentage is greater than the Limit of Insurance, we will pay only the proportion of the loss that the Limit of Insurance bears to the required amount." ;
+        pc:confidence 0.667 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-C,
+            pc:Claim,
+            pc:Coverage ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION F - ADDITIONAL CONDITIONS / F.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-F_F.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 F.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION F - ADDITIONAL CONDITIONS F.2 p.3] F.2 Mortgageholders. We will pay for covered loss of or damage to buildings to each mortgageholder shown in the Declarations in their order of precedence." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "F.2 Mortgageholders. We will pay for covered loss of or damage to buildings to each mortgageholder shown in the Declarations in their order of precedence." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:AuthorityLevel,
+            pc:Claim,
+            pc:Coverage ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION F - ADDITIONAL CONDITIONS / F.2" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-G_G.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 G.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION G - OPTIONAL COVERAGES AND ENDORSEMENTS G.1 p.3] G.1 The following endorsements may be attached to this form when shown in the Declarations: MM-CP-E101 Flood Coverage Endorsement - Scheduled Locations; MM-CP-E205 Equipment Breakdown Endorsement; MM-CP-E310 Windstorm or Hail Percentage Deductible; MM-CP-E415 Protective Safeguards Endorsement. State amendatory endorsements such as MM-CP-FL-01 (Florida) are attached automatically where required by the state filing." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "G.1 The following endorsements may be attached to this form when shown in the Declarations: MM-CP-E101 Flood Coverage Endorsement - Scheduled Locations; MM-CP-E205 Equipment Breakdown Endorsement; MM-CP-E310 Windstorm or Hail Percentage Deductible; MM-CP-E415 Protective Safeguards Endorsement. State amendatory endorsements such as MM-CP-FL-01 (Florida) are attached automatically where required by the state filing." ;
+        pc:confidence 0.75 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Endorsement,
+            pc:Form,
+            pc:StateAmendatoryEndorsement ;
+        pc:mentions pcd:FL,
+            pcd:Flood,
+            pcd:Hail,
+            pcd:MM-CP-E101,
+            pcd:MM-CP-E205,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-E415,
+            pcd:MM-CP-FL-01,
+            pcd:MechanicalBreakdown,
+            pcd:Windstorm ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION G - OPTIONAL COVERAGES AND ENDORSEMENTS / G.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 1.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) 1.1 p.1] 1.1 This endorsement modifies insurance provided under MM-CP-0010 and MM-CP-1030. It applies only to the scheduled locations listed in the Schedule below and to Coverages COV-A (Building) and COV-B (Your Business Personal Property)." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.1 This endorsement modifies insurance provided under MM-CP-0010 and MM-CP-1030. It applies only to the scheduled locations listed in the Schedule below and to Coverages COV-A (Building) and COV-B (Your Business Personal Property)." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-B,
+            pcd:CommercialProperty,
+            pc:Form ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:MM-CP-0010,
+            pcd:MM-CP-1030 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / 1.1" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 1.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) 1.2 p.1] 1.2 Coverage Grant. Exclusion EXCL-FLD (Water) in Section B.1.g of MM-CP-1030 is deleted with respect to the peril of Flood for the scheduled locations. We will pay for direct physical loss of or damage to Covered Property at a scheduled location caused by Flood, subject to the Flood Sublimit and Flood Deductible shown in the Schedule." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.2 Coverage Grant. Exclusion EXCL-FLD (Water) in Section B.1.g of MM-CP-1030 is deleted with respect to the peril of Flood for the scheduled locations. We will pay for direct physical loss of or damage to Covered Property at a scheduled location caused by Flood, subject to the Flood Sublimit and Flood Deductible shown in the Schedule." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Exclusion,
+            pc:FloodZone ;
+        pc:mentions pcd:EXCL-FLD,
+            pcd:Flood,
+            pcd:MM-CP-1030,
+            pcd:Water ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / 1.2" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.3_x1 a pc:Clause ;
+        pc:clauseText "but not less than $25,000." ;
+        pc:exceptionTo pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.3 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / 1.3 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.4_x1 a pc:Clause ;
+        pc:clauseText "is not extended by this endorsement unless the Schedule shows a COV-D Flood Sublimit." ;
+        pc:exceptionTo pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.4 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / 1.4 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_T1 a pc:Chunk ;
+        rdfs:label "MM-CP-E-SERIES table Schedule Item / Value" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) table p.1] Schedule Item: Flood Sublimit (COV-A + COV-B, per location) ; Value: $250,000 | Schedule Item: Flood Deductible ; Value: 5% of COV-A limit, minimum $25,000 | Schedule Item: Annual Aggregate ; Value: $500,000 | Schedule Item: Eligible Flood Zones ; Value: AE, A, VE, X (shaded) | Schedule Item: Available States ; Value: FL, TX" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / table" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 2.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) 2.1 p.1] 2.1 This endorsement modifies MM-CP-0010 Coverages COV-A and COV-B. We will pay for direct physical damage to Covered Property caused by a Breakdown to Covered Equipment, including mechanical breakdown, electrical arcing and steam boiler explosion." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.1 This endorsement modifies MM-CP-0010 Coverages COV-A and COV-B. We will pay for direct physical damage to Covered Property caused by a Breakdown to Covered Equipment, including mechanical breakdown, electrical arcing and steam boiler explosion." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-B,
+            pcd:CommercialProperty,
+            pc:Coverage ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:MM-CP-0010,
+            pcd:MechanicalBreakdown ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) / 2.1" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.2_x1 a pc:Clause ;
+        pc:clauseText "does not apply to the extent coverage is provided by this endorsement." ;
+        pc:exceptionTo pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.2 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) / 2.2 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.3_x1 a pc:Clause ;
+        pc:clauseText "unless a higher limit is shown in the Declarations." ;
+        pc:exceptionTo pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.3 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) / 2.3 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 2.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) 2.4 p.1] 2.4 You must maintain all Covered Equipment in accordance with the manufacturer's recommendations." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.4 You must maintain all Covered Equipment in accordance with the manufacturer's recommendations." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:COV-B,
+            pcd:COV-D,
+            pc:Coverage ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) / 2.4" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_3-MM-CP-E310_3.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 3.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) 3.1 p.2] 3.1 This endorsement modifies Section D - Deductible of MM-CP-0010 for Coverage COV-A and COV-B." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "3.1 This endorsement modifies Section D - Deductible of MM-CP-0010 for Coverage COV-A and COV-B." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Coverage,
+            pc:Form ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:MM-CP-0010 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) / 3.1" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_3-MM-CP-E310_3.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 3.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) 3.2 p.2] 3.2 For loss caused by Windstorm or Hail, the deductible is the percentage shown in the Declarations (2% or 5%) of the Limit of Insurance for the damaged property, replacing the flat deductible." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "3.2 For loss caused by Windstorm or Hail, the deductible is the percentage shown in the Declarations (2% or 5%) of the Limit of Insurance for the damaged property, replacing the flat deductible." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Claim,
+            pc:PolicyForm ;
+        pc:mentions pcd:Hail,
+            pcd:Windstorm ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) / 3.2" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_3-MM-CP-E310_3.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 3.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) 3.3 p.2] 3.3 In Florida the Windstorm deductible applies as a Hurricane deductible on a calendar-year basis as required by Filing MM-FL-2025-0142." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "3.3 In Florida the Windstorm deductible applies as a Hurricane deductible on a calendar-year basis as required by Filing MM-FL-2025-0142." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:FL,
+            pcd:Flood,
+            pcd:Windstorm ;
+        pc:mentions pcd:FL,
+            pcd:MM-FL-2025-0142,
+            pcd:Windstorm ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) / 3.3" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_3-MM-CP-E310_3.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 3.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) 3.4 p.2] 3.4 This endorsement is mandatory for risks located in Florida Tier 1 coastal counties and in Texas territory TX-T01 per Underwriting Guideline MM-UW-CP-2025 Section 4.3." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "3.4 This endorsement is mandatory for risks located in Florida Tier 1 coastal counties and in Texas territory TX-T01 per Underwriting Guideline MM-UW-CP-2025 Section 4.3." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:Prohibition,
+            pc:StateAmendatoryEndorsement,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:MM-UW-CP-2025,
+            pcd:TX,
+            pcd:TX-T01 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025) / 3.4" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_4-MM-CP-E415_4.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 4.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) 4.1 p.3] 4.1 As a condition of this insurance, you are required to maintain the protective devices or services listed in the Schedule (for example P-1 Automatic Sprinkler System, P-2 Automatic Fire Alarm, P-9 Central Station Burglar Alarm)." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.1 As a condition of this insurance, you are required to maintain the protective devices or services listed in the Schedule (for example P-1 Automatic Sprinkler System, P-2 Automatic Fire Alarm, P-9 Central Station Burglar Alarm)." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Location,
+            pc:ProtectionClass,
+            pc:ProtectiveSafeguard ;
+        pc:mentions pcd:Fire ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) / 4.1" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_4-MM-CP-E415_4.2_x1 a pc:Clause ;
+        pc:clauseText "except when the impairment is due to ordinary maintenance that is completed within 24 hours." ;
+        pc:exceptionTo pcd:MM-CP-E-SERIES_4-MM-CP-E415_4.2 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) / 4.2 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_4-MM-CP-E415_4.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 4.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) 4.3 p.3] 4.3 We will not pay for loss or damage caused by or resulting from fire if, prior to the fire, you knew of any suspension or impairment in any protective safeguard listed in the Schedule and failed to notify us of that fact." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.3 We will not pay for loss or damage caused by or resulting from fire if, prior to the fire, you knew of any suspension or impairment in any protective safeguard listed in the Schedule and failed to notify us of that fact." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:Fire,
+            pc:Claim,
+            pc:Exclusion ;
+        pc:mentions pcd:Fire ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) / 4.3" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_4-MM-CP-E415_4.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 4.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) 4.4 p.3] 4.4 This endorsement modifies Coverages COV-A, COV-B and COV-C." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "4.4 This endorsement modifies Coverages COV-A, COV-B and COV-C." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-C,
+            pc:Coverage,
+            pc:Endorsement ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:COV-C ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) / 4.4" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 5.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) 5.1 p.3] 5.1 This endorsement modifies MM-CP-0010 for policies issued in the State of Florida (FL) and supersedes any conflicting provision in the base form." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "5.1 This endorsement modifies MM-CP-0010 for policies issued in the State of Florida (FL) and supersedes any conflicting provision in the base form." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Endorsement,
+            pc:Form,
+            pc:StateAmendatoryEndorsement ;
+        pc:mentions pcd:FL,
+            pcd:MM-CP-0010 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) / 5.1" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.2_x1 a pc:Clause ;
+        pc:clauseText "except 10 days for nonpayment of premium." ;
+        pc:exceptionTo pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.2 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) / 5.2 (exception)" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 5.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) 5.3 p.3] 5.3 Section E.3(b) of MM-CP-0010 is amended to read: you must give us prompt notice of the loss or damage, and in no event later than 14 days after you become aware of it." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.3 Section E.3(b) of MM-CP-0010 is amended to read: you must give us prompt notice of the loss or damage, and in no event later than 14 days after you become aware of it." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pc:Claim,
+            pc:Peril ;
+        pc:mentions pcd:MM-CP-0010 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) / 5.3" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 5.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) 5.4 p.3] 5.4 Hurricane Deductible Disclosure. Where MM-CP-E310 is attached, the Declarations must display the hurricane deductible in dollars and as a percentage." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.4 Hurricane Deductible Disclosure. Where MM-CP-E310 is attached, the Declarations must display the hurricane deductible in dollars and as a percentage." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pcd:Windstorm,
+            pc:ProtectionClass ;
+        pc:mentions pcd:MM-CP-E310,
+            pcd:Windstorm ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) / 5.4" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.5 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 5.5" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) 5.5 p.3] 5.5 Coverage COV-A is amended to include the cost to comply with any ordinance or law up to $25,000 per occurrence." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.5 Coverage COV-A is amended to include the cost to comply with any ordinance or law up to $25,000 per occurrence." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-A,
+            pcd:COV-C,
+            pc:Coverage ;
+        pc:mentions pcd:COV-A ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) / 5.5" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_6-ENDORSEMENTAVAILABILITYMATRIX_6.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 6.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 6. ENDORSEMENT AVAILABILITY MATRIX 6.1 p.3] 6.1 Precedence. Where an endorsement conflicts with the base form, the endorsement controls. Where a state amendatory endorsement conflicts with any other endorsement, the state amendatory endorsement controls. Where two editions of the same form are in force, the later edition controls." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "6.1 Precedence. Where an endorsement conflicts with the base form, the endorsement controls. Where a state amendatory endorsement conflicts with any other endorsement, the state amendatory endorsement controls. Where two editions of the same form are in force, the later edition controls." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Endorsement,
+            pc:FormApproval,
+            pc:StateAmendatoryEndorsement ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "6. ENDORSEMENT AVAILABILITY MATRIX / 6.1" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_6-ENDORSEMENTAVAILABILITYMATRIX_T1 a pc:Chunk ;
+        rdfs:label "MM-CP-E-SERIES table Endorsement / Edition / Modifies Coverages" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 6. ENDORSEMENT AVAILABILITY MATRIX table p.3] Endorsement: MM-CP-E101 ; Edition: 06/2025 ; Modifies Coverages: COV-A, COV-B ; Modifies Forms: MM-CP-0010, MM-CP-1030 ; FL: Approved ; TX: Approved ; NY: Not filed | Endorsement: MM-CP-E205 ; Edition: 01/2025 ; Modifies Coverages: COV-A, COV-B ; Modifies Forms: MM-CP-0010, MM-CP-1030 ; FL: Approved ; TX: Approved ; NY: Pending | Endorsement: MM-CP-E310 ; Edition: 03/2025 ; Modifies Coverages: COV-A, COV-B ; Modifies Forms: MM-CP-0010 ; FL: Approved (mandatory Tier 1) ; TX: Approved ; NY: Not filed | Endorsement: MM-CP-E415 ; Edition: 01/2025 ; Modifies Coverages: COV-A, COV-B, COV-C ; Modifies Forms: MM-CP-0010 ; FL: Approved ; TX: Approved ; NY: Pending | Endorsement: MM-CP-FL-01 ; Edition: 07/2025 ; Modifies Coverages: COV-A ; Modifies Forms: MM-CP-0010 ; FL: Approved (mandatory) ; TX: N/A ; NY: N/A" ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "6. ENDORSEMENT AVAILABILITY MATRIX / table" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_FRONT_T1 a pc:Chunk ;
+        rdfs:label "MM-CP-E-SERIES table Field / Value" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES Front matter table p.1] Field: Package ; Value: MM-CP-E-SERIES | Field: Edition Dates ; Value: E101 06/2025; E205 01/2025; E310 03/2025; E415 01/2025; FL-01 07/2025 | Field: Modifies Forms ; Value: MM-CP-0010 (Ed. 01/2025), MM-CP-1030 (Ed. 01/2025) | Field: State Availability ; Value: See Section 6 and State Filings MM-FL-2025-0142, MM-TX-2025-0098, MM-NY-2025-0211" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "Front matter / table" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-FILINGS-CP-2025_FILING-1_1.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 1.2" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 1 - FLORIDA (FL) - MM-FL-2025-0142 1.2 p.1] 1.2 Overall rate change +6.2%. Territory FL-T03 factor revised from 1.30 to 1.45." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.2 Overall rate change +6.2%. Territory FL-T03 factor revised from 1.30 to 1.45." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:RateManual,
+            pc:RatingFactor,
+            pc:Territory ;
+        pc:mentions pcd:FL,
+            pcd:FL-T03 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "FILING 1 - FLORIDA (FL) - MM-FL-2025-0142 / 1.2" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-1_1.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 1.3" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 1 - FLORIDA (FL) - MM-FL-2025-0142 1.3 p.1] 1.3 Conditions of approval: MM-CP-FL-01 Florida Amendatory Endorsement must be attached to every Florida policy; MM-CP-E310 must display the hurricane deductible in dollars and percent; the insurer must acknowledge claims within 14 calendar days." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.3 Conditions of approval: MM-CP-FL-01 Florida Amendatory Endorsement must be attached to every Florida policy; MM-CP-E310 must display the hurricane deductible in dollars and percent; the insurer must acknowledge claims within 14 calendar days." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pc:Coverage,
+            pc:StateAmendatoryEndorsement ;
+        pc:mentions pcd:FL,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-FL-01,
+            pcd:Windstorm ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "FILING 1 - FLORIDA (FL) - MM-FL-2025-0142 / 1.3" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-1_T1 a pc:Chunk ;
+        rdfs:label "MM-FILINGS-CP-2025 table Form / Edition / Status" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 1 - FLORIDA (FL) - MM-FL-2025-0142 table p.1] Form: MM-CP-0010 ; Edition: 01/2025 ; Status: Approved ; Action: Replaces Ed. 07/2022 | Form: MM-CP-1030 ; Edition: 01/2025 ; Status: Approved ; Action: Replaces Ed. 07/2022 | Form: MM-CP-E101 ; Edition: 06/2025 ; Status: Approved ; Action: New form | Form: MM-CP-E205 ; Edition: 01/2025 ; Status: Approved ; Action: No change | Form: MM-CP-E310 ; Edition: 03/2025 ; Status: Approved ; Action: Mandatory in Tier 1 coastal counties | Form: MM-CP-E415 ; Edition: 01/2025 ; Status: Approved ; Action: No change | Form: MM-CP-FL-01 ; Edition: 07/2025 ; Status: Approved ; Action: Mandatory on all FL policies; replaces Ed. 01/2023" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "FILING 1 - FLORIDA (FL) - MM-FL-2025-0142 / table" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-2_2.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 2.2" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 2 - TEXAS (TX) - MM-TX-2025-0098 2.2 p.1] 2.2 Overall rate change +4.8%. Territory TX-T01 factor 1.35 unchanged." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "2.2 Overall rate change +4.8%. Territory TX-T01 factor 1.35 unchanged." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:RateManual,
+            pc:RatingFactor,
+            pc:Territory ;
+        pc:mentions pcd:TX,
+            pcd:TX-T01 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "FILING 2 - TEXAS (TX) - MM-TX-2025-0098 / 2.2" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-2_2.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 2.3" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 2 - TEXAS (TX) - MM-TX-2025-0098 2.3 p.1] 2.3 Conditions of approval: claims must be acknowledged within 15 business days; MM-CP-E310 mandatory in territory TX-T01." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.3 Conditions of approval: claims must be acknowledged within 15 business days; MM-CP-E310 mandatory in territory TX-T01." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:NotFiled,
+            pc:Claim,
+            pc:FilingStatus ;
+        pc:mentions pcd:MM-CP-E310,
+            pcd:TX,
+            pcd:TX-T01 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "FILING 2 - TEXAS (TX) - MM-TX-2025-0098 / 2.3" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-2_T1 a pc:Chunk ;
+        rdfs:label "MM-FILINGS-CP-2025 table Form / Edition / Status" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 2 - TEXAS (TX) - MM-TX-2025-0098 table p.1] Form: MM-CP-0010 ; Edition: 01/2025 ; Status: Approved ; Action: Replaces Ed. 07/2022 | Form: MM-CP-1030 ; Edition: 01/2025 ; Status: Approved ; Action: Replaces Ed. 07/2022 | Form: MM-CP-E101 ; Edition: 06/2025 ; Status: Approved ; Action: New form | Form: MM-CP-E205 ; Edition: 01/2025 ; Status: Approved ; Action: No change | Form: MM-CP-E310 ; Edition: 03/2025 ; Status: Approved ; Action: Mandatory in TX-T01 | Form: MM-CP-E415 ; Edition: 01/2025 ; Status: Approved ; Action: No change" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "FILING 2 - TEXAS (TX) - MM-TX-2025-0098 / table" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-3_3.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 3.2" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 3.2 p.2] 3.2 Forms MM-CP-E101 and MM-CP-E310 were not included in this filing and must not be used in New York." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "3.2 Forms MM-CP-E101 and MM-CP-E310 were not included in this filing and must not be used in New York." ;
+        pc:confidence 0.706 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:NotFiled,
+            pc:StateAmendatoryEndorsement,
+            pc:StateFiling ;
+        pc:mentions pcd:MM-CP-E101,
+            pcd:MM-CP-E310 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 / 3.2" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-3_3.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 3.3" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 3.3 p.2] 3.3 Until approval, no Commercial Property policy may be issued on form MM-CP-0010 in New York (see MM-UW-CP-2025 Section 2.3)." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "3.3 Until approval, no Commercial Property policy may be issued on form MM-CP-0010 in New York (see MM-UW-CP-2025 Section 2.3)." ;
+        pc:confidence 0.667 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pcd:NY,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:MM-CP-0010,
+            pcd:MM-UW-CP-2025 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 / 3.3" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FILING-3_T1 a pc:Chunk ;
+        rdfs:label "MM-FILINGS-CP-2025 table Form / Edition / Status" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 table p.2] Form: MM-CP-0010 ; Edition: 01/2025 ; Status: Pending ; Action: New form for NY | Form: MM-CP-1030 ; Edition: 01/2025 ; Status: Pending ; Action: New form for NY | Form: MM-CP-E205 ; Edition: 01/2025 ; Status: Pending ; Action: New form for NY | Form: MM-CP-E415 ; Edition: 01/2025 ; Status: Pending ; Action: New form for NY | Form: MM-CP-E101 ; Edition: 06/2025 ; Status: Not filed ; Action: Not available in NY | Form: MM-CP-E310 ; Edition: 03/2025 ; Status: Not filed ; Action: Not available in NY" ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 / table" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_FRONT_T1 a pc:Chunk ;
+        rdfs:label "MM-FILINGS-CP-2025 table Field / Value" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 Front matter table p.1] Field: Register ID ; Value: MM-FILINGS-CP-2025 | Field: Prepared ; Value: 08/15/2025 | Field: Filings Covered ; Value: MM-FL-2025-0142, MM-TX-2025-0098, MM-NY-2025-0211 | Field: Forms Covered ; Value: MM-CP-0010, MM-CP-1030, MM-CP-E101, MM-CP-E205, MM-CP-E310, MM-CP-E415, MM-CP-FL-01" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "Front matter / table" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_SECTION-4_4.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 4.1" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 SECTION 4 - FILING COMPLIANCE RULES 4.1 p.2] 4.1 A form may be attached to a policy only in a state where this register shows the status Approved for that form and edition on or before the policy effective date." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.1 A form may be attached to a policy only in a state where this register shows the status Approved for that form and edition on or before the policy effective date." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Form,
+            pc:FormApproval,
+            pc:StateAmendatoryEndorsement ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 4 - FILING COMPLIANCE RULES / 4.1" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_SECTION-4_4.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 4.2" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 SECTION 4 - FILING COMPLIANCE RULES 4.2 p.2] 4.2 When a form edition is replaced, the superseded edition must not be used on new business after the effective date of the replacing filing and must be replaced at the first renewal." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "4.2 When a form edition is replaced, the superseded edition must not be used on new business after the effective date of the replacing filing and must be replaced at the first renewal." ;
+        pc:confidence 0.545 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:COV-D,
+            pc:PolicyForm,
+            pc:UnderwritingGuideline ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 4 - FILING COMPLIANCE RULES / 4.2" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_SECTION-4_4.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 4.3" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 SECTION 4 - FILING COMPLIANCE RULES 4.3 p.2] 4.3 Compliance must review this register at every renewal cycle and notify Underwriting of any withdrawn or disapproved form within 5 business days." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.3 Compliance must review this register at every renewal cycle and notify Underwriting of any withdrawn or disapproved form within 5 business days." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:NotFiled,
+            pc:Claim,
+            pc:FormApproval ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 4 - FILING COMPLIANCE RULES / 4.3" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_SECTION-4_4.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-FILINGS-CP-2025 4.4" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 SECTION 4 - FILING COMPLIANCE RULES 4.4 p.2] 4.4 Rate changes approved in a filing apply to policies effective on or after the filing effective date and must be implemented in Rate Manual MM-RM-CP-2025." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.4 Rate changes approved in a filing apply to policies effective on or after the filing effective date and must be implemented in Rate Manual MM-RM-CP-2025." ;
+        pc:confidence 0.714 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:FormApproval,
+            pc:RateManual,
+            pc:StateFiling ;
+        pc:mentions pcd:MM-RM-CP-2025 ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 4 - FILING COMPLIANCE RULES / 4.4" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-FILINGS-CP-2025_SECTION-5_T1 a pc:Chunk ;
+        rdfs:label "MM-FILINGS-CP-2025 table Form / FL / TX" ;
+        prov:wasDerivedFrom pcd:MM-FILINGS-CP-2025 ;
+        pc:chunkText "[MM-FILINGS-CP-2025 SECTION 5 - FORM TO STATE CROSS-REFERENCE table p.2] Form: MM-CP-0010 Ed. 01/2025 ; FL: Approved ; TX: Approved ; NY: Pending | Form: MM-CP-1030 Ed. 01/2025 ; FL: Approved ; TX: Approved ; NY: Pending | Form: MM-CP-E101 Ed. 06/2025 ; FL: Approved ; TX: Approved ; NY: Not filed | Form: MM-CP-E205 Ed. 01/2025 ; FL: Approved ; TX: Approved ; NY: Pending | Form: MM-CP-E310 Ed. 03/2025 ; FL: Approved ; TX: Approved ; NY: Not filed | Form: MM-CP-E415 Ed. 01/2025 ; FL: Approved ; TX: Approved ; NY: Pending | Form: MM-CP-FL-01 Ed. 07/2025 ; FL: Approved ; TX: N/A ; NY: N/A" ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 5 - FORM TO STATE CROSS-REFERENCE / table" ;
+        pc:sourceDocument pcd:MM-FILINGS-CP-2025 .
+
+    pcd:MM-RM-CP-2025_FRONT_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Field / Value" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 Front matter table p.1] Field: Document ID ; Value: MM-RM-CP-2025 | Field: Edition ; Value: 07/2025 | Field: Effective Date ; Value: 07/01/2025 (new and renewal) | Field: Rate Filings ; Value: FL: MM-FL-2025-0142 (approved); TX: MM-TX-2025-0098 (approved, +4.8% overall); NY: MM-NY-2025-0211 (pending) | Field: Companion Documents ; Value: MM-UW-CP-2025 Underwriting Guidelines; MM-CP-0010 Coverage Form" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "Front matter / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-1_1.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-RM-CP-2025 1.1" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 1 - RATING PROCEDURE 1.1 p.1] 1.1 Premium for Coverage COV-A and COV-B is computed as: Limit of Insurance / 100 x Base Rate x Territory Factor x Protection Class Factor x Deductible Factor x Safeguard Factors, plus endorsement premiums." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.1 Premium for Coverage COV-A and COV-B is computed as: Limit of Insurance / 100 x Base Rate x Territory Factor x Protection Class Factor x Deductible Factor x Safeguard Factors, plus endorsement premiums." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-B,
+            pc:Coverage,
+            pc:RatingFactor ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "RULE 1 - RATING PROCEDURE / 1.1" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-1_1.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-RM-CP-2025 1.2" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 1 - RATING PROCEDURE 1.2 p.1] 1.2 COV-D (Business Income) is rated at 80% of the COV-A rate applied to the COV-D limit." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.2 COV-D (Business Income) is rated at 80% of the COV-A rate applied to the COV-D limit." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:RatingFactor,
+            pc:Territory ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-D ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "RULE 1 - RATING PROCEDURE / 1.2" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-1_1.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-RM-CP-2025 1.4" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 1 - RATING PROCEDURE 1.4 p.1] 1.4 Rates in this manual apply only to forms in the editions listed in the applicable State Filing." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.4 Rates in this manual apply only to forms in the editions listed in the applicable State Filing." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Form,
+            pc:RateManual,
+            pc:StateFiling ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "RULE 1 - RATING PROCEDURE / 1.4" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-2_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Construction Class / Description / Base Rate COV-A" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 2 - BASE RATES PER $100 OF INSURANCE (COV-A BUILDING) table p.1] Construction Class: CC1 ; Description: Frame ; Base Rate COV-A: 0.420 ; Base Rate COV-B: 0.510 | Construction Class: CC2 ; Description: Joisted Masonry ; Base Rate COV-A: 0.350 ; Base Rate COV-B: 0.430 | Construction Class: CC3 ; Description: Non-Combustible ; Base Rate COV-A: 0.290 ; Base Rate COV-B: 0.360 | Construction Class: CC4 ; Description: Masonry Non-Combustible ; Base Rate COV-A: 0.240 ; Base Rate COV-B: 0.300 | Construction Class: CC5 ; Description: Modified Fire Resistive ; Base Rate COV-A: 0.190 ; Base Rate COV-B: 0.240 | Construction Class: CC6 ; Description: Fire Resistive ; Base Rate COV-A: 0.150 ; Base Rate COV-B: 0.200" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "RULE 2 - BASE RATES PER $100 OF INSURANCE (COV-A BUILDING) / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-3_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Territory Code / State / Description" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 3 - TERRITORY FACTORS table p.1] Territory Code: FL-T01 ; State: FL ; Description: Inland counties ; Factor: 1.10 ; Notes:  | Territory Code: FL-T03 ; State: FL ; Description: Tier 1 coastal counties ; Factor: 1.45 ; Notes: MM-CP-E310 mandatory (MM-UW-CP-2025 4.3) | Territory Code: TX-T01 ; State: TX ; Description: Gulf coast counties ; Factor: 1.35 ; Notes: MM-CP-E310 mandatory | Territory Code: TX-T04 ; State: TX ; Description: North and central ; Factor: 0.95 ; Notes:  | Territory Code: NY-T07 ; State: NY ; Description: Metro ; Factor: 1.20 ; Notes: Not in effect until Filing MM-NY-2025-0211 is approved" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "RULE 3 - TERRITORY FACTORS / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-4_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Protection Class / PC1-PC3 / PC4-PC6" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 4 - PROTECTION CLASS FACTORS table p.2] Protection Class: Factor ; PC1-PC3: 0.85 ; PC4-PC6: 1.00 ; PC7-PC8: 1.20 ; PC9: 1.60 (refer) ; PC10: 2.00 (refer)" ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "RULE 4 - PROTECTION CLASS FACTORS / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-5_5.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-RM-CP-2025 5.1" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 5 - DEDUCTIBLE FACTORS 5.1 p.3] 5.1 Where MM-CP-E310 Windstorm or Hail Percentage Deductible is attached, apply factor WH-2 (0.92) for a 2% deductible or WH-5 (0.85) for a 5% deductible to the COV-A and COV-B premium in territories FL-T03 and TX-T01." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "5.1 Where MM-CP-E310 Windstorm or Hail Percentage Deductible is attached, apply factor WH-2 (0.92) for a 2% deductible or WH-5 (0.85) for a 5% deductible to the COV-A and COV-B premium in territories FL-T03 and TX-T01." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Form,
+            pc:RatingFactor ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:FL,
+            pcd:FL-T03,
+            pcd:Hail,
+            pcd:MM-CP-E310,
+            pcd:TX,
+            pcd:TX-T01,
+            pcd:WH-2,
+            pcd:WH-5,
+            pcd:Windstorm ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "RULE 5 - DEDUCTIBLE FACTORS / 5.1" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-5_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Deductible / $1,000 / $2,500 (base)" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 5 - DEDUCTIBLE FACTORS table p.3] Deductible: Factor ; $1,000: 1.05 ; $2,500 (base): 1.00 ; $5,000: 0.95 ; $10,000: 0.90 ; $25,000: 0.82" ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "RULE 5 - DEDUCTIBLE FACTORS / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-6_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Factor Code / Safeguard / Factor" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 6 - PROTECTIVE SAFEGUARD FACTORS table p.3] Factor Code: SPR-1 ; Safeguard: P-1 Automatic Sprinkler System (full) ; Factor: 0.80 ; Required Endorsement: MM-CP-E415 | Factor Code: ALM-1 ; Safeguard: P-9 Central Station Burglar Alarm ; Factor: 0.95 ; Required Endorsement: MM-CP-E415 | Factor Code: ALM-2 ; Safeguard: P-2 Automatic Fire Alarm ; Factor: 0.97 ; Required Endorsement: MM-CP-E415" ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "RULE 6 - PROTECTIVE SAFEGUARD FACTORS / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-7_T1 a pc:Chunk ;
+        rdfs:label "MM-RM-CP-2025 table Endorsement / Rating Basis / Rate or Factor" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 7 - ENDORSEMENT PREMIUMS table p.3] Endorsement: MM-CP-E101 Flood - Scheduled Locations ; Rating Basis: Per $100 of Flood Sublimit ; Rate or Factor: 0.350 in zone X; 0.900 in zones A/AE; 1.400 in zones V/VE ; States: FL, TX | Endorsement: MM-CP-E205 Equipment Breakdown ; Rating Basis: Per $100 of COV-A + COV-B limit ; Rate or Factor: 0.025 ; States: FL, TX | Endorsement: MM-CP-E310 Windstorm/Hail % Deductible ; Rating Basis: Factor on COV-A + COV-B premium ; Rate or Factor: WH-2 0.92 / WH-5 0.85 ; States: FL, TX | Endorsement: MM-CP-E415 Protective Safeguards ; Rating Basis: No charge (enables SPR/ALM factors) ; Rate or Factor: 1.00 ; States: FL, TX | Endorsement: MM-CP-FL-01 Florida Amendatory ; Rating Basis: No charge (mandatory) ; Rate or Factor: 1.00 ; States: FL" ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "RULE 7 - ENDORSEMENT PREMIUMS / table" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-8_8.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-RM-CP-2025 8.1" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 8 - WORKED EXAMPLE 8.1 p.3] 8.1 A CC4 office building (class code 0745) in territory FL-T03 with COV-A limit $4,000,000, PC4, $5,000 deductible, 5% windstorm deductible (MM-CP-E310) and full sprinklers (SPR-1 with MM-CP-E415): 4,000,000 / 100 x 0.240 x 1.45 x 1.00 x 0.95 x 0.80 x 0.85 = $8,992 COV-A premium before fees." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "8.1 A CC4 office building (class code 0745) in territory FL-T03 with COV-A limit $4,000,000, PC4, $5,000 deductible, 5% windstorm deductible (MM-CP-E310) and full sprinklers (SPR-1 with MM-CP-E415): 4,000,000 / 100 x 0.240 x 1.45 x 1.00 x 0.95 x 0.80 x 0.85 = $8,992 COV-A premium before fees." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-A,
+            pcd:CommercialProperty,
+            pc:ProtectionClass ;
+        pc:mentions pcd:CC-0745,
+            pcd:CC4,
+            pcd:COV-A,
+            pcd:FL,
+            pcd:FL-T03,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-E415,
+            pcd:PC4,
+            pcd:SPR-1,
+            pcd:Windstorm ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "RULE 8 - WORKED EXAMPLE / 8.1" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-RM-CP-2025_RULE-8_8.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-RM-CP-2025 8.2" ;
+        prov:wasDerivedFrom pcd:MM-RM-CP-2025 ;
+        pc:chunkText "[MM-RM-CP-2025 RULE 8 - WORKED EXAMPLE 8.2 p.3] 8.2 Adding MM-CP-E101 with a $250,000 flood sublimit in zone AE adds 250,000 / 100 x 0.900 = $2,250." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "8.2 Adding MM-CP-E101 with a $250,000 flood sublimit in zone AE adds 250,000 / 100 x 0.900 = $2,250." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pcd:Flood,
+            pc:FloodZone ;
+        pc:mentions pcd:Flood,
+            pcd:MM-CP-E101 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "RULE 8 - WORKED EXAMPLE / 8.2" ;
+        pc:sourceDocument pcd:MM-RM-CP-2025 .
+
+    pcd:MM-UW-CP-2025_FRONT_T1 a pc:Chunk ;
+        rdfs:label "MM-UW-CP-2025 table Field / Value" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 Front matter table p.1] Field: Document ID ; Value: MM-UW-CP-2025 | Field: Version ; Value: 3.2 | Field: Effective Date ; Value: 07/01/2025 | Field: Applies To Forms ; Value: MM-CP-0010 (Ed. 01/2025), MM-CP-1030 (Ed. 01/2025) and E-series endorsements | Field: States In Scope ; Value: FL, TX (NY pending Filing MM-NY-2025-0211)" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "Front matter / table" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-1_1.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 1.1" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 1 - PURPOSE AND SCOPE 1.1 p.1] 1.1 These guidelines govern the acceptance, pricing referral and binding of Commercial Property risks written on form MM-CP-0010." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.1 These guidelines govern the acceptance, pricing referral and binding of Commercial Property risks written on form MM-CP-0010." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pc:AuthorityLevel,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:MM-CP-0010 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - PURPOSE AND SCOPE / 1.1" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-1_1.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 1.2" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 1 - PURPOSE AND SCOPE 1.2 p.1] 1.2 Underwriters must apply these guidelines together with Rate Manual MM-RM-CP-2025 and the state filings listed above." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.2 Underwriters must apply these guidelines together with Rate Manual MM-RM-CP-2025 and the state filings listed above." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:StateFiling,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:MM-RM-CP-2025 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - PURPOSE AND SCOPE / 1.2" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-1_1.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 1.3" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 1 - PURPOSE AND SCOPE 1.3 p.1] 1.3 Any exception to these guidelines requires written approval from an Underwriting Manager and must be documented in the underwriting file." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.3 Any exception to these guidelines requires written approval from an Underwriting Manager and must be documented in the underwriting file." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:AuthorityLevel,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - PURPOSE AND SCOPE / 1.3" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-2_2.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 2.1" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 2 - ELIGIBILITY 2.1 p.1] 2.1 Eligible Risks. A risk is eligible if all of the following are true: (a) construction class is CC1 through CC6; (b) Public Protection Class is PC1 through PC8; (c) the building is not vacant and has not been vacant for more than 60 consecutive days in the prior 12 months; (d) Total Insured Value (TIV) does not exceed $25,000,000 per location; (e) the class code is not listed as Prohibited in Section 2.3." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.1 Eligible Risks. A risk is eligible if all of the following are true: (a) construction class is CC1 through CC6; (b) Public Protection Class is PC1 through PC8; (c) the building is not vacant and has not been vacant for more than 60 consecutive days in the prior 12 months; (d) Total Insured Value (TIV) does not exceed $25,000,000 per location; (e) the class code is not listed as Prohibited in Section 2.3." ;
+        pc:confidence 0.667 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-A,
+            pc:ConstructionClass,
+            pc:ProtectionClass ;
+        pc:mentions pcd:CC1,
+            pcd:CC6,
+            pcd:PC1,
+            pcd:PC8 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - ELIGIBILITY / 2.1" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-2_2.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 2.2" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 2 - ELIGIBILITY 2.2 p.1] 2.2 Referral Risks. The following risks may be written only with Underwriting Manager approval: Protection Class PC9 or PC10; buildings over 50 years old without updated electrical, plumbing, heating and roof within the last 25 years; class code 0921 (Vacant Buildings); any location in FEMA flood zone A, AE, V or VE that does not carry MM-CP-E101." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.2 Referral Risks. The following risks may be written only with Underwriting Manager approval: Protection Class PC9 or PC10; buildings over 50 years old without updated electrical, plumbing, heating and roof within the last 25 years; class code 0921 (Vacant Buildings); any location in FEMA flood zone A, AE, V or VE that does not carry MM-CP-E101." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:Refer,
+            pc:FloodZone,
+            pc:ProtectionClass ;
+        pc:mentions pcd:CC-0921,
+            pcd:Flood,
+            pcd:MM-CP-E101,
+            pcd:PC10,
+            pcd:PC9 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - ELIGIBILITY / 2.2" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-2_2.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 2.3" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 2 - ELIGIBILITY 2.3 p.1] 2.3 Prohibited Risks. Underwriters must not quote or bind any risk with class code 0511, any risk with unresolved open fire code violations, or any risk located in a state where form MM-CP-0010 is not approved (currently NY, pending Filing MM-NY-2025-0211)." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.3 Prohibited Risks. Underwriters must not quote or bind any risk with class code 0511, any risk with unresolved open fire code violations, or any risk located in a state where form MM-CP-0010 is not approved (currently NY, pending Filing MM-NY-2025-0211)." ;
+        pc:confidence 0.632 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:Prohibited,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:CC-0511,
+            pcd:Fire,
+            pcd:MM-CP-0010,
+            pcd:MM-NY-2025-0211,
+            pcd:NY ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - ELIGIBILITY / 2.3" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-2_T1 a pc:Chunk ;
+        rdfs:label "MM-UW-CP-2025 table Class Code / Description / Status" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 2 - ELIGIBILITY table p.1] Class Code: 0511 ; Description: Fireworks or Explosives Manufacturing ; Status: Prohibited ; Reason: Unacceptable fire and explosion hazard | Class Code: 0921 ; Description: Vacant Buildings ; Status: Refer ; Reason: Vandalism and water damage frequency; see MM-CP-0010 E.5 | Class Code: 0745 ; Description: Office Buildings - Mercantile Occupancy ; Status: Eligible ; Reason: Preferred class | Class Code: 0802 ; Description: Warehouses - General Storage ; Status: Eligible ; Reason: Verify protective safeguards MM-CP-E415 | Class Code: 0634 ; Description: Restaurants with Cooking ; Status: Refer ; Reason: Requires UL300 hood suppression (P-1 or P-5 safeguard)" ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - ELIGIBILITY / table" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-3_3.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 3.1" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 3 - AUTHORITY LIMITS 3.1 p.2] 3.1 An underwriter must not bind a risk that exceeds his or her authority level." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "3.1 An underwriter must not bind a risk that exceeds his or her authority level." ;
+        pc:confidence 0.545 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pc:AuthorityLevel,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 3 - AUTHORITY LIMITS / 3.1" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-3_3.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 3.2" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 3 - AUTHORITY LIMITS 3.2 p.2] 3.2 Where a risk exceeds the authority of the assigned underwriter, the file must be referred before a quote is released." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "3.2 Where a risk exceeds the authority of the assigned underwriter, the file must be referred before a quote is released." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Policy,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 3 - AUTHORITY LIMITS / 3.2" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-3_T1 a pc:Chunk ;
+        rdfs:label "MM-UW-CP-2025 table Authority Level / Maximum TIV Per Location / Maximum Policy Premium" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 3 - AUTHORITY LIMITS table p.2] Authority Level: UW Level 1 (Associate) ; Maximum TIV Per Location: $5,000,000 ; Maximum Policy Premium: $75,000 ; Approval Required: None within limits | Authority Level: UW Level 2 (Senior) ; Maximum TIV Per Location: $15,000,000 ; Maximum Policy Premium: $250,000 ; Approval Required: None within limits | Authority Level: UW Level 3 (Underwriting Manager) ; Maximum TIV Per Location: $25,000,000 ; Maximum Policy Premium: $600,000 ; Approval Required: None within limits | Authority Level: Above Level 3 ; Maximum TIV Per Location: Over $25,000,000 ; Maximum Policy Premium: Over $600,000 ; Approval Required: Chief Underwriting Officer and facultative reinsurance" ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION 3 - AUTHORITY LIMITS / table" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-4_4.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 4.1" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS 4.1 p.3] 4.1 Every policy must include the base coverage form MM-CP-0010 and the causes of loss form MM-CP-1030 in the edition approved in the state of the risk." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.1 Every policy must include the base coverage form MM-CP-0010 and the causes of loss form MM-CP-1030 in the edition approved in the state of the risk." ;
+        pc:confidence 0.846 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Coverage,
+            pc:Form,
+            pc:PolicyForm ;
+        pc:mentions pcd:MM-CP-0010,
+            pcd:MM-CP-1030 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.1" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-4_4.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 4.2" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS 4.2 p.3] 4.2 Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.2 Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Form,
+            pc:StateAmendatoryEndorsement,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:FL,
+            pcd:MM-CP-FL-01 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.2" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-4_4.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 4.3" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS 4.3 p.3] 4.3 MM-CP-E310 Windstorm or Hail Percentage Deductible is mandatory for all locations in Florida Tier 1 coastal counties and in Texas rating territory TX-T01; a 5% deductible is required within one mile of the coast and 2% elsewhere in those territories." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.3 MM-CP-E310 Windstorm or Hail Percentage Deductible is mandatory for all locations in Florida Tier 1 coastal counties and in Texas rating territory TX-T01; a 5% deductible is required within one mile of the coast and 2% elsewhere in those territories." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:FL,
+            pc:FloodZone,
+            pc:ProtectionClass ;
+        pc:mentions pcd:Hail,
+            pcd:MM-CP-E310,
+            pcd:TX,
+            pcd:TX-T01,
+            pcd:Windstorm ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.3" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-4_4.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 4.4" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS 4.4 p.3] 4.4 Any scheduled location in FEMA flood zone A, AE, V or VE must carry MM-CP-E101 Flood Coverage Endorsement, or the insured must sign a Flood Exclusion Acknowledgment form before binding." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.4 Any scheduled location in FEMA flood zone A, AE, V or VE must carry MM-CP-E101 Flood Coverage Endorsement, or the insured must sign a Flood Exclusion Acknowledgment form before binding." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Coverage,
+            pc:FloodZone,
+            pc:ProtectiveSafeguard ;
+        pc:mentions pcd:Flood,
+            pcd:MM-CP-E101 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.4" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-4_4.5 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 4.5" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS 4.5 p.3] 4.5 MM-CP-E415 Protective Safeguards is required when the rate manual applies a sprinkler credit (factor SPR-1) or a central station alarm credit (factor ALM-1)." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.5 MM-CP-E415 Protective Safeguards is required when the rate manual applies a sprinkler credit (factor SPR-1) or a central station alarm credit (factor ALM-1)." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:ProtectionClass,
+            pc:ProtectiveSafeguard,
+            pc:RatingFactor ;
+        pc:mentions pcd:ALM-1,
+            pcd:MM-CP-E415,
+            pcd:SPR-1 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.5" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-4_4.6 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 4.6" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS 4.6 p.3] 4.6 Endorsements may be attached only in states where the State Filing shows the status Approved." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.6 Endorsements may be attached only in states where the State Filing shows the status Approved." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:NotFiled,
+            pc:Endorsement,
+            pc:StateAmendatoryEndorsement ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.6" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-5_5.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 5.1" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 5 - QUOTING, BINDING AND DOCUMENTATION 5.1 p.3] 5.1 Before releasing a quote the underwriter must verify: eligibility under Section 2; that the premium was developed from Rate Manual MM-RM-CP-2025; and that all required endorsements under Section 4 are included." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.1 Before releasing a quote the underwriter must verify: eligibility under Section 2; that the premium was developed from Rate Manual MM-RM-CP-2025; and that all required endorsements under Section 4 are included." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Coverage,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:MM-RM-CP-2025 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION / 5.1" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-5_5.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 5.2" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 5 - QUOTING, BINDING AND DOCUMENTATION 5.2 p.3] 5.2 Before binding, the underwriter must verify that every form edition on the policy matches the edition approved in the applicable State Filing." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.2 Before binding, the underwriter must verify that every form edition on the policy matches the edition approved in the applicable State Filing." ;
+        pc:confidence 0.714 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:FormApproval,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION / 5.2" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-5_5.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 5.3" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 5 - QUOTING, BINDING AND DOCUMENTATION 5.3 p.3] 5.3 The underwriting file must document the flood zone determination for every scheduled location." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.3 The underwriting file must document the flood zone determination for every scheduled location." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:Flood,
+            pc:FloodZone,
+            pc:UnderwritingGuideline ;
+        pc:mentions pcd:Flood ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION / 5.3" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-5_5.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 5.4" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 5 - QUOTING, BINDING AND DOCUMENTATION 5.4 p.3] 5.4 Inspections are required within 60 days of binding for any location with TIV above $2,000,000 or Protection Class PC7 or higher." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "5.4 Inspections are required within 60 days of binding for any location with TIV above $2,000,000 or Protection Class PC7 or higher." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:COV-D,
+            pc:Coverage,
+            pc:Location ;
+        pc:mentions pcd:PC7 ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION / 5.4" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-6_6.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 6.1" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 6 - RENEWAL REVIEW 6.1 p.3] 6.1 At renewal the underwriter must confirm that form editions remain current and that no State Filing has withdrawn a form in use." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "6.1 At renewal the underwriter must confirm that form editions remain current and that no State Filing has withdrawn a form in use." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pcd:NotFiled,
+            pc:Underwriter,
+            pc:UnderwritingGuideline ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 6 - RENEWAL REVIEW / 6.1" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-UW-CP-2025_SECTION-6_6.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-UW-CP-2025 6.3" ;
+        prov:wasDerivedFrom pcd:MM-UW-CP-2025 ;
+        pc:chunkText "[MM-UW-CP-2025 SECTION 6 - RENEWAL REVIEW 6.3 p.3] 6.3 Where a newer edition of a form has been approved, the newer edition must be attached at renewal." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "6.3 Where a newer edition of a form has been approved, the newer edition must be attached at renewal." ;
+        pc:confidence 0.714 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Form,
+            pc:FormApproval,
+            pc:StateAmendatoryEndorsement ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION 6 - RENEWAL REVIEW / 6.3" ;
+        pc:sourceDocument pcd:MM-UW-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-1_1.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 1.1" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 1 - FIRST NOTICE OF LOSS (FNOL) 1.1 p.1] 1.1 The insured is required by MM-CP-0010 Section E.3(b) to report loss within 72 hours of becoming aware of it; in Florida, MM-CP-FL-01 Section 5.3 extends this period to 14 days. Late notice must not be used to deny a claim unless the delay prejudiced our investigation." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.1 The insured is required by MM-CP-0010 Section E.3(b) to report loss within 72 hours of becoming aware of it; in Florida, MM-CP-FL-01 Section 5.3 extends this period to 14 days. Late notice must not be used to deny a claim unless the delay prejudiced our investigation." ;
+        pc:confidence 0.517 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Claim,
+            pc:Coverage,
+            pc:PolicyForm ;
+        pc:mentions pcd:FL,
+            pcd:MM-CP-0010,
+            pcd:MM-CP-FL-01 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 1 - FIRST NOTICE OF LOSS (FNOL) / 1.1" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CM-CP-2025_SECTION-2_2.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CM-CP-2025 2.3" ;
+        prov:wasDerivedFrom pcd:MM-CM-CP-2025 ;
+        pc:chunkText "[MM-CM-CP-2025 SECTION 2 - COVERAGE VERIFICATION 2.3 p.1] 2.3 If MM-CP-E101 is attached and the premises is a scheduled location, Flood damage to COV-A and COV-B is covered up to the Flood Sublimit of $250,000 subject to the 5% Flood Deductible; COV-D is not covered unless the Schedule shows a COV-D Flood Sublimit." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "2.3 If MM-CP-E101 is attached and the premises is a scheduled location, Flood damage to COV-A and COV-B is covered up to the Flood Sublimit of $250,000 subject to the 5% Flood Deductible; COV-D is not covered unless the Schedule shows a COV-D Flood Sublimit." ;
+        pc:confidence 0.565 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-D,
+            pcd:CommercialProperty,
+            pcd:Flood ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:COV-D,
+            pcd:Flood,
+            pcd:MM-CP-E101 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION 2 - COVERAGE VERIFICATION / 2.3" ;
+        pc:sourceDocument pcd:MM-CM-CP-2025 .
+
+    pcd:MM-CP-0010_SECTION-B_B.1 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 B.1" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION B - EXCLUSIONS AND LIMITATIONS B.1 p.2] B.1 See the applicable Causes of Loss form MM-CP-1030 for exclusions and limitations. The exclusions EXCL-FLD (Water), EXCL-EQ (Earth Movement), EXCL-WAR (War and Military Action), EXCL-MOLD (Fungus, Wet Rot and Bacteria) and EXCL-WEAR (Wear and Tear) apply to Coverages COV-A, COV-B, COV-C and COV-D unless an endorsement attached to this policy states otherwise." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "B.1 See the applicable Causes of Loss form MM-CP-1030 for exclusions and limitations. The exclusions EXCL-FLD (Water), EXCL-EQ (Earth Movement), EXCL-WAR (War and Military Action), EXCL-MOLD (Fungus, Wet Rot and Bacteria) and EXCL-WEAR (Wear and Tear) apply to Coverages COV-A, COV-B, COV-C and COV-D unless an endorsement attached to this policy states otherwise." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pc:Claim,
+            pc:Exclusion,
+            pc:PolicyForm ;
+        pc:mentions pcd:COV-A,
+            pcd:COV-B,
+            pcd:COV-C,
+            pcd:COV-D,
+            pcd:EXCL-EQ,
+            pcd:EXCL-FLD,
+            pcd:EXCL-MOLD,
+            pcd:EXCL-WAR,
+            pcd:EXCL-WEAR,
+            pcd:EarthMovement,
+            pcd:MM-CP-1030,
+            pcd:Mold,
+            pcd:Water ;
+        pc:pageNumber 2 ;
+        pc:sectionRef "SECTION B - EXCLUSIONS AND LIMITATIONS / B.1" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-0010_SECTION-E_E.5 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 E.5" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION E - LOSS CONDITIONS E.5 p.3] E.5 Vacancy. If the building where loss or damage occurs has been vacant for more than 60 consecutive days before that loss or damage occurs, we will not pay for any loss or damage caused by vandalism, sprinkler leakage, building glass breakage, water damage, theft or attempted theft. With respect to Covered Causes of Loss other than those listed, we will reduce the amount we would otherwise pay by 15%." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "E.5 Vacancy. If the building where loss or damage occurs has been vacant for more than 60 consecutive days before that loss or damage occurs, we will not pay for any loss or damage caused by vandalism, sprinkler leakage, building glass breakage, water damage, theft or attempted theft. With respect to Covered Causes of Loss other than those listed, we will reduce the amount we would otherwise pay by 15%." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:Vandalism,
+            pc:Claim,
+            pc:Location ;
+        pc:mentions pcd:SprinklerLeakage,
+            pcd:Theft,
+            pcd:Vandalism,
+            pcd:Water ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "SECTION E - LOSS CONDITIONS / E.5" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 1.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) 1.3 p.1] 1.3 Flood Deductible. A deductible of 5% of the Limit of Insurance for COV-A at the scheduled location applies to each Flood occurrence, but not less than $25,000. This deductible replaces the deductible in Section D of MM-CP-0010 for the peril of Flood only." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "1.3 Flood Deductible. A deductible of 5% of the Limit of Insurance for COV-A at the scheduled location applies to each Flood occurrence, but not less than $25,000. This deductible replaces the deductible in Section D of MM-CP-0010 for the peril of Flood only." ;
+        pc:confidence 0.34 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:CommercialProperty,
+            pcd:Flood,
+            pc:FloodZone ;
+        pc:mentions pcd:COV-A,
+            pcd:Flood,
+            pcd:MM-CP-0010 ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / 1.3" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.4 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 1.4" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) 1.4 p.1] 1.4 Limitations. We will not pay under this endorsement for loss to property in the open, for loss at any location that is not a scheduled location, or for loss caused by Flood that begins before the effective date of this endorsement or within 72 hours after it. Coverage COV-D (Business Income) is not extended by this endorsement unless the Schedule shows a COV-D Flood Sublimit." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "1.4 Limitations. We will not pay under this endorsement for loss to property in the open, for loss at any location that is not a scheduled location, or for loss caused by Flood that begins before the effective date of this endorsement or within 72 hours after it. Coverage COV-D (Business Income) is not extended by this endorsement unless the Schedule shows a COV-D Flood Sublimit." ;
+        pc:confidence 0.769 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:COV-D,
+            pcd:CommercialProperty,
+            pc:Coverage ;
+        pc:mentions pcd:COV-D,
+            pcd:Flood ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025) / 1.4" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 2.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) 2.2 p.1] 2.2 The exclusion for mechanical breakdown in MM-CP-1030 Section B.2.d does not apply to the extent coverage is provided by this endorsement." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.2 The exclusion for mechanical breakdown in MM-CP-1030 Section B.2.d does not apply to the extent coverage is provided by this endorsement." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:COV-A,
+            pcd:COV-D,
+            pc:Coverage ;
+        pc:mentions pcd:MM-CP-1030,
+            pcd:MechanicalBreakdown ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) / 2.2" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_2-MM-CP-E205_2.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 2.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) 2.3 p.1] 2.3 The most we will pay for loss under this endorsement is $100,000 per occurrence unless a higher limit is shown in the Declarations." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "2.3 The most we will pay for loss under this endorsement is $100,000 per occurrence unless a higher limit is shown in the Declarations." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:Prohibition,
+            pc:Claim,
+            pc:Exclusion ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025) / 2.3" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_4-MM-CP-E415_4.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 4.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) 4.2 p.3] 4.2 You must notify us within 48 hours if any listed protective safeguard is impaired or out of service, except when the impairment is due to ordinary maintenance that is completed within 24 hours." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "4.2 You must notify us within 48 hours if any listed protective safeguard is impaired or out of service, except when the impairment is due to ordinary maintenance that is completed within 24 hours." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Obligation ;
+        pc:groundedTerm pc:Claim,
+            pc:Location,
+            pc:ProtectiveSafeguard ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025) / 4.2" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.2 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-E-SERIES 5.2" ;
+        prov:wasDerivedFrom pcd:MM-CP-E-SERIES ;
+        pc:chunkText "[MM-CP-E-SERIES 5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) 5.2 p.3] 5.2 Cancellation. We may cancel this policy only for the reasons permitted by Florida law and we must mail written notice of cancellation at least 45 days before the effective date of cancellation, except 10 days for nonpayment of premium." ;
+        pc:classifierRoute "pass2-rules" ;
+        pc:clauseText "5.2 Cancellation. We may cancel this policy only for the reasons permitted by Florida law and we must mail written notice of cancellation at least 45 days before the effective date of cancellation, except 10 days for nonpayment of premium." ;
+        pc:confidence 0.583 ;
+        pc:deonticType pcd:Permission ;
+        pc:groundedTerm pcd:FL,
+            pcd:Prohibition,
+            pc:Exclusion ;
+        pc:pageNumber 3 ;
+        pc:sectionRef "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025) / 5.2" ;
+        pc:sourceDocument pcd:MM-CP-E-SERIES .
+
+    pcd:MM-CP-0010_SECTION-A_A.3 a pc:Chunk,
+            pc:Clause ;
+        rdfs:label "MM-CP-0010 A.3" ;
+        prov:wasDerivedFrom pcd:MM-CP-0010 ;
+        pc:chunkText "[MM-CP-0010 SECTION A - COVERAGE A.3 p.1] A.3 Property Not Covered. Covered Property does not include: (a) accounts, bills, currency, deeds, money or securities; (b) land, water, growing crops or lawns; (c) vehicles or self-propelled machines that are licensed for use on public roads, except vehicles you manufacture, process or warehouse; (d) the cost to research, replace or restore the information on valuable papers and records, except as provided in the Coverage Extensions." ;
+        pc:classifierRoute "pass1" ;
+        pc:clauseText "A.3 Property Not Covered. Covered Property does not include: (a) accounts, bills, currency, deeds, money or securities; (b) land, water, growing crops or lawns; (c) vehicles or self-propelled machines that are licensed for use on public roads, except vehicles you manufacture, process or warehouse; (d) the cost to research, replace or restore the information on valuable papers and records, except as provided in the Coverage Extensions." ;
+        pc:confidence 1.0 ;
+        pc:deonticType pcd:Prohibition ;
+        pc:groundedTerm pcd:COV-A,
+            pcd:COV-B,
+            pcd:COV-C ;
+        pc:mentions pcd:Water ;
+        pc:pageNumber 1 ;
+        pc:sectionRef "SECTION A - COVERAGE / A.3" ;
+        pc:sourceDocument pcd:MM-CP-0010 .
+}
+
+<https://example.org/pc/graph/data> {
+    pcd:ALM-2 a pc:RatingFactor ;
+        rdfs:label "P-2 Automatic Fire Alarm" ;
+        pc:factorCode "ALM-2" ;
+        pc:factorRequiresEndorsement pcd:MM-CP-E415 ;
+        pc:factorValue 0.97 .
+
+    pcd:CC-0634 a pc:ClassCode ;
+        rdfs:label "Restaurants with Cooking" ;
+        rdfs:comment "Requires UL300 hood suppression (P-1 or P-5 safeguard)" ;
+        pc:classCode "0634" ;
+        pc:classCodeStatus pcd:Refer .
+
+    pcd:CC-0802 a pc:ClassCode ;
+        rdfs:label "Warehouses - General Storage" ;
+        rdfs:comment "Verify protective safeguards MM-CP-E415" ;
+        pc:classCode "0802" ;
+        pc:classCodeStatus pcd:Eligible .
+
+    pcd:CC2 a pc:ConstructionClass ;
+        rdfs:label "CC2 Joisted Masonry" ;
+        rdfs:comment "Base rate per $100: COV-A 0.350, COV-B 0.430" ;
+        pc:factorValue 0.35 .
+
+    pcd:CC3 a pc:ConstructionClass ;
+        rdfs:label "CC3 Non-Combustible" ;
+        rdfs:comment "Base rate per $100: COV-A 0.290, COV-B 0.360" ;
+        pc:factorValue 0.29 .
+
+    pcd:CC5 a pc:ConstructionClass ;
+        rdfs:label "CC5 Modified Fire Resistive" ;
+        rdfs:comment "Base rate per $100: COV-A 0.190, COV-B 0.240" ;
+        pc:factorValue 0.19 .
+
+    pcd:FL-T01 a pc:Territory ;
+        rdfs:label "FL-T01 Inland counties" ;
+        pc:factorValue 1.1 ;
+        pc:territoryCode "FL-T01" ;
+        pc:territoryState pcd:FL .
+
+    pcd:NY-T07 a pc:Territory ;
+        rdfs:label "NY-T07 Metro" ;
+        rdfs:comment "Not in effect until Filing MM-NY-2025-0211 is approved" ;
+        pc:factorValue 1.2 ;
+        pc:territoryCode "NY-T07" ;
+        pc:territoryState pcd:NY .
+
+    pcd:PC2 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 2" ;
+        pc:factorValue 0.85 .
+
+    pcd:PC3 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 3" ;
+        pc:factorValue 0.85 .
+
+    pcd:PC5 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 5" ;
+        pc:factorValue 1.0 .
+
+    pcd:PC6 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 6" ;
+        pc:factorValue 1.0 .
+
+    pcd:TX-T04 a pc:Territory ;
+        rdfs:label "TX-T04 North and central" ;
+        pc:factorValue 0.95 ;
+        pc:territoryCode "TX-T04" ;
+        pc:territoryState pcd:TX .
+
+    <https://example.org/pc/id/authority/Above-Level-3> a pc:AuthorityLevel ;
+        rdfs:label "Above Level 3" .
+
+    <https://example.org/pc/id/authority/UW-Level-1-Associate> a pc:AuthorityLevel ;
+        rdfs:label "UW Level 1 (Associate)" ;
+        pc:authorityMaxTIV 5000000.0 .
+
+    <https://example.org/pc/id/authority/UW-Level-2-Senior> a pc:AuthorityLevel ;
+        rdfs:label "UW Level 2 (Senior)" ;
+        pc:authorityMaxTIV 15000000.0 .
+
+    <https://example.org/pc/id/authority/UW-Level-3-Underwriting-Manager> a pc:AuthorityLevel ;
+        rdfs:label "UW Level 3 (Underwriting Manager)" ;
+        pc:authorityMaxTIV 25000000.0 .
+
+    pcd:ALM-1 a pc:RatingFactor ;
+        rdfs:label "P-9 Central Station Burglar Alarm" ;
+        pc:factorCode "ALM-1" ;
+        pc:factorRequiresEndorsement pcd:MM-CP-E415 ;
+        pc:factorValue 0.95 .
+
+    pcd:CC-0511 a pc:ClassCode ;
+        rdfs:label "Fireworks or Explosives Manufacturing" ;
+        rdfs:comment "Unacceptable fire and explosion hazard" ;
+        pc:classCode "0511" ;
+        pc:classCodeStatus pcd:Prohibited .
+
+    pcd:CC-0745 a pc:ClassCode ;
+        rdfs:label "Office Buildings - Mercantile Occupancy" ;
+        rdfs:comment "Preferred class" ;
+        pc:classCode "0745" ;
+        pc:classCodeStatus pcd:Eligible .
+
+    pcd:CC-0921 a pc:ClassCode ;
+        rdfs:label "Vacant Buildings" ;
+        rdfs:comment "Vandalism and water damage frequency; see MM-CP-0010 E.5" ;
+        pc:classCode "0921" ;
+        pc:classCodeStatus pcd:Refer .
+
+    pcd:CC1 a pc:ConstructionClass ;
+        rdfs:label "CC1 Frame" ;
+        rdfs:comment "Base rate per $100: COV-A 0.420, COV-B 0.510" ;
+        pc:factorValue 0.42 .
+
+    pcd:CC4 a pc:ConstructionClass ;
+        rdfs:label "CC4 Masonry Non-Combustible" ;
+        rdfs:comment "Base rate per $100: COV-A 0.240, COV-B 0.300" ;
+        pc:factorValue 0.24 .
+
+    pcd:CC6 a pc:ConstructionClass ;
+        rdfs:label "CC6 Fire Resistive" ;
+        rdfs:comment "Base rate per $100: COV-A 0.150, COV-B 0.200" ;
+        pc:factorValue 0.15 .
+
+    pcd:MM-CP-0010-Ed-07-2022 a pc:PolicyForm ;
+        pc:editionDate "07/2022" ;
+        pc:formNumber "MM-CP-0010" .
+
+    pcd:MM-CP-1030-Ed-07-2022 a pc:PolicyForm ;
+        pc:editionDate "07/2022" ;
+        pc:formNumber "MM-CP-1030" .
+
+    pcd:PC1 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 1" ;
+        pc:factorValue 0.85 .
+
+    pcd:PC10 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 10" ;
+        pc:factorValue 2.0 .
+
+    pcd:PC4 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 4" ;
+        pc:factorValue 1.0 .
+
+    pcd:PC7 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 7" ;
+        pc:factorValue 1.2 .
+
+    pcd:PC8 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 8" ;
+        pc:factorValue 1.2 .
+
+    pcd:PC9 a pc:ProtectionClass ;
+        rdfs:label "Protection Class 9" ;
+        pc:factorValue 1.6 .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-0010> a pc:FormApproval ;
+        rdfs:comment "Replaces Ed. 07/2022" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-0010 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-1030> a pc:FormApproval ;
+        rdfs:comment "Replaces Ed. 07/2022" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-1030 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E101> a pc:FormApproval ;
+        rdfs:comment "New form" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-E101 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "06/2025" .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E205> a pc:FormApproval ;
+        rdfs:comment "No change" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-E205 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E310> a pc:FormApproval ;
+        rdfs:comment "Mandatory in Tier 1 coastal counties" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-E310 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "03/2025" .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E415> a pc:FormApproval ;
+        rdfs:comment "No change" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-E415 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-FL-01> a pc:FormApproval ;
+        rdfs:comment "Mandatory on all FL policies; replaces Ed. 01/2023" ;
+        pc:approvalInState pcd:FL ;
+        pc:approvalOfForm pcd:MM-CP-FL-01 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "07/2025" .
+
+    <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-0010> a pc:FormApproval ;
+        rdfs:comment "Replaces Ed. 07/2022" ;
+        pc:approvalInState pcd:TX ;
+        pc:approvalOfForm pcd:MM-CP-0010 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-1030> a pc:FormApproval ;
+        rdfs:comment "Replaces Ed. 07/2022" ;
+        pc:approvalInState pcd:TX ;
+        pc:approvalOfForm pcd:MM-CP-1030 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E101> a pc:FormApproval ;
+        rdfs:comment "New form" ;
+        pc:approvalInState pcd:TX ;
+        pc:approvalOfForm pcd:MM-CP-E101 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "06/2025" .
+
+    <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E205> a pc:FormApproval ;
+        rdfs:comment "No change" ;
+        pc:approvalInState pcd:TX ;
+        pc:approvalOfForm pcd:MM-CP-E205 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E310> a pc:FormApproval ;
+        rdfs:comment "Mandatory in TX-T01" ;
+        pc:approvalInState pcd:TX ;
+        pc:approvalOfForm pcd:MM-CP-E310 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "03/2025" .
+
+    <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E415> a pc:FormApproval ;
+        rdfs:comment "No change" ;
+        pc:approvalInState pcd:TX ;
+        pc:approvalOfForm pcd:MM-CP-E415 ;
+        pc:approvalStatus pcd:Approved ;
+        pc:editionDate "01/2025" .
+
+    pcd:MM-TX-2025-0098 a pc:StateFiling ;
+        rdfs:label "TX form and rate filing MM-TX-2025-0098" ;
+        pc:appliesInState pcd:TX ;
+        pc:filingNumber "MM-TX-2025-0098" ;
+        pc:hasFormApproval <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-0010>,
+            <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-1030>,
+            <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E101>,
+            <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E205>,
+            <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E310>,
+            <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E415> .
+
+    pcd:SPR-1 a pc:RatingFactor ;
+        rdfs:label "P-1 Automatic Sprinkler System (full)" ;
+        pc:factorCode "SPR-1" ;
+        pc:factorRequiresEndorsement pcd:MM-CP-E415 ;
+        pc:factorValue 0.8 .
+
+    pcd:EXCL-EQ a pc:Exclusion ;
+        rdfs:label "Earth Movement" ;
+        pc:excludesPeril pcd:EarthMovement ;
+        pc:exclusionCode "EXCL-EQ" .
+
+    pcd:EXCL-MOLD a pc:Exclusion ;
+        rdfs:label "Fungus, Wet Rot and Bacteria" ;
+        pc:excludesPeril pcd:Mold ;
+        pc:exclusionCode "EXCL-MOLD" .
+
+    pcd:EXCL-WAR a pc:Exclusion ;
+        rdfs:label "War and Military Action" ;
+        pc:exclusionCode "EXCL-WAR" .
+
+    pcd:EXCL-WEAR a pc:Exclusion ;
+        rdfs:label "Wear and Tear" ;
+        pc:exclusionCode "EXCL-WEAR" .
+
+    pcd:FL-T03 a pc:Territory ;
+        rdfs:label "FL-T03 Tier 1 coastal counties" ;
+        rdfs:comment "MM-CP-E310 mandatory (MM-UW-CP-2025 4.3)" ;
+        pc:factorValue 1.45 ;
+        pc:territoryCode "FL-T03" ;
+        pc:territoryState pcd:FL .
+
+    pcd:MM-CP-E205 a pc:Endorsement ;
+        rdfs:label "Equipment Breakdown Endorsement" ;
+        rdfs:comment "Rating: Per $100 of COV-A + COV-B limit; 0.025" ;
+        pc:appliesInState pcd:FL,
+            pcd:TX ;
+        pc:editionDate "01/2025" ;
+        pc:formNumber "MM-CP-E205" ;
+        pc:modifiesCoverage pcd:COV-A,
+            pcd:COV-B ;
+        pc:modifiesForm pcd:MM-CP-0010,
+            pcd:MM-CP-1030 ;
+        pc:restoresPeril pcd:MechanicalBreakdown ;
+        pc:sublimitAmount 100000.0 .
+
+    pcd:MM-FL-2025-0142 a pc:StateFiling ;
+        rdfs:label "FL form and rate filing MM-FL-2025-0142" ;
+        pc:appliesInState pcd:FL ;
+        pc:filingNumber "MM-FL-2025-0142" ;
+        pc:hasFormApproval <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-0010>,
+            <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-1030>,
+            <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E101>,
+            <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E205>,
+            <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E310>,
+            <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E415>,
+            <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-FL-01> .
+
+    pcd:EXCL-FLD a pc:Exclusion ;
+        rdfs:label "Water (flood, surface water, overflow)" ;
+        pc:excludesPeril pcd:Flood,
+            pcd:Water ;
+        pc:exclusionCode "EXCL-FLD" .
+
+    pcd:TX-T01 a pc:Territory ;
+        rdfs:label "TX-T01 Gulf coast counties" ;
+        rdfs:comment "MM-CP-E310 mandatory" ;
+        pc:factorValue 1.35 ;
+        pc:territoryCode "TX-T01" ;
+        pc:territoryState pcd:TX .
+
+    pcd:MM-CP-FL-01 a pc:StateAmendatoryEndorsement ;
+        rdfs:label "Florida Amendatory Endorsement" ;
+        rdfs:comment "Rating: No charge (mandatory); 1.00" ;
+        pc:appliesInState pcd:FL ;
+        pc:editionDate "07/2025" ;
+        pc:formNumber "MM-CP-FL-01" ;
+        pc:mandatoryIn pcd:FL ;
+        pc:modifiesCoverage pcd:COV-A ;
+        pc:modifiesForm pcd:MM-CP-0010 .
+
+    pcd:MM-CP-E415 a pc:Endorsement ;
+        rdfs:label "Protective Safeguards Endorsement" ;
+        rdfs:comment "Rating: No charge (enables SPR/ALM factors); 1.00" ;
+        pc:appliesInState pcd:FL,
+            pcd:TX ;
+        pc:editionDate "01/2025" ;
+        pc:formNumber "MM-CP-E415" ;
+        pc:modifiesCoverage pcd:COV-A,
+            pcd:COV-B,
+            pcd:COV-C ;
+        pc:modifiesForm pcd:MM-CP-0010 .
+
+    pcd:MM-CP-1030 a pc:PolicyForm ;
+        rdfs:label "Causes of Loss - Special Form" ;
+        pc:editionDate "01/2025" ;
+        pc:formNumber "MM-CP-1030" ;
+        pc:hasExclusion pcd:EXCL-EQ,
+            pcd:EXCL-FLD,
+            pcd:EXCL-MOLD,
+            pcd:EXCL-WAR,
+            pcd:EXCL-WEAR ;
+        pc:supersedes pcd:MM-CP-1030-Ed-07-2022 .
+
+    pcd:MM-CP-E101 a pc:Endorsement ;
+        rdfs:label "Flood Coverage Endorsement - Scheduled Locations" ;
+        rdfs:comment "Rating: Per $100 of Flood Sublimit; 0.350 in zone X; 0.900 in zones A/AE; 1.400 in zones V/VE" ;
+        pc:appliesInState pcd:FL,
+            pcd:TX ;
+        pc:deductibleMinimum 25000.0 ;
+        pc:deductiblePercent 5.0 ;
+        pc:editionDate "06/2025" ;
+        pc:formNumber "MM-CP-E101" ;
+        pc:modifiesCoverage pcd:COV-A,
+            pcd:COV-B ;
+        pc:modifiesForm pcd:MM-CP-0010,
+            pcd:MM-CP-1030 ;
+        pc:removesExclusion pcd:EXCL-FLD ;
+        pc:restoresPeril pcd:Flood ;
+        pc:sublimitAmount 250000.0 .
+
+    pcd:MM-CP-E310 a pc:Endorsement ;
+        rdfs:label "Windstorm or Hail Percentage Deductible" ;
+        rdfs:comment "Rating: Factor on COV-A + COV-B premium; WH-2 0.92 / WH-5 0.85" ;
+        pc:appliesInState pcd:FL,
+            pcd:TX ;
+        pc:editionDate "03/2025" ;
+        pc:formNumber "MM-CP-E310" ;
+        pc:mandatoryIn pcd:FL,
+            pcd:FL-T03,
+            pcd:TX-T01 ;
+        pc:modifiesCoverage pcd:COV-A,
+            pcd:COV-B ;
+        pc:modifiesForm pcd:MM-CP-0010 .
+
+    pcd:MM-FILINGS-CP-2025 a pc:Document ;
+        rdfs:label "State Form and Rate Filing Register" ;
+        pc:documentId "MM-FILINGS-CP-2025" ;
+        pc:references pcd:MM-CP-0010,
+            pcd:MM-CP-E101,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-FL-01,
+            pcd:MM-RM-CP-2025,
+            pcd:MM-UW-CP-2025 .
+
+    pcd:MM-RM-CP-2025 a pc:RateManual ;
+        rdfs:label "Commercial Property Rate Manual" ;
+        pc:documentId "MM-RM-CP-2025" ;
+        pc:editionDate "07/2025" ;
+        pc:effectiveDate "2025-07-01"^^xsd:date ;
+        pc:references pcd:MM-CP-E101,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-E415 .
+
+    pcd:MM-CM-CP-2025 a pc:ClaimsManual ;
+        rdfs:label "Commercial Property Claims Handling Manual" ;
+        pc:appliesInState pcd:FL,
+            pcd:TX ;
+        pc:documentId "MM-CM-CP-2025" ;
+        pc:effectiveDate "2025-05-01"^^xsd:date ;
+        pc:references pcd:MM-CP-0010,
+            pcd:MM-CP-1030,
+            pcd:MM-CP-E101,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-E415,
+            pcd:MM-CP-FL-01,
+            pcd:MM-FL-2025-0142,
+            pcd:MM-TX-2025-0098 ;
+        pc:versionLabel "2.0" .
+
+    pcd:MM-UW-CP-2025 a pc:UnderwritingGuideline ;
+        rdfs:label "Commercial Property Underwriting Guidelines" ;
+        pc:appliesInState pcd:FL,
+            pcd:NY,
+            pcd:TX ;
+        pc:documentId "MM-UW-CP-2025" ;
+        pc:effectiveDate "2025-07-01"^^xsd:date ;
+        pc:references pcd:MM-CP-0010,
+            pcd:MM-CP-1030,
+            pcd:MM-CP-E101,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-E415,
+            pcd:MM-CP-FL-01,
+            pcd:MM-NY-2025-0211,
+            pcd:MM-RM-CP-2025 ;
+        pc:versionLabel "3.2" .
+
+    pcd:MM-CP-E-SERIES a pc:Document ;
+        rdfs:label "Commercial Property Endorsements Package" ;
+        pc:appliesInState pcd:FL,
+            pcd:NY,
+            pcd:TX ;
+        pc:documentId "MM-CP-E-SERIES" ;
+        pc:references pcd:MM-CP-0010,
+            pcd:MM-CP-1030,
+            pcd:MM-CP-E310,
+            pcd:MM-FL-2025-0142,
+            pcd:MM-UW-CP-2025 .
+
+    pcd:MM-CP-0010 a pc:PolicyForm ;
+        rdfs:label "Building and Personal Property Coverage Form" ;
+        pc:appliesInState pcd:FL,
+            pcd:TX ;
+        pc:documentId "MM-CP-0010" ;
+        pc:editionDate "01/2025" ;
+        pc:formNumber "MM-CP-0010" ;
+        pc:hasExclusion pcd:EXCL-EQ,
+            pcd:EXCL-FLD,
+            pcd:EXCL-MOLD,
+            pcd:EXCL-WAR,
+            pcd:EXCL-WEAR ;
+        pc:references pcd:MM-CP-1030,
+            pcd:MM-CP-E101,
+            pcd:MM-CP-E205,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-E415,
+            pcd:MM-CP-FL-01 ;
+        pc:supersedes pcd:MM-CP-0010-Ed-07-2022 .
+}
+
+<https://example.org/pc/graph/rules> {
+    <https://example.org/pc/id/rule/R01> a pc:Rule ;
+        rdfs:label "R01" ;
+        rdfs:comment "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement." ;
+        pc:compiledFrom pcd:MM-CP-0010_SECTION-B_B.1 ;
+        pc:hasShape <https://example.org/pc/shape/R01> ;
+        pc:overriddenBy <https://example.org/pc/id/rule/R02> ;
+        pc:ruleDSL "PROHIBITION Claim pay_for_loss Peril:Flood WHEN Claim.onPolicy.hasForm = MM-CP-0010 SOURCE MM-CP-0010#SECTION-B/B.1 UNLESS Claim.onPolicy.hasEndorsement = MM-CP-E101 AND Claim.atLocation.scheduledUnder = MM-CP-E101 AND Claim.affectsCoverage IN (COV-A, COV-B)" ;
+        pc:ruleStatus "scoped" .
+
+    <https://example.org/pc/id/rule/R03> a pc:Rule ;
+        rdfs:label "R03" ;
+        rdfs:comment "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b))." ;
+        pc:compiledFrom pcd:MM-CP-0010_SECTION-E_E.3 ;
+        pc:hasShape <https://example.org/pc/shape/R03> ;
+        pc:overriddenBy <https://example.org/pc/id/rule/R04> ;
+        pc:ruleDSL "OBLIGATION Claim report_loss NONE WITHIN 72 hours SOURCE MM-CP-0010#SECTION-E/E.3 WHEN Claim.onPolicy.inState != FL" ;
+        pc:ruleStatus "scoped" .
+
+    <https://example.org/pc/id/rule/R05> a pc:Rule ;
+        rdfs:label "R05" ;
+        rdfs:comment "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)." ;
+        pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-2_2.3 ;
+        pc:hasShape <https://example.org/pc/shape/R05> ;
+        pc:ruleDSL "PROHIBITION Policy bind ClassCode:CC-0511 SOURCE MM-UW-CP-2025#SECTION-2/2.3" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R06> a pc:Rule ;
+        rdfs:label "R06" ;
+        rdfs:comment "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)." ;
+        pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.6 ;
+        pc:hasShape <https://example.org/pc/shape/R06> ;
+        pc:ruleDSL "PROHIBITION Policy attach_form Form:ANY SOURCE MM-UW-CP-2025#SECTION-4/4.6" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R07> a pc:Rule ;
+        rdfs:label "R07" ;
+        rdfs:comment "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2)." ;
+        pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.2 ;
+        pc:hasShape <https://example.org/pc/shape/R07> ;
+        pc:ruleDSL "OBLIGATION Policy attach_endorsement Endorsement:MM-CP-FL-01 WHEN Policy.inState = FL SOURCE MM-UW-CP-2025#SECTION-4/4.2" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R08> a pc:Rule ;
+        rdfs:label "R08" ;
+        rdfs:comment "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)." ;
+        pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.3 ;
+        pc:hasShape <https://example.org/pc/shape/R08> ;
+        pc:ruleDSL "OBLIGATION Policy attach_endorsement Endorsement:MM-CP-E310 WHEN Policy.hasLocation.inTerritory IN (FL-T03, TX-T01) SOURCE MM-UW-CP-2025#SECTION-4/4.3" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R09> a pc:Rule ;
+        rdfs:label "R09" ;
+        rdfs:comment "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)." ;
+        pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.4 ;
+        pc:hasShape <https://example.org/pc/shape/R09> ;
+        pc:ruleDSL "OBLIGATION Location schedule_location Endorsement:MM-CP-E101 WHEN Location.inFloodZone IN (A, AE, V, VE) UNLESS Location.^hasLocation.floodAcknowledgmentSigned = true SOURCE MM-UW-CP-2025#SECTION-4/4.4" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R10> a pc:Rule ;
+        rdfs:label "R10" ;
+        rdfs:comment "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)." ;
+        pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-3_3.1 ;
+        pc:hasShape <https://example.org/pc/shape/R10> ;
+        pc:ruleDSL "PROHIBITION Policy bind NONE WHEN Policy.totalInsuredValue > Policy.boundBy.hasAuthorityLevel.authorityMaxTIV SOURCE MM-UW-CP-2025#SECTION-3/3.1" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R11> a pc:Rule ;
+        rdfs:label "R11" ;
+        rdfs:comment "Building vacant more than 60 days: vandalism, sprinkler leakage, water damage and theft are not covered (MM-CP-0010 E.5)." ;
+        pc:compiledFrom pcd:MM-CP-0010_SECTION-E_E.5 ;
+        pc:hasShape <https://example.org/pc/shape/R11> ;
+        pc:ruleDSL "PROHIBITION Claim pay_for_loss Peril:Vandalism,SprinklerLeakage,Theft,Water WHEN Claim.atLocation.vacantDays > 60 SOURCE MM-CP-0010#SECTION-E/E.5" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R12> a pc:Rule ;
+        rdfs:label "R12" ;
+        rdfs:comment "Adjuster must acknowledge a Florida claim in writing within 14 calendar days (MM-CM-CP-2025 1.2)." ;
+        pc:compiledFrom pcd:MM-CM-CP-2025_SECTION-1_1.2 ;
+        pc:hasShape <https://example.org/pc/shape/R12> ;
+        pc:ruleDSL "OBLIGATION Claim acknowledge_claim NONE WHEN Claim.onPolicy.inState = FL WITHIN 14 days SOURCE MM-CM-CP-2025#SECTION-1/1.2" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R02> a pc:Rule ;
+        rdfs:label "R02" ;
+        rdfs:comment "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible)." ;
+        pc:compiledFrom pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.2 ;
+        pc:hasShape <https://example.org/pc/shape/R02> ;
+        pc:ruleDSL "PERMISSION Claim pay_for_loss Peril:Flood WHEN Claim.causeOfLoss = Flood WHEN Claim.onPolicy.hasEndorsement = MM-CP-E101 REQUIRES Claim.atLocation.scheduledUnder = MM-CP-E101 REQUIRES Claim.affectsCoverage IN (COV-A, COV-B) SOURCE MM-CP-E-SERIES#1-MM-CP-E101/1.2" ;
+        pc:ruleStatus "active" .
+
+    <https://example.org/pc/id/rule/R04> a pc:Rule ;
+        rdfs:label "R04" ;
+        rdfs:comment "In Florida the notice period is 14 days (MM-CP-FL-01 Section 5.3 amends E.3(b))." ;
+        pc:compiledFrom pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.3 ;
+        pc:hasShape <https://example.org/pc/shape/R04> ;
+        pc:ruleDSL "OBLIGATION Claim report_loss NONE WHEN Claim.onPolicy.inState = FL WITHIN 14 days SOURCE MM-CP-E-SERIES#5-MM-CP-FL-01/5.3" ;
+        pc:ruleStatus "active" .
+}
+
+<https://example.org/pc/graph/operational> {
+    pcd:A a pc:FloodZone ;
+        rdfs:label "FEMA zone A" .
+
+    pcd:V a pc:FloodZone ;
+        rdfs:label "FEMA zone V" .
+
+    pcd:VE a pc:FloodZone ;
+        rdfs:label "FEMA zone VE" .
+
+    pcd:X a pc:FloodZone ;
+        rdfs:label "FEMA zone X" .
+
+    <https://example.org/pc/id/claim/CLM-0001> a pc:Claim ;
+        pc:acknowledgmentDelayDays 10 ;
+        pc:affectsCoverage pcd:COV-A ;
+        pc:atLocation <https://example.org/pc/id/location/LOC-0001> ;
+        pc:causeOfLoss pcd:Flood ;
+        pc:claimStatus "open" ;
+        pc:lossDate "2025-10-02"^^xsd:date ;
+        pc:noticeDelayHours 100 ;
+        pc:onPolicy <https://example.org/pc/id/policy/POL-FL-0001> .
+
+    pcd:AE a pc:FloodZone ;
+        rdfs:label "FEMA zone AE" .
+
+    <https://example.org/pc/id/policy/POL-FL-0001> a pc:Policy ;
+        pc:boundBy <https://example.org/pc/id/uw/jane-doe> ;
+        pc:effectiveDate "2025-09-01"^^xsd:date ;
+        pc:hasClassCode pcd:CC-0745 ;
+        pc:hasEndorsement pcd:MM-CP-E101,
+            pcd:MM-CP-E310,
+            pcd:MM-CP-FL-01 ;
+        pc:hasForm pcd:MM-CP-0010,
+            pcd:MM-CP-1030 ;
+        pc:hasLocation <https://example.org/pc/id/location/LOC-0001> ;
+        pc:inState pcd:FL ;
+        pc:policyNumber "POL-FL-0001" ;
+        pc:totalInsuredValue 4000000.0 .
+
+    <https://example.org/pc/id/uw/jane-doe> a pc:Underwriter ;
+        rdfs:label "J. Doe (UW Level 1)" ;
+        pc:hasAuthorityLevel <https://example.org/pc/id/authority/UW-Level-1-Associate> .
+
+    <https://example.org/pc/id/location/LOC-0001> a pc:Location ;
+        rdfs:label "100 Bayfront Ave, Tampa FL" ;
+        pc:hasConstructionClass pcd:CC4 ;
+        pc:hasProtectionClass pcd:PC4 ;
+        pc:inFloodZone pcd:AE ;
+        pc:inState pcd:FL ;
+        pc:inTerritory pcd:FL-T03 ;
+        pc:scheduledUnder pcd:MM-CP-E101 ;
+        pc:vacantDays 0 .
+}
+
+<https://example.org/pc/graph/ontology> {
+    <https://example.org/pc/ontology> a owl:Ontology ;
+        rdfs:label "P&C Underwriting and Claims POC Ontology" ;
+        dct:description "Minimal vocabulary for grounding clauses from policy forms, endorsements, UW guidelines, rate manuals, claims manuals and state filings." ;
+        owl:versionInfo "0.3.0" .
+
+    pc:acknowledgmentDelayDays a owl:DatatypeProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range xsd:integer .
+
+    pc:affectsCoverage a owl:ObjectProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range pc:Coverage .
+
+    pc:appliesInState a owl:ObjectProperty ;
+        rdfs:label "applies in state" ;
+        rdfs:domain pc:Document ;
+        rdfs:range pc:State .
+
+    pc:approvalDate a owl:DatatypeProperty ;
+        rdfs:range xsd:date .
+
+    pc:approvalInState a owl:ObjectProperty ;
+        rdfs:domain pc:FormApproval ;
+        rdfs:range pc:State .
+
+    pc:approvalOfForm a owl:ObjectProperty ;
+        rdfs:domain pc:FormApproval ;
+        rdfs:range pc:Form .
+
+    pc:approvalStatus a owl:ObjectProperty ;
+        rdfs:domain pc:FormApproval ;
+        rdfs:range pc:FilingStatus .
+
+    pc:atLocation a owl:ObjectProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range pc:Location .
+
+    pc:authorityMaxTIV a owl:DatatypeProperty ;
+        rdfs:domain pc:AuthorityLevel ;
+        rdfs:range xsd:decimal .
+
+    pc:boundBy a owl:ObjectProperty ;
+        rdfs:domain pc:Policy ;
+        rdfs:range pc:Underwriter .
+
+    pc:causeOfLoss a owl:ObjectProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range pc:Peril .
+
+    pc:chunkText a owl:DatatypeProperty ;
+        rdfs:domain pc:Chunk ;
+        rdfs:range xsd:string .
+
+    pc:claimStatus a owl:DatatypeProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range xsd:string .
+
+    pc:classCode a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:classCodeStatus a owl:ObjectProperty ;
+        rdfs:domain pc:ClassCode ;
+        rdfs:range pc:ClassCodeStatus .
+
+    pc:classifierRoute a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:clauseText a owl:DatatypeProperty ;
+        rdfs:domain pc:Clause ;
+        rdfs:range xsd:string .
+
+    pc:compiledFrom a owl:ObjectProperty ;
+        rdfs:domain pc:Rule ;
+        rdfs:range pc:Clause .
+
+    pc:confidence a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:coverageCode a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:deductibleMinimum a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:deductiblePercent a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:deonticType a owl:ObjectProperty ;
+        rdfs:domain pc:Clause ;
+        rdfs:range pc:DeonticType .
+
+    pc:documentId a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:editionDate a owl:DatatypeProperty ;
+        rdfs:comment "MM/YYYY as printed on the form" ;
+        rdfs:range xsd:string .
+
+    pc:effectiveDate a owl:DatatypeProperty ;
+        rdfs:range xsd:date .
+
+    pc:exceptionTo a owl:ObjectProperty ;
+        rdfs:label "is an exception to" ;
+        rdfs:domain pc:Clause ;
+        rdfs:range pc:Clause .
+
+    pc:excludesPeril a owl:ObjectProperty ;
+        rdfs:label "excludes peril" ;
+        rdfs:domain pc:Exclusion ;
+        rdfs:range pc:Peril .
+
+    pc:exclusionCode a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:factorCode a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:factorRequiresEndorsement a owl:ObjectProperty ;
+        rdfs:domain pc:RatingFactor ;
+        rdfs:range pc:Endorsement .
+
+    pc:factorValue a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:filingNumber a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:floodAcknowledgmentSigned a owl:DatatypeProperty ;
+        rdfs:range xsd:boolean .
+
+    pc:formNumber a owl:DatatypeProperty ;
+        rdfs:domain pc:Form ;
+        rdfs:range xsd:string .
+
+    pc:groundedTerm a owl:ObjectProperty ;
+        rdfs:label "grounded ontology term (top-3 by embedding)" ;
+        rdfs:domain pc:Clause .
+
+    pc:hasAuthorityLevel a owl:ObjectProperty ;
+        rdfs:range pc:AuthorityLevel .
+
+    pc:hasClassCode a owl:ObjectProperty ;
+        rdfs:range pc:ClassCode .
+
+    pc:hasConstructionClass a owl:ObjectProperty ;
+        rdfs:range pc:ConstructionClass .
+
+    pc:hasEndorsement a owl:ObjectProperty ;
+        rdfs:domain pc:Policy ;
+        rdfs:range pc:Endorsement ;
+        rdfs:subPropertyOf pc:hasForm .
+
+    pc:hasExclusion a owl:ObjectProperty ;
+        rdfs:label "has exclusion" ;
+        rdfs:domain pc:Form ;
+        rdfs:range pc:Exclusion .
+
+    pc:hasFormApproval a owl:ObjectProperty ;
+        rdfs:label "has form approval" ;
+        rdfs:domain pc:StateFiling ;
+        rdfs:range pc:FormApproval .
+
+    pc:hasLocation a owl:ObjectProperty ;
+        rdfs:domain pc:Policy ;
+        rdfs:range pc:Location .
+
+    pc:hasProtectionClass a owl:ObjectProperty ;
+        rdfs:range pc:ProtectionClass .
+
+    pc:hasShape a owl:ObjectProperty ;
+        rdfs:label "materialised as SHACL shape" ;
+        rdfs:domain pc:Rule .
+
+    pc:inFloodZone a owl:ObjectProperty ;
+        rdfs:domain pc:Location ;
+        rdfs:range pc:FloodZone .
+
+    pc:inState a owl:ObjectProperty ;
+        rdfs:range pc:State .
+
+    pc:inTerritory a owl:ObjectProperty ;
+        rdfs:range pc:Territory .
+
+    pc:lossDate a owl:DatatypeProperty ;
+        rdfs:range xsd:date .
+
+    pc:mandatoryIn a owl:ObjectProperty ;
+        rdfs:label "mandatory in (state or territory)" ;
+        rdfs:domain pc:Endorsement .
+
+    pc:maxTIV a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:mentions a owl:ObjectProperty ;
+        rdfs:label "mentions (hard-grounded entity)" ;
+        rdfs:domain pc:Clause .
+
+    pc:modifiesCoverage a owl:ObjectProperty ;
+        rdfs:label "modifies coverage" ;
+        rdfs:domain pc:Endorsement ;
+        rdfs:range pc:Coverage .
+
+    pc:modifiesForm a owl:ObjectProperty ;
+        rdfs:label "modifies form" ;
+        rdfs:domain pc:Endorsement ;
+        rdfs:range pc:PolicyForm .
+
+    pc:noticeDeadlineHours a owl:DatatypeProperty ;
+        rdfs:range xsd:integer .
+
+    pc:noticeDelayHours a owl:DatatypeProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range xsd:integer .
+
+    pc:onPolicy a owl:ObjectProperty ;
+        rdfs:domain pc:Claim ;
+        rdfs:range pc:Policy .
+
+    pc:overriddenBy a owl:ObjectProperty ;
+        rdfs:label "overridden by (Layer 5 precedence)" ;
+        rdfs:domain pc:Rule ;
+        rdfs:range pc:Rule .
+
+    pc:pageNumber a owl:DatatypeProperty ;
+        rdfs:range xsd:integer .
+
+    pc:policyNumber a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:references a owl:ObjectProperty ;
+        rdfs:label "references document" ;
+        rdfs:domain pc:Document ;
+        rdfs:range pc:Document .
+
+    pc:removesExclusion a owl:ObjectProperty ;
+        rdfs:label "removes exclusion" ;
+        rdfs:domain pc:Endorsement ;
+        rdfs:range pc:Exclusion .
+
+    pc:requiresEndorsement a owl:ObjectProperty ;
+        rdfs:label "requires endorsement" ;
+        rdfs:range pc:Endorsement .
+
+    pc:restoresPeril a owl:ObjectProperty ;
+        rdfs:label "restores coverage for peril" ;
+        rdfs:domain pc:Endorsement ;
+        rdfs:range pc:Peril .
+
+    pc:ruleDSL a owl:DatatypeProperty ;
+        rdfs:domain pc:Rule ;
+        rdfs:range xsd:string .
+
+    pc:ruleStatus a owl:DatatypeProperty ;
+        rdfs:comment "active | scoped | superseded" ;
+        rdfs:domain pc:Rule ;
+        rdfs:range xsd:string .
+
+    pc:scheduledUnder a owl:ObjectProperty ;
+        rdfs:label "scheduled under endorsement" ;
+        rdfs:domain pc:Location ;
+        rdfs:range pc:Endorsement .
+
+    pc:sectionRef a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:sourceDocument a owl:ObjectProperty ;
+        rdfs:label "source document" ;
+        rdfs:range pc:Document .
+
+    pc:stateCode a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:sublimitAmount a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:supersedes a owl:ObjectProperty ;
+        rdfs:label "supersedes edition" ;
+        rdfs:domain pc:Form ;
+        rdfs:range pc:Form .
+
+    pc:territoryCode a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:territoryState a owl:ObjectProperty ;
+        rdfs:domain pc:Territory ;
+        rdfs:range pc:State .
+
+    pc:totalInsuredValue a owl:DatatypeProperty ;
+        rdfs:range xsd:decimal .
+
+    pc:trackingNumber a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pc:vacantDays a owl:DatatypeProperty ;
+        rdfs:range xsd:integer .
+
+    pc:versionLabel a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+    pcd:Pending a pc:FilingStatus ;
+        rdfs:label "Pending" .
+
+    pc:LineOfBusiness a owl:Class ;
+        rdfs:label "Line of Business" .
+
+    pc:hasForm a owl:ObjectProperty ;
+        rdfs:domain pc:Policy ;
+        rdfs:range pc:Form .
+
+    pcd:EarthMovement a pc:Peril ;
+        rdfs:label "Earth Movement" ;
+        skos:altLabel "earthquake",
+            "landslide",
+            "sinkhole" .
+
+    pcd:Eligible a pc:ClassCodeStatus ;
+        rdfs:label "Eligible" .
+
+    pcd:Mold a pc:Peril ;
+        rdfs:label "Fungus, Wet Rot and Bacteria" ;
+        skos:altLabel "bacteria",
+            "fungus",
+            "mold" .
+
+    pcd:Prohibited a pc:ClassCodeStatus ;
+        rdfs:label "Prohibited" ;
+        skos:altLabel "declined class",
+            "unacceptable" .
+
+    pc:Adjuster a owl:Class ;
+        rdfs:label "Adjuster" .
+
+    pcd:Refer a pc:ClassCodeStatus ;
+        rdfs:label "Refer" ;
+        skos:altLabel "manager approval",
+            "referral" .
+
+    pcd:SprinklerLeakage a pc:Peril ;
+        rdfs:label "Sprinkler Leakage" .
+
+    pcd:Theft a pc:Peril ;
+        rdfs:label "Theft" ;
+        skos:altLabel "attempted theft",
+            "burglary" .
+
+    pcd:Vandalism a pc:Peril ;
+        rdfs:label "Vandalism" .
+
+    pc:Manual a owl:Class ;
+        rdfs:label "Manual" ;
+        rdfs:subClassOf pc:Document .
+
+    pcd:Hail a pc:Peril ;
+        rdfs:label "Hail" .
+
+    pcd:MechanicalBreakdown a pc:Peril ;
+        rdfs:label "Mechanical Breakdown" ;
+        skos:altLabel "boiler explosion",
+            "electrical arcing",
+            "equipment breakdown" .
+
+    pc:ClassCodeStatus a owl:Class ;
+        rdfs:label "Class Code Status" .
+
+    pc:DeonticType a owl:Class ;
+        rdfs:label "Deontic Type" .
+
+    pcd:NY a pc:State ;
+        rdfs:label "New York" ;
+        pc:stateCode "NY" .
+
+    pcd:NotFiled a pc:FilingStatus ;
+        rdfs:label "Not filed" ;
+        skos:altLabel "not approved",
+            "not available" .
+
+    pc:ProtectiveSafeguard a owl:Class ;
+        rdfs:label "Protective Safeguard" ;
+        skos:altLabel "central station alarm",
+            "fire alarm",
+            "sprinkler" .
+
+    pc:RateManual a owl:Class ;
+        rdfs:label "Rate Manual" ;
+        rdfs:subClassOf pc:Manual ;
+        skos:altLabel "rate pages",
+            "rating manual" .
+
+    pcd:Fire a pc:Peril ;
+        rdfs:label "Fire" ;
+        skos:altLabel "fire loss" .
+
+    pc:FilingStatus a owl:Class ;
+        rdfs:label "Filing Status" .
+
+    pc:ClaimsManual a owl:Class ;
+        rdfs:label "Claims Manual" ;
+        rdfs:subClassOf pc:Manual ;
+        skos:altLabel "adjuster procedures",
+            "claims handling manual" .
+
+    pc:ClassCode a owl:Class ;
+        rdfs:label "Class Code" ;
+        skos:altLabel "class of business",
+            "occupancy class" .
+
+    pc:Policy a owl:Class ;
+        rdfs:label "Policy" ;
+        skos:altLabel "bound policy",
+            "policy record",
+            "quote" .
+
+    pc:State a owl:Class ;
+        rdfs:label "State" ;
+        skos:altLabel "jurisdiction" .
+
+    pc:StateFiling a owl:Class ;
+        rdfs:label "State Filing" ;
+        rdfs:subClassOf pc:Document ;
+        skos:altLabel "SERFF filing",
+            "form filing",
+            "rate filing",
+            "regulatory filing" .
+
+    pcd:Water a pc:Peril ;
+        rdfs:label "Water" ;
+        skos:altLabel "surface water",
+            "water damage" .
+
+    pc:ConstructionClass a owl:Class ;
+        rdfs:label "Construction Class" ;
+        skos:altLabel "ISO construction",
+            "fire resistive",
+            "frame",
+            "masonry" .
+
+    pc:Document a owl:Class ;
+        rdfs:label "Document" ;
+        rdfs:comment "Any source document in the POC corpus." .
+
+    pcd:Windstorm a pc:Peril ;
+        rdfs:label "Windstorm" ;
+        skos:altLabel "hurricane",
+            "named storm",
+            "wind" .
+
+    pc:Location a owl:Class ;
+        rdfs:label "Insured Location" ;
+        skos:altLabel "premises",
+            "scheduled location" .
+
+    pc:Territory a owl:Class ;
+        rdfs:label "Rating Territory" ;
+        skos:altLabel "territory code" .
+
+    pc:Underwriter a owl:Class ;
+        rdfs:label "Underwriter" .
+
+    pcd:COV-C a pc:Coverage ;
+        rdfs:label "Coverage C - Personal Property of Others" ;
+        skos:altLabel "care custody or control",
+            "property of others" ;
+        pc:coverageCode "COV-C" .
+
+    pc:AuthorityLevel a owl:Class ;
+        rdfs:label "Authority Level" ;
+        skos:altLabel "payment authority",
+            "reserve authority",
+            "underwriting authority" .
+
+    pc:RatingFactor a owl:Class ;
+        rdfs:label "Rating Factor" ;
+        skos:altLabel "base rate",
+            "credit",
+            "debit",
+            "factor" .
+
+    pcd:Approved a pc:FilingStatus ;
+        rdfs:label "Approved" .
+
+    pc:StateAmendatoryEndorsement a owl:Class ;
+        rdfs:label "State Amendatory Endorsement" ;
+        rdfs:subClassOf pc:Endorsement ;
+        skos:altLabel "state amendatory",
+            "state form" .
+
+    pcd:CommercialProperty a pc:LineOfBusiness ;
+        rdfs:label "Commercial Property" ;
+        skos:altLabel "CP",
+            "property" .
+
+    pc:Exclusion a owl:Class ;
+        rdfs:label "Exclusion" ;
+        skos:altLabel "excluded cause of loss",
+            "we will not pay for" .
+
+    pc:PolicyForm a owl:Class ;
+        rdfs:label "Policy Form" ;
+        rdfs:subClassOf pc:Form ;
+        skos:altLabel "base form",
+            "causes of loss form",
+            "coverage form" .
+
+    pc:FloodZone a owl:Class ;
+        rdfs:label "FEMA Flood Zone" ;
+        skos:altLabel "special flood hazard area",
+            "zone AE",
+            "zone VE" .
+
+    pc:Peril a owl:Class ;
+        rdfs:label "Peril" ;
+        skos:altLabel "cause of loss",
+            "hazard" .
+
+    pc:UnderwritingGuideline a owl:Class ;
+        rdfs:label "Underwriting Guideline" ;
+        rdfs:subClassOf pc:Manual ;
+        skos:altLabel "UW guideline",
+            "eligibility rules",
+            "underwriting manual" .
+
+    pcd:COV-B a pc:Coverage ;
+        rdfs:label "Coverage B - Your Business Personal Property" ;
+        skos:altLabel "BPP",
+            "business personal property",
+            "contents",
+            "stock" ;
+        pc:coverageCode "COV-B" .
+
+    pc:Rule a owl:Class ;
+        rdfs:label "Compiled Rule" ;
+        rdfs:comment "Layer 4 output: a typed rule compiled from a clause, materialised as a SHACL shape." .
+
+    pcd:Prohibition a pc:DeonticType ;
+        rdfs:label "Prohibition" ;
+        skos:altLabel "exclusion",
+            "ineligible",
+            "must not do",
+            "we will not pay" .
+
+    pc:ProtectionClass a owl:Class ;
+        rdfs:label "Public Protection Class" ;
+        skos:altLabel "PPC",
+            "fire protection class" .
+
+    pcd:COV-D a pc:Coverage ;
+        rdfs:label "Coverage D - Business Income and Extra Expense" ;
+        skos:altLabel "BI",
+            "business income",
+            "period of restoration",
+            "time element" ;
+        pc:coverageCode "COV-D" .
+
+    pcd:Flood a pc:Peril ;
+        rdfs:label "Flood" ;
+        skos:altLabel "flooding",
+            "overflow of a body of water",
+            "storm surge",
+            "surface water" ;
+        skos:broader pcd:Water .
+
+    pc:Endorsement a owl:Class ;
+        rdfs:label "Endorsement" ;
+        rdfs:comment "A form that modifies a policy form. Endorsement beats base form (lex specialis)." ;
+        rdfs:subClassOf pc:Form ;
+        skos:altLabel "amendatory endorsement",
+            "endorsement form",
+            "rider" .
+
+    pc:Form a owl:Class ;
+        rdfs:label "Form" ;
+        rdfs:subClassOf pc:Document ;
+        skos:altLabel "insurance form",
+            "policy form number" .
+
+    pcd:TX a pc:State ;
+        rdfs:label "Texas" ;
+        pc:stateCode "TX" .
+
+    pcd:COV-A a pc:Coverage ;
+        rdfs:label "Coverage A - Building" ;
+        skos:altLabel "building",
+            "building coverage",
+            "structure" ;
+        pc:coverageCode "COV-A" .
+
+    pc:FormApproval a owl:Class ;
+        rdfs:label "Form Approval" ;
+        rdfs:comment "n-ary relation: (form, state, status, edition, effective date) stated by a filing." .
+
+    pc:Coverage a owl:Class ;
+        rdfs:label "Coverage" ;
+        skos:altLabel "coverage part",
+            "insuring agreement" .
+
+    pc:Claim a owl:Class ;
+        rdfs:label "Claim" ;
+        skos:altLabel "FNOL",
+            "first notice of loss",
+            "loss" .
+
+    pcd:FL a pc:State ;
+        rdfs:label "Florida" ;
+        pc:stateCode "FL" .
+
+    pcd:Obligation a pc:DeonticType ;
+        rdfs:label "Obligation" ;
+        skos:altLabel "duty",
+            "must do",
+            "required" .
+
+    pcd:Permission a pc:DeonticType ;
+        rdfs:label "Permission" ;
+        skos:altLabel "coverage grant",
+            "may do",
+            "we will pay" .
+
+    pc:Clause a owl:Class ;
+        rdfs:label "Clause" ;
+        rdfs:comment "A rule-bearing unit of text (Layer 1 output). Exceptions are child clauses linked with pc:exceptionTo." .
+
+    pc:Chunk a owl:Class ;
+        rdfs:label "Text Chunk" ;
+        rdfs:comment "Retrieval unit for Graph RAG; carries the verbatim text and its page/section." ;
+        rdfs:subClassOf prov:Entity .
+}
+

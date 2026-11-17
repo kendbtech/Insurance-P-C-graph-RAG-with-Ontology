@@ -1,0 +1,3 @@
+# Same question restricted to asserted triples. FROM onto:explicit is a GraphDB pseudo-graph (not standard SPARQL);
+# the portable check is to compare with a repository whose ruleset is "empty". Expected: 0 rows (no explicit pc:Form typing).
+SELECT ?form FROM onto:explicit WHERE { ?f a pc:Form ; pc:formNumber ?form } ORDER BY ?form

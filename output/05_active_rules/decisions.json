@@ -1,0 +1,122 @@
+{
+  "collisions_detected": [
+    {
+      "type": "grant-vs-exclusion",
+      "rules": [
+        "R01",
+        "R02"
+      ],
+      "overlap": [
+        "Flood",
+        "Flood"
+      ]
+    },
+    {
+      "type": "grant-vs-exclusion",
+      "rules": [
+        "R02",
+        "R11"
+      ],
+      "overlap": [
+        "Flood",
+        "Water"
+      ]
+    },
+    {
+      "type": "deadline-value-conflict",
+      "rules": [
+        "R03",
+        "R04"
+      ],
+      "values": [
+        {
+          "value": 72,
+          "unit": "hours"
+        },
+        {
+          "value": 14,
+          "unit": "days"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "collision": {
+        "type": "grant-vs-exclusion",
+        "rules": [
+          "R01",
+          "R02"
+        ],
+        "overlap": [
+          "Flood",
+          "Flood"
+        ]
+      },
+      "decision": "R01 narrowed: exclusion does not apply where R02 grants coverage",
+      "basis": "lex specialis (more specific source)",
+      "winner": {
+        "rule": "R02",
+        "source": "MM-CP-E-SERIES#1-MM-CP-E101/1.2",
+        "rank": "endorsement",
+        "edition": "2025-06"
+      },
+      "loser": {
+        "rule": "R01",
+        "source": "MM-CP-0010#SECTION-B/B.1",
+        "rank": "base policy form",
+        "edition": "2025-01"
+      }
+    },
+    {
+      "collision": {
+        "type": "grant-vs-exclusion",
+        "rules": [
+          "R02",
+          "R11"
+        ],
+        "overlap": [
+          "Flood",
+          "Water"
+        ]
+      },
+      "decision": "compatible",
+      "basis": "prohibition has its own narrower condition; both rules stay active",
+      "winner": null,
+      "loser": null
+    },
+    {
+      "collision": {
+        "type": "deadline-value-conflict",
+        "rules": [
+          "R03",
+          "R04"
+        ],
+        "values": [
+          {
+            "value": 72,
+            "unit": "hours"
+          },
+          {
+            "value": 14,
+            "unit": "days"
+          }
+        ]
+      },
+      "decision": "R03 scoped to the complement of R04's conditions",
+      "basis": "lex specialis (more specific source)",
+      "winner": {
+        "rule": "R04",
+        "source": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.3",
+        "rank": "state amendatory endorsement",
+        "edition": "2025-07"
+      },
+      "loser": {
+        "rule": "R03",
+        "source": "MM-CP-0010#SECTION-E/E.3",
+        "rank": "base policy form",
+        "edition": "2025-01"
+      }
+    }
+  ]
+}

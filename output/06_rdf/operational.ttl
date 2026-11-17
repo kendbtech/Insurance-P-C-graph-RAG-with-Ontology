@@ -1,0 +1,58 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pcd:A a pc:FloodZone ;
+    rdfs:label "FEMA zone A" .
+
+pcd:V a pc:FloodZone ;
+    rdfs:label "FEMA zone V" .
+
+pcd:VE a pc:FloodZone ;
+    rdfs:label "FEMA zone VE" .
+
+pcd:X a pc:FloodZone ;
+    rdfs:label "FEMA zone X" .
+
+<https://example.org/pc/id/claim/CLM-0001> a pc:Claim ;
+    pc:acknowledgmentDelayDays 10 ;
+    pc:affectsCoverage pcd:COV-A ;
+    pc:atLocation <https://example.org/pc/id/location/LOC-0001> ;
+    pc:causeOfLoss pcd:Flood ;
+    pc:claimStatus "open" ;
+    pc:lossDate "2025-10-02"^^xsd:date ;
+    pc:noticeDelayHours 100 ;
+    pc:onPolicy <https://example.org/pc/id/policy/POL-FL-0001> .
+
+pcd:AE a pc:FloodZone ;
+    rdfs:label "FEMA zone AE" .
+
+<https://example.org/pc/id/policy/POL-FL-0001> a pc:Policy ;
+    pc:boundBy <https://example.org/pc/id/uw/jane-doe> ;
+    pc:effectiveDate "2025-09-01"^^xsd:date ;
+    pc:hasClassCode pcd:CC-0745 ;
+    pc:hasEndorsement pcd:MM-CP-E101,
+        pcd:MM-CP-E310,
+        pcd:MM-CP-FL-01 ;
+    pc:hasForm pcd:MM-CP-0010,
+        pcd:MM-CP-1030 ;
+    pc:hasLocation <https://example.org/pc/id/location/LOC-0001> ;
+    pc:inState pcd:FL ;
+    pc:policyNumber "POL-FL-0001" ;
+    pc:totalInsuredValue 4000000.0 .
+
+<https://example.org/pc/id/uw/jane-doe> a pc:Underwriter ;
+    rdfs:label "J. Doe (UW Level 1)" ;
+    pc:hasAuthorityLevel <https://example.org/pc/id/authority/UW-Level-1-Associate> .
+
+<https://example.org/pc/id/location/LOC-0001> a pc:Location ;
+    rdfs:label "100 Bayfront Ave, Tampa FL" ;
+    pc:hasConstructionClass pcd:CC4 ;
+    pc:hasProtectionClass pcd:PC4 ;
+    pc:inFloodZone pcd:AE ;
+    pc:inState pcd:FL ;
+    pc:inTerritory pcd:FL-T03 ;
+    pc:scheduledUnder pcd:MM-CP-E101 ;
+    pc:vacantDays 0 .
+

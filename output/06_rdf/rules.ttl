@@ -1,0 +1,103 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+<https://example.org/pc/id/rule/R01> a pc:Rule ;
+    rdfs:label "R01" ;
+    rdfs:comment "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement." ;
+    pc:compiledFrom pcd:MM-CP-0010_SECTION-B_B.1 ;
+    pc:hasShape shape:R01 ;
+    pc:overriddenBy <https://example.org/pc/id/rule/R02> ;
+    pc:ruleDSL "PROHIBITION Claim pay_for_loss Peril:Flood WHEN Claim.onPolicy.hasForm = MM-CP-0010 SOURCE MM-CP-0010#SECTION-B/B.1 UNLESS Claim.onPolicy.hasEndorsement = MM-CP-E101 AND Claim.atLocation.scheduledUnder = MM-CP-E101 AND Claim.affectsCoverage IN (COV-A, COV-B)" ;
+    pc:ruleStatus "scoped" .
+
+<https://example.org/pc/id/rule/R03> a pc:Rule ;
+    rdfs:label "R03" ;
+    rdfs:comment "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b))." ;
+    pc:compiledFrom pcd:MM-CP-0010_SECTION-E_E.3 ;
+    pc:hasShape shape:R03 ;
+    pc:overriddenBy <https://example.org/pc/id/rule/R04> ;
+    pc:ruleDSL "OBLIGATION Claim report_loss NONE WITHIN 72 hours SOURCE MM-CP-0010#SECTION-E/E.3 WHEN Claim.onPolicy.inState != FL" ;
+    pc:ruleStatus "scoped" .
+
+<https://example.org/pc/id/rule/R05> a pc:Rule ;
+    rdfs:label "R05" ;
+    rdfs:comment "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)." ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-2_2.3 ;
+    pc:hasShape shape:R05 ;
+    pc:ruleDSL "PROHIBITION Policy bind ClassCode:CC-0511 SOURCE MM-UW-CP-2025#SECTION-2/2.3" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R06> a pc:Rule ;
+    rdfs:label "R06" ;
+    rdfs:comment "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)." ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.6 ;
+    pc:hasShape shape:R06 ;
+    pc:ruleDSL "PROHIBITION Policy attach_form Form:ANY SOURCE MM-UW-CP-2025#SECTION-4/4.6" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R07> a pc:Rule ;
+    rdfs:label "R07" ;
+    rdfs:comment "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2)." ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.2 ;
+    pc:hasShape shape:R07 ;
+    pc:ruleDSL "OBLIGATION Policy attach_endorsement Endorsement:MM-CP-FL-01 WHEN Policy.inState = FL SOURCE MM-UW-CP-2025#SECTION-4/4.2" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R08> a pc:Rule ;
+    rdfs:label "R08" ;
+    rdfs:comment "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)." ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.3 ;
+    pc:hasShape shape:R08 ;
+    pc:ruleDSL "OBLIGATION Policy attach_endorsement Endorsement:MM-CP-E310 WHEN Policy.hasLocation.inTerritory IN (FL-T03, TX-T01) SOURCE MM-UW-CP-2025#SECTION-4/4.3" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R09> a pc:Rule ;
+    rdfs:label "R09" ;
+    rdfs:comment "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)." ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.4 ;
+    pc:hasShape shape:R09 ;
+    pc:ruleDSL "OBLIGATION Location schedule_location Endorsement:MM-CP-E101 WHEN Location.inFloodZone IN (A, AE, V, VE) UNLESS Location.^hasLocation.floodAcknowledgmentSigned = true SOURCE MM-UW-CP-2025#SECTION-4/4.4" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R10> a pc:Rule ;
+    rdfs:label "R10" ;
+    rdfs:comment "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)." ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-3_3.1 ;
+    pc:hasShape shape:R10 ;
+    pc:ruleDSL "PROHIBITION Policy bind NONE WHEN Policy.totalInsuredValue > Policy.boundBy.hasAuthorityLevel.authorityMaxTIV SOURCE MM-UW-CP-2025#SECTION-3/3.1" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R11> a pc:Rule ;
+    rdfs:label "R11" ;
+    rdfs:comment "Building vacant more than 60 days: vandalism, sprinkler leakage, water damage and theft are not covered (MM-CP-0010 E.5)." ;
+    pc:compiledFrom pcd:MM-CP-0010_SECTION-E_E.5 ;
+    pc:hasShape shape:R11 ;
+    pc:ruleDSL "PROHIBITION Claim pay_for_loss Peril:Vandalism,SprinklerLeakage,Theft,Water WHEN Claim.atLocation.vacantDays > 60 SOURCE MM-CP-0010#SECTION-E/E.5" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R12> a pc:Rule ;
+    rdfs:label "R12" ;
+    rdfs:comment "Adjuster must acknowledge a Florida claim in writing within 14 calendar days (MM-CM-CP-2025 1.2)." ;
+    pc:compiledFrom pcd:MM-CM-CP-2025_SECTION-1_1.2 ;
+    pc:hasShape shape:R12 ;
+    pc:ruleDSL "OBLIGATION Claim acknowledge_claim NONE WHEN Claim.onPolicy.inState = FL WITHIN 14 days SOURCE MM-CM-CP-2025#SECTION-1/1.2" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R02> a pc:Rule ;
+    rdfs:label "R02" ;
+    rdfs:comment "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible)." ;
+    pc:compiledFrom pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.2 ;
+    pc:hasShape shape:R02 ;
+    pc:ruleDSL "PERMISSION Claim pay_for_loss Peril:Flood WHEN Claim.causeOfLoss = Flood WHEN Claim.onPolicy.hasEndorsement = MM-CP-E101 REQUIRES Claim.atLocation.scheduledUnder = MM-CP-E101 REQUIRES Claim.affectsCoverage IN (COV-A, COV-B) SOURCE MM-CP-E-SERIES#1-MM-CP-E101/1.2" ;
+    pc:ruleStatus "active" .
+
+<https://example.org/pc/id/rule/R04> a pc:Rule ;
+    rdfs:label "R04" ;
+    rdfs:comment "In Florida the notice period is 14 days (MM-CP-FL-01 Section 5.3 amends E.3(b))." ;
+    pc:compiledFrom pcd:MM-CP-E-SERIES_5-MM-CP-FL-01_5.3 ;
+    pc:hasShape shape:R04 ;
+    pc:ruleDSL "OBLIGATION Claim report_loss NONE WHEN Claim.onPolicy.inState = FL WITHIN 14 days SOURCE MM-CP-E-SERIES#5-MM-CP-FL-01/5.3" ;
+    pc:ruleStatus "active" .
+

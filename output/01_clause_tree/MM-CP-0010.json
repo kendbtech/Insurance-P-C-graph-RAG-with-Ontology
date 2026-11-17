@@ -1,0 +1,428 @@
+{
+  "doc_id": "MM-CP-0010",
+  "file": "01_policy_form_MM-CP-0010.pdf",
+  "doc_type": "PolicyForm",
+  "title": "Building and Personal Property Coverage Form",
+  "metadata": {
+    "Form Number": "MM-CP-0010",
+    "Edition Date": "01/2025",
+    "Line of Business": "Commercial Property (CP)",
+    "Companion Form": "MM-CP-1030 Causes of Loss - Special Form (Ed. 01/2025)",
+    "Approved States": "FL (Filing MM-FL-2025-0142), TX (Filing MM-TX-2025-0098)"
+  },
+  "sections": [
+    {
+      "id": "FRONT",
+      "title": "Front matter",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Field",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Form Number",
+              "MM-CP-0010"
+            ],
+            [
+              "Edition Date",
+              "01/2025"
+            ],
+            [
+              "Line of Business",
+              "Commercial Property (CP)"
+            ],
+            [
+              "Companion Form",
+              "MM-CP-1030 Causes of Loss - Special Form (Ed. 01/2025)"
+            ],
+            [
+              "Approved States",
+              "FL (Filing MM-FL-2025-0142), TX (Filing MM-TX-2025-0098)"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-CP-0010#FRONT/T1"
+        }
+      ]
+    },
+    {
+      "id": "SECTION-A",
+      "title": "SECTION A - COVERAGE",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-A/A.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-A",
+          "section_title": "SECTION A - COVERAGE",
+          "ref": "A.1",
+          "page": 1,
+          "text": "A.1 Insuring Agreement. We will pay for direct physical loss of or damage to Covered Property at the premises described in the Declarations caused by or resulting from any Covered Cause of Loss. Covered Causes of Loss are defined in the Causes of Loss form MM-CP-1030 attached to this policy.",
+          "full_text": "A.1 Insuring Agreement. We will pay for direct physical loss of or damage to Covered Property at the premises described in the Declarations caused by or resulting from any Covered Cause of Loss. Covered Causes of Loss are defined in the Causes of Loss form MM-CP-1030 attached to this policy.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-1030"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-A/A.2",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-A",
+          "section_title": "SECTION A - COVERAGE",
+          "ref": "A.2",
+          "page": 1,
+          "text": "A.2 Covered Property. Covered Property, as used in this Coverage Part, means the type of property described in this section and limited in A.3 Property Not Covered, if a Limit of Insurance is shown in the Declarations for that type of property.",
+          "full_text": "A.2 Covered Property. Covered Property, as used in this Coverage Part, means the type of property described in this section and limited in A.3 Property Not Covered, if a Limit of Insurance is shown in the Declarations for that type of property.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-A/A.3",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-A",
+          "section_title": "SECTION A - COVERAGE",
+          "ref": "A.3",
+          "page": 1,
+          "text": "A.3 Property Not Covered. Covered Property does not include: (a) accounts, bills, currency, deeds, money or securities; (b) land, water, growing crops or lawns; (c) vehicles or self-propelled machines that are licensed for use on public roads, except vehicles you manufacture, process or warehouse; (d) the cost to research, replace or restore the information on valuable papers and records, except as provided in the Coverage Extensions.",
+          "full_text": "A.3 Property Not Covered. Covered Property does not include: (a) accounts, bills, currency, deeds, money or securities; (b) land, water, growing crops or lawns; (c) vehicles or self-propelled machines that are licensed for use on public roads, except vehicles you manufacture, process or warehouse; (d) the cost to research, replace or restore the information on valuable papers and records, except as provided in the Coverage Extensions.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-0010#SECTION-A/A.3/x1",
+              "text": "except vehicles you manufacture, process or warehouse;",
+              "exception_to": "MM-CP-0010#SECTION-A/A.3"
+            },
+            {
+              "clause_id": "MM-CP-0010#SECTION-A/A.3/x2",
+              "text": "except as provided in the Coverage Extensions.",
+              "exception_to": "MM-CP-0010#SECTION-A/A.3"
+            }
+          ],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-A/A.4",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-A",
+          "section_title": "SECTION A - COVERAGE",
+          "ref": "A.4",
+          "page": 1,
+          "text": "A.4 Additional Coverages. Debris Removal: We will pay your expense to remove debris of Covered Property caused by a Covered Cause of Loss, subject to a limit of 25% of the amount we pay for the direct physical loss plus the deductible. Preservation of Property: If it is necessary to move Covered Property to preserve it from loss, we will pay for any direct physical loss while it is being moved or stored at another location for up to 30 days.",
+          "full_text": "A.4 Additional Coverages. Debris Removal: We will pay your expense to remove debris of Covered Property caused by a Covered Cause of Loss, subject to a limit of 25% of the amount we pay for the direct physical loss plus the deductible. Preservation of Property: If it is necessary to move Covered Property to preserve it from loss, we will pay for any direct physical loss while it is being moved or stored at another location for up to 30 days.",
+          "exceptions": [],
+          "ids": {}
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Coverage Code",
+            "Coverage Name",
+            "Description",
+            "Default Deductible"
+          ],
+          "rows": [
+            [
+              "COV-A",
+              "Building",
+              "The building or structure described in the Declarations, including completed additions, fixtures, permanently installed machinery and equipment.",
+              "$2,500"
+            ],
+            [
+              "COV-B",
+              "Your Business Personal Property",
+              "Furniture, fixtures, machinery, stock and all other personal property owned by you and used in your business, located in or within 100 feet of the described premises.",
+              "$2,500"
+            ],
+            [
+              "COV-C",
+              "Personal Property of Others",
+              "Personal property of others that is in your care, custody or control and located in or within 100 feet of the described premises.",
+              "$2,500"
+            ],
+            [
+              "COV-D",
+              "Business Income and Extra Expense",
+              "Actual loss of Business Income you sustain due to the necessary suspension of operations during the period of restoration.",
+              "72-hour waiting period"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-CP-0010#SECTION-A/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "SECTION-B",
+      "title": "SECTION B - EXCLUSIONS AND LIMITATIONS",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-B/B.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-B",
+          "section_title": "SECTION B - EXCLUSIONS AND LIMITATIONS",
+          "ref": "B.1",
+          "page": 2,
+          "text": "B.1 See the applicable Causes of Loss form MM-CP-1030 for exclusions and limitations. The exclusions EXCL-FLD (Water), EXCL-EQ (Earth Movement), EXCL-WAR (War and Military Action), EXCL-MOLD (Fungus, Wet Rot and Bacteria) and EXCL-WEAR (Wear and Tear) apply to Coverages COV-A, COV-B, COV-C and COV-D unless an endorsement attached to this policy states otherwise.",
+          "full_text": "B.1 See the applicable Causes of Loss form MM-CP-1030 for exclusions and limitations. The exclusions EXCL-FLD (Water), EXCL-EQ (Earth Movement), EXCL-WAR (War and Military Action), EXCL-MOLD (Fungus, Wet Rot and Bacteria) and EXCL-WEAR (Wear and Tear) apply to Coverages COV-A, COV-B, COV-C and COV-D unless an endorsement attached to this policy states otherwise.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-0010#SECTION-B/B.1/x1",
+              "text": "unless an endorsement attached to this policy states otherwise.",
+              "exception_to": "MM-CP-0010#SECTION-B/B.1"
+            }
+          ],
+          "ids": {
+            "form": [
+              "MM-CP-1030"
+            ],
+            "coverage": [
+              "COV-A",
+              "COV-B",
+              "COV-C",
+              "COV-D"
+            ],
+            "exclusion": [
+              "EXCL-EQ",
+              "EXCL-FLD",
+              "EXCL-MOLD",
+              "EXCL-WAR",
+              "EXCL-WEAR"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 1
+    },
+    {
+      "id": "SECTION-C",
+      "title": "SECTION C - LIMITS OF INSURANCE",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-C/C.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-C",
+          "section_title": "SECTION C - LIMITS OF INSURANCE",
+          "ref": "C.1",
+          "page": 2,
+          "text": "C.1 The most we will pay for loss or damage in any one occurrence is the applicable Limit of Insurance shown in the Declarations.",
+          "full_text": "C.1 The most we will pay for loss or damage in any one occurrence is the applicable Limit of Insurance shown in the Declarations.",
+          "exceptions": [],
+          "ids": {}
+        }
+      ],
+      "tables": [],
+      "page": 2
+    },
+    {
+      "id": "SECTION-D",
+      "title": "SECTION D - DEDUCTIBLE",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-D/D.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-D",
+          "section_title": "SECTION D - DEDUCTIBLE",
+          "ref": "D.1",
+          "page": 2,
+          "text": "D.1 We will not pay for loss or damage in any one occurrence until the amount of loss or damage exceeds the Deductible shown in the Declarations. We will then pay the amount of loss or damage in excess of the Deductible, up to the applicable Limit of Insurance.",
+          "full_text": "D.1 We will not pay for loss or damage in any one occurrence until the amount of loss or damage exceeds the Deductible shown in the Declarations. We will then pay the amount of loss or damage in excess of the Deductible, up to the applicable Limit of Insurance.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-D/D.2",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-D",
+          "section_title": "SECTION D - DEDUCTIBLE",
+          "ref": "D.2",
+          "page": 2,
+          "text": "D.2 Where a percentage deductible endorsement such as MM-CP-E310 is attached, the percentage deductible replaces the flat deductible for the peril named in that endorsement.",
+          "full_text": "D.2 Where a percentage deductible endorsement such as MM-CP-E310 is attached, the percentage deductible replaces the flat deductible for the peril named in that endorsement.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E310"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 2
+    },
+    {
+      "id": "SECTION-E",
+      "title": "SECTION E - LOSS CONDITIONS",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-E/E.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-E",
+          "section_title": "SECTION E - LOSS CONDITIONS",
+          "ref": "E.1",
+          "page": 3,
+          "text": "E.1 Abandonment. There can be no abandonment of any property to us.",
+          "full_text": "E.1 Abandonment. There can be no abandonment of any property to us.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-E/E.2",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-E",
+          "section_title": "SECTION E - LOSS CONDITIONS",
+          "ref": "E.2",
+          "page": 3,
+          "text": "E.2 Appraisal. If we and you disagree on the value of the property or the amount of loss, either may make written demand for an appraisal of the loss. Each party will select a competent and impartial appraiser within 20 days of the demand.",
+          "full_text": "E.2 Appraisal. If we and you disagree on the value of the property or the amount of loss, either may make written demand for an appraisal of the loss. Each party will select a competent and impartial appraiser within 20 days of the demand.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-E/E.3",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-E",
+          "section_title": "SECTION E - LOSS CONDITIONS",
+          "ref": "E.3",
+          "page": 3,
+          "text": "E.3 Duties In The Event Of Loss Or Damage. You must see that the following are done in the event of loss or damage to Covered Property: (a) Notify the police if a law may have been broken. (b) Give us prompt notice of the loss or damage, and in no event later than 72 hours after you become aware of it, including a description of the property involved. (c) Take all reasonable steps to protect the Covered Property from further damage. (d) Send us a signed, sworn proof of loss containing the information we request within 60 days after our request. (e) Cooperate with us in the investigation or settlement of the claim, and permit us to inspect the property and examine your books and records.",
+          "full_text": "E.3 Duties In The Event Of Loss Or Damage. You must see that the following are done in the event of loss or damage to Covered Property: (a) Notify the police if a law may have been broken. (b) Give us prompt notice of the loss or damage, and in no event later than 72 hours after you become aware of it, including a description of the property involved. (c) Take all reasonable steps to protect the Covered Property from further damage. (d) Send us a signed, sworn proof of loss containing the information we request within 60 days after our request. (e) Cooperate with us in the investigation or settlement of the claim, and permit us to inspect the property and examine your books and records.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-E/E.4",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-E",
+          "section_title": "SECTION E - LOSS CONDITIONS",
+          "ref": "E.4",
+          "page": 3,
+          "text": "E.4 Loss Payment. We will give notice of our intentions within 30 days after we receive the sworn proof of loss. We will pay for covered loss or damage within 30 days after we receive the sworn proof of loss, if you have complied with all of the terms of this Coverage Part and we have reached agreement with you on the amount of loss, or an appraisal award has been made.",
+          "full_text": "E.4 Loss Payment. We will give notice of our intentions within 30 days after we receive the sworn proof of loss. We will pay for covered loss or damage within 30 days after we receive the sworn proof of loss, if you have complied with all of the terms of this Coverage Part and we have reached agreement with you on the amount of loss, or an appraisal award has been made.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-E/E.5",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-E",
+          "section_title": "SECTION E - LOSS CONDITIONS",
+          "ref": "E.5",
+          "page": 3,
+          "text": "E.5 Vacancy. If the building where loss or damage occurs has been vacant for more than 60 consecutive days before that loss or damage occurs, we will not pay for any loss or damage caused by vandalism, sprinkler leakage, building glass breakage, water damage, theft or attempted theft.",
+          "full_text": "E.5 Vacancy. If the building where loss or damage occurs has been vacant for more than 60 consecutive days before that loss or damage occurs, we will not pay for any loss or damage caused by vandalism, sprinkler leakage, building glass breakage, water damage, theft or attempted theft. With respect to Covered Causes of Loss other than those listed, we will reduce the amount we would otherwise pay by 15%.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-0010#SECTION-E/E.5/x1",
+              "text": "With respect to Covered Causes of Loss other than those listed, we will reduce the amount we would otherwise pay by 15%.",
+              "exception_to": "MM-CP-0010#SECTION-E/E.5"
+            }
+          ],
+          "ids": {}
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "SECTION-F",
+      "title": "SECTION F - ADDITIONAL CONDITIONS",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-F/F.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-F",
+          "section_title": "SECTION F - ADDITIONAL CONDITIONS",
+          "ref": "F.1",
+          "page": 3,
+          "text": "F.1 Coinsurance. If a Coinsurance percentage is shown in the Declarations and the value of Covered Property at the time of loss times the Coinsurance percentage is greater than the Limit of Insurance, we will pay only the proportion of the loss that the Limit of Insurance bears to the required amount.",
+          "full_text": "F.1 Coinsurance. If a Coinsurance percentage is shown in the Declarations and the value of Covered Property at the time of loss times the Coinsurance percentage is greater than the Limit of Insurance, we will pay only the proportion of the loss that the Limit of Insurance bears to the required amount.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-0010#SECTION-F/F.2",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-F",
+          "section_title": "SECTION F - ADDITIONAL CONDITIONS",
+          "ref": "F.2",
+          "page": 3,
+          "text": "F.2 Mortgageholders. We will pay for covered loss of or damage to buildings to each mortgageholder shown in the Declarations in their order of precedence.",
+          "full_text": "F.2 Mortgageholders. We will pay for covered loss of or damage to buildings to each mortgageholder shown in the Declarations in their order of precedence.",
+          "exceptions": [],
+          "ids": {}
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "SECTION-G",
+      "title": "SECTION G - OPTIONAL COVERAGES AND ENDORSEMENTS",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-0010#SECTION-G/G.1",
+          "doc_id": "MM-CP-0010",
+          "section": "SECTION-G",
+          "section_title": "SECTION G - OPTIONAL COVERAGES AND ENDORSEMENTS",
+          "ref": "G.1",
+          "page": 3,
+          "text": "G.1 The following endorsements may be attached to this form when shown in the Declarations: MM-CP-E101 Flood Coverage Endorsement - Scheduled Locations; MM-CP-E205 Equipment Breakdown Endorsement; MM-CP-E310 Windstorm or Hail Percentage Deductible; MM-CP-E415 Protective Safeguards Endorsement. State amendatory endorsements such as MM-CP-FL-01 (Florida) are attached automatically where required by the state filing.",
+          "full_text": "G.1 The following endorsements may be attached to this form when shown in the Declarations: MM-CP-E101 Flood Coverage Endorsement - Scheduled Locations; MM-CP-E205 Equipment Breakdown Endorsement; MM-CP-E310 Windstorm or Hail Percentage Deductible; MM-CP-E415 Protective Safeguards Endorsement. State amendatory endorsements such as MM-CP-FL-01 (Florida) are attached automatically where required by the state filing.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E101",
+              "MM-CP-E205",
+              "MM-CP-E310",
+              "MM-CP-E415",
+              "MM-CP-FL-01"
+            ],
+            "state": [
+              "FL"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    }
+  ],
+  "dropped_by_gatekeeper": [
+    {
+      "clause_id": "MM-CP-0010#FRONT/p1",
+      "reason": "front-matter",
+      "text": "Building and Personal Property Coverage Form Meridian Mutual Insurance Company (fictional). Commercial Property Line of "
+    },
+    {
+      "clause_id": "MM-CP-0010#FRONT/p1",
+      "reason": "front-matter",
+      "text": "SYNTHETIC DOCUMENT FOR TRAINING AND TESTING. Not a real insurance form. Carrier, forms, codes and figures are fictional."
+    },
+    {
+      "clause_id": "MM-CP-0010#SECTION-C/C.2",
+      "reason": "no-rule-signal",
+      "text": "C.2 The limits applicable to the Coverage Extensions and the Additional Coverages are in addition to the Limits of Insur"
+    },
+    {
+      "clause_id": "MM-CP-0010#SECTION-H/H.1",
+      "reason": "no-rule-signal",
+      "text": "H.1 'Occurrence' means an accident, including continuous or repeated exposure to substantially the same general harmful "
+    },
+    {
+      "clause_id": "MM-CP-0010#SECTION-H/H.2",
+      "reason": "no-rule-signal",
+      "text": "H.2 'Period of restoration' means the period that begins 72 hours after the time of direct physical loss and ends on the"
+    },
+    {
+      "clause_id": "MM-CP-0010#SECTION-H/H.3",
+      "reason": "no-rule-signal",
+      "text": "H.3 'Scheduled location' means a premises listed by address in the Declarations or in a schedule attached to an endorsem"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "doc_id": "MM-RM-CP-2025",
+  "file": "04_rate_manual_MM-RM-CP-2025.pdf",
+  "doc_type": "RateManual",
+  "title": "Commercial Property Rate Manual",
+  "metadata": {
+    "Document ID": "MM-RM-CP-2025",
+    "Edition": "07/2025",
+    "Effective Date": "07/01/2025 (new and renewal)",
+    "Rate Filings": "FL: MM-FL-2025-0142 (approved); TX: MM-TX-2025-0098 (approved, +4.8% overall); NY: MM-NY-2025-0211 (pending)",
+    "Companion Documents": "MM-UW-CP-2025 Underwriting Guidelines; MM-CP-0010 Coverage Form"
+  },
+  "sections": [
+    {
+      "id": "FRONT",
+      "title": "Front matter",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Field",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Document ID",
+              "MM-RM-CP-2025"
+            ],
+            [
+              "Edition",
+              "07/2025"
+            ],
+            [
+              "Effective Date",
+              "07/01/2025 (new and renewal)"
+            ],
+            [
+              "Rate Filings",
+              "FL: MM-FL-2025-0142 (approved); TX: MM-TX-2025-0098 (approved, +4.8% overall); NY: MM-NY-2025-0211 (pending)"
+            ],
+            [
+              "Companion Documents",
+              "MM-UW-CP-2025 Underwriting Guidelines; MM-CP-0010 Coverage Form"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-RM-CP-2025#FRONT/T1"
+        }
+      ]
+    },
+    {
+      "id": "RULE-1",
+      "title": "RULE 1 - RATING PROCEDURE",
+      "clauses": [
+        {
+          "clause_id": "MM-RM-CP-2025#RULE-1/1.1",
+          "doc_id": "MM-RM-CP-2025",
+          "section": "RULE-1",
+          "section_title": "RULE 1 - RATING PROCEDURE",
+          "ref": "1.1",
+          "page": 1,
+          "text": "1.1 Premium for Coverage COV-A and COV-B is computed as: Limit of Insurance / 100 x Base Rate x Territory Factor x Protection Class Factor x Deductible Factor x Safeguard Factors, plus endorsement premiums.",
+          "full_text": "1.1 Premium for Coverage COV-A and COV-B is computed as: Limit of Insurance / 100 x Base Rate x Territory Factor x Protection Class Factor x Deductible Factor x Safeguard Factors, plus endorsement premiums.",
+          "exceptions": [],
+          "ids": {
+            "coverage": [
+              "COV-A",
+              "COV-B"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-RM-CP-2025#RULE-1/1.2",
+          "doc_id": "MM-RM-CP-2025",
+          "section": "RULE-1",
+          "section_title": "RULE 1 - RATING PROCEDURE",
+          "ref": "1.2",
+          "page": 1,
+          "text": "1.2 COV-D (Business Income) is rated at 80% of the COV-A rate applied to the COV-D limit.",
+          "full_text": "1.2 COV-D (Business Income) is rated at 80% of the COV-A rate applied to the COV-D limit.",
+          "exceptions": [],
+          "ids": {
+            "coverage": [
+              "COV-A",
+              "COV-D"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-RM-CP-2025#RULE-1/1.4",
+          "doc_id": "MM-RM-CP-2025",
+          "section": "RULE-1",
+          "section_title": "RULE 1 - RATING PROCEDURE",
+          "ref": "1.4",
+          "page": 1,
+          "text": "1.4 Rates in this manual apply only to forms in the editions listed in the applicable State Filing.",
+          "full_text": "1.4 Rates in this manual apply only to forms in the editions listed in the applicable State Filing.",
+          "exceptions": [],
+          "ids": {}
+        }
+      ],
+      "tables": [],
+      "page": 1
+    },
+    {
+      "id": "RULE-2",
+      "title": "RULE 2 - BASE RATES PER $100 OF INSURANCE (COV-A BUILDING)",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Construction Class",
+            "Description",
+            "Base Rate COV-A",
+            "Base Rate COV-B"
+          ],
+          "rows": [
+            [
+              "CC1",
+              "Frame",
+              "0.420",
+              "0.510"
+            ],
+            [
+              "CC2",
+              "Joisted Masonry",
+              "0.350",
+              "0.430"
+            ],
+            [
+              "CC3",
+              "Non-Combustible",
+              "0.290",
+              "0.360"
+            ],
+            [
+              "CC4",
+              "Masonry Non-Combustible",
+              "0.240",
+              "0.300"
+            ],
+            [
+              "CC5",
+              "Modified Fire Resistive",
+              "0.190",
+              "0.240"
+            ],
+            [
+              "CC6",
+              "Fire Resistive",
+              "0.150",
+              "0.200"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-RM-CP-2025#RULE-2/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "RULE-3",
+      "title": "RULE 3 - TERRITORY FACTORS",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Territory Code",
+            "State",
+            "Description",
+            "Factor",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "FL-T01",
+              "FL",
+              "Inland counties",
+              "1.10",
+              ""
+            ],
+            [
+              "FL-T03",
+              "FL",
+              "Tier 1 coastal counties",
+              "1.45",
+              "MM-CP-E310 mandatory (MM-UW-CP-2025 4.3)"
+            ],
+            [
+              "TX-T01",
+              "TX",
+              "Gulf coast counties",
+              "1.35",
+              "MM-CP-E310 mandatory"
+            ],
+            [
+              "TX-T04",
+              "TX",
+              "North and central",
+              "0.95",
+              ""
+            ],
+            [
+              "NY-T07",
+              "NY",
+              "Metro",
+              "1.20",
+              "Not in effect until Filing MM-NY-2025-0211 is approved"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-RM-CP-2025#RULE-3/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "RULE-4",
+      "title": "RULE 4 - PROTECTION CLASS FACTORS",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Protection Class",
+            "PC1-PC3",
+            "PC4-PC6",
+            "PC7-PC8",
+            "PC9",
+            "PC10"
+          ],
+          "rows": [
+            [
+              "Factor",
+              "0.85",
+              "1.00",
+              "1.20",
+              "1.60 (refer)",
+              "2.00 (refer)"
+            ]
+          ],
+          "page": 2,
+          "table_id": "MM-RM-CP-2025#RULE-4/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "RULE-5",
+      "title": "RULE 5 - DEDUCTIBLE FACTORS",
+      "clauses": [
+        {
+          "clause_id": "MM-RM-CP-2025#RULE-5/5.1",
+          "doc_id": "MM-RM-CP-2025",
+          "section": "RULE-5",
+          "section_title": "RULE 5 - DEDUCTIBLE FACTORS",
+          "ref": "5.1",
+          "page": 3,
+          "text": "5.1 Where MM-CP-E310 Windstorm or Hail Percentage Deductible is attached, apply factor WH-2 (0.92) for a 2% deductible or WH-5 (0.85) for a 5% deductible to the COV-A and COV-B premium in territories FL-T03 and TX-T01.",
+          "full_text": "5.1 Where MM-CP-E310 Windstorm or Hail Percentage Deductible is attached, apply factor WH-2 (0.92) for a 2% deductible or WH-5 (0.85) for a 5% deductible to the COV-A and COV-B premium in territories FL-T03 and TX-T01.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E310"
+            ],
+            "coverage": [
+              "COV-A",
+              "COV-B"
+            ],
+            "state": [
+              "FL",
+              "TX"
+            ],
+            "territory": [
+              "FL-T03",
+              "TX-T01"
+            ],
+            "factor": [
+              "WH-2",
+              "WH-5"
+            ]
+          }
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Deductible",
+            "$1,000",
+            "$2,500 (base)",
+            "$5,000",
+            "$10,000",
+            "$25,000"
+          ],
+          "rows": [
+            [
+              "Factor",
+              "1.05",
+              "1.00",
+              "0.95",
+              "0.90",
+              "0.82"
+            ]
+          ],
+          "page": 3,
+          "table_id": "MM-RM-CP-2025#RULE-5/T1"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "id": "RULE-6",
+      "title": "RULE 6 - PROTECTIVE SAFEGUARD FACTORS",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Factor Code",
+            "Safeguard",
+            "Factor",
+            "Required Endorsement"
+          ],
+          "rows": [
+            [
+              "SPR-1",
+              "P-1 Automatic Sprinkler System (full)",
+              "0.80",
+              "MM-CP-E415"
+            ],
+            [
+              "ALM-1",
+              "P-9 Central Station Burglar Alarm",
+              "0.95",
+              "MM-CP-E415"
+            ],
+            [
+              "ALM-2",
+              "P-2 Automatic Fire Alarm",
+              "0.97",
+              "MM-CP-E415"
+            ]
+          ],
+          "page": 3,
+          "table_id": "MM-RM-CP-2025#RULE-6/T1"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "id": "RULE-7",
+      "title": "RULE 7 - ENDORSEMENT PREMIUMS",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Endorsement",
+            "Rating Basis",
+            "Rate or Factor",
+            "States"
+          ],
+          "rows": [
+            [
+              "MM-CP-E101 Flood - Scheduled Locations",
+              "Per $100 of Flood Sublimit",
+              "0.350 in zone X; 0.900 in zones A/AE; 1.400 in zones V/VE",
+              "FL, TX"
+            ],
+            [
+              "MM-CP-E205 Equipment Breakdown",
+              "Per $100 of COV-A + COV-B limit",
+              "0.025",
+              "FL, TX"
+            ],
+            [
+              "MM-CP-E310 Windstorm/Hail % Deductible",
+              "Factor on COV-A + COV-B premium",
+              "WH-2 0.92 / WH-5 0.85",
+              "FL, TX"
+            ],
+            [
+              "MM-CP-E415 Protective Safeguards",
+              "No charge (enables SPR/ALM factors)",
+              "1.00",
+              "FL, TX"
+            ],
+            [
+              "MM-CP-FL-01 Florida Amendatory",
+              "No charge (mandatory)",
+              "1.00",
+              "FL"
+            ]
+          ],
+          "page": 3,
+          "table_id": "MM-RM-CP-2025#RULE-7/T1"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "id": "RULE-8",
+      "title": "RULE 8 - WORKED EXAMPLE",
+      "clauses": [
+        {
+          "clause_id": "MM-RM-CP-2025#RULE-8/8.1",
+          "doc_id": "MM-RM-CP-2025",
+          "section": "RULE-8",
+          "section_title": "RULE 8 - WORKED EXAMPLE",
+          "ref": "8.1",
+          "page": 3,
+          "text": "8.1 A CC4 office building (class code 0745) in territory FL-T03 with COV-A limit $4,000,000, PC4, $5,000 deductible, 5% windstorm deductible (MM-CP-E310) and full sprinklers (SPR-1 with MM-CP-E415): 4,000,000 / 100 x 0.240 x 1.45 x 1.00 x 0.95 x 0.80 x 0.85 = $8,992 COV-A premium before fees.",
+          "full_text": "8.1 A CC4 office building (class code 0745) in territory FL-T03 with COV-A limit $4,000,000, PC4, $5,000 deductible, 5% windstorm deductible (MM-CP-E310) and full sprinklers (SPR-1 with MM-CP-E415): 4,000,000 / 100 x 0.240 x 1.45 x 1.00 x 0.95 x 0.80 x 0.85 = $8,992 COV-A premium before fees.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E310",
+              "MM-CP-E415"
+            ],
+            "coverage": [
+              "COV-A"
+            ],
+            "state": [
+              "FL"
+            ],
+            "territory": [
+              "FL-T03"
+            ],
+            "classcode": [
+              "0745"
+            ],
+            "construction": [
+              "CC4"
+            ],
+            "protection": [
+              "PC4"
+            ],
+            "factor": [
+              "SPR-1"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-RM-CP-2025#RULE-8/8.2",
+          "doc_id": "MM-RM-CP-2025",
+          "section": "RULE-8",
+          "section_title": "RULE 8 - WORKED EXAMPLE",
+          "ref": "8.2",
+          "page": 3,
+          "text": "8.2 Adding MM-CP-E101 with a $250,000 flood sublimit in zone AE adds 250,000 / 100 x 0.900 = $2,250.",
+          "full_text": "8.2 Adding MM-CP-E101 with a $250,000 flood sublimit in zone AE adds 250,000 / 100 x 0.900 = $2,250.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E101"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    }
+  ],
+  "dropped_by_gatekeeper": [
+    {
+      "clause_id": "MM-RM-CP-2025#FRONT/p1",
+      "reason": "front-matter",
+      "text": "Commercial Property Rate Manual Meridian Mutual Insurance Company (fictional). Rates and rating factors for form MM-CP-0"
+    },
+    {
+      "clause_id": "MM-RM-CP-2025#FRONT/p1",
+      "reason": "front-matter",
+      "text": "SYNTHETIC DOCUMENT FOR TRAINING AND TESTING. Not a real insurance form. Carrier, forms, codes and figures are fictional."
+    },
+    {
+      "clause_id": "MM-RM-CP-2025#RULE-1/1.3",
+      "reason": "no-rule-signal",
+      "text": "1.3 The minimum premium per policy is $1,000."
+    }
+  ]
+}

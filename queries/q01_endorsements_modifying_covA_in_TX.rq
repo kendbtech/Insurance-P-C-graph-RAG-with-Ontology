@@ -1,0 +1,10 @@
+# Which endorsements modify Coverage A (Building) and are approved for use in Texas?
+# Join: endorsement -> coverage  AND  filing -> FormApproval(form, state, status)
+SELECT ?endorsement ?title ?edition ?status WHERE {
+  ?e a pc:Endorsement ; pc:formNumber ?endorsement ; rdfs:label ?title ;
+     pc:modifiesCoverage pcd:COV-A .
+  OPTIONAL { ?e pc:editionDate ?edition }
+  ?ap a pc:FormApproval ; pc:approvalOfForm ?e ; pc:approvalInState pcd:TX ; pc:approvalStatus ?st .
+  ?st rdfs:label ?status .
+  FILTER(?st = pcd:Approved)
+} ORDER BY ?endorsement

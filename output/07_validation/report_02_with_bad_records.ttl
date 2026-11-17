@@ -1,0 +1,160 @@
+@prefix ns1: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/pc/shape/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:focusNode pcd:MM-CP-E999 ;
+            sh:resultMessage "An endorsement must state which coverage(s) it modifies." ;
+            sh:resultPath ns1:modifiesCoverage ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:class ns1:Coverage ;
+                    sh:message "An endorsement must state which coverage(s) it modifies." ;
+                    sh:minCount 1 ;
+                    sh:path ns1:modifiesCoverage ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/policy/POL-FL-0002> ;
+            sh:resultMessage "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2)." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2)." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:inState ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/FL>)
+    BIND(<https://example.org/pc/id/MM-CP-FL-01> AS ?value)
+    FILTER NOT EXISTS { $this pc:hasEndorsement ?value }
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R07 ;
+            sh:value pcd:MM-CP-FL-01 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/policy/POL-NY-0099> ;
+            sh:resultMessage "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:totalInsuredValue ?c0 .
+    $this pc:boundBy/pc:hasAuthorityLevel/pc:authorityMaxTIV ?v0 .
+    FILTER(?c0 > ?v0)
+    BIND($this AS ?value)
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R10 ;
+            sh:value <https://example.org/pc/id/policy/POL-NY-0099> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/location/LOC-0002> ;
+            sh:resultMessage "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:inFloodZone ?c0 .
+    FILTER(?c0 IN (<https://example.org/pc/id/A>, <https://example.org/pc/id/AE>, <https://example.org/pc/id/V>, <https://example.org/pc/id/VE>))
+    BIND(<https://example.org/pc/id/MM-CP-E101> AS ?value)
+    FILTER NOT EXISTS { $this pc:scheduledUnder ?value }
+    FILTER NOT EXISTS {
+      $this ^pc:hasLocation/pc:floodAcknowledgmentSigned ?c200 .
+    FILTER(?c200 = true)
+    }
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R09 ;
+            sh:value pcd:MM-CP-E101 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode pcd:MM-CP-E999 ;
+            sh:resultMessage "An endorsement must be approved in at least one state, otherwise it cannot be attached anywhere." ;
+            sh:resultPath ns1:appliesInState ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape [ sh:class ns1:State ;
+                    sh:message "An endorsement must be approved in at least one state, otherwise it cannot be attached anywhere." ;
+                    sh:minCount 1 ;
+                    sh:path ns1:appliesInState ] ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/claim/CLM-0002> ;
+            sh:resultMessage "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:onPolicy/pc:hasForm ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/MM-CP-0010>)
+    $this pc:causeOfLoss ?value .
+    FILTER(?value IN (<https://example.org/pc/id/Flood>))
+    FILTER NOT EXISTS {
+      $this pc:onPolicy/pc:hasEndorsement ?c200 .
+    FILTER(?c200 = <https://example.org/pc/id/MM-CP-E101>)
+      $this pc:atLocation/pc:scheduledUnder ?c201 .
+    FILTER(?c201 = <https://example.org/pc/id/MM-CP-E101>)
+      $this pc:affectsCoverage ?c202 .
+    FILTER(?c202 IN (<https://example.org/pc/id/COV-A>, <https://example.org/pc/id/COV-B>))
+    }
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R01 ;
+            sh:value pcd:Flood ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/claim/CLM-0003> ;
+            sh:resultMessage "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b))." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b))." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:onPolicy/pc:inState ?c0 .
+    FILTER(?c0 != <https://example.org/pc/id/FL>)
+    $this pc:noticeDelayHours ?value . FILTER(?value > 72)
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R03 ;
+            sh:value 80 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/policy/POL-NY-0099> ;
+            sh:resultMessage "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)." ;
+            sh:resultPath ns1:hasClassCode ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NotConstraintComponent ;
+            sh:sourceShape [ sh:message "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)." ;
+                    sh:not [ sh:hasValue pcd:CC-0511 ] ;
+                    sh:path ns1:hasClassCode ] ;
+            sh:value pcd:CC-0511 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/policy/POL-FL-0002> ;
+            sh:resultMessage "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:hasLocation/pc:inTerritory ?c0 .
+    FILTER(?c0 IN (<https://example.org/pc/id/FL-T03>, <https://example.org/pc/id/TX-T01>))
+    BIND(<https://example.org/pc/id/MM-CP-E310> AS ?value)
+    FILTER NOT EXISTS { $this pc:hasEndorsement ?value }
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R08 ;
+            sh:value pcd:MM-CP-E310 ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <https://example.org/pc/id/policy/POL-NY-0099> ;
+            sh:resultMessage "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint [ sh:message "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)." ;
+                    sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:hasForm ?value ; pc:inState ?st .
+    FILTER NOT EXISTS { ?ap a pc:FormApproval ; pc:approvalOfForm ?value ; pc:approvalInState ?st ; pc:approvalStatus pcd:Approved }
+}""" ] ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape shape:R06 ;
+            sh:value pcd:MM-CP-0010 ] .
+

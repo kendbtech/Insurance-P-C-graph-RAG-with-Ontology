@@ -1,0 +1,3 @@
+SELECT ?code ?description ?status ?reason WHERE {
+  ?c a pc:ClassCode ; pc:classCode ?code ; rdfs:label ?description ; pc:classCodeStatus/rdfs:label ?status ; rdfs:comment ?reason .
+} ORDER BY ?status ?code

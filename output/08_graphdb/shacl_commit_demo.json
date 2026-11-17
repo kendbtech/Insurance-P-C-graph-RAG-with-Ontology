@@ -1,0 +1,23 @@
+{
+  "bad_records": {
+    "http": 500,
+    "report": {
+      "messages": [
+        "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1).",
+        "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4).",
+        "An endorsement must be approved in at least one state, otherwise it cannot be attached anywhere.",
+        "An endorsement must state which coverage(s) it modifies.",
+        "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3).",
+        "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement.",
+        "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2).",
+        "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3).",
+        "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)."
+      ],
+      "focusNodes": [],
+      "raw_head": "_:3ff9b69412a14904abb2b7150365bd2e326 <http://www.w3.org/ns/shacl#conforms> \"false\"^^<http://www.w3.org/2001/XMLSchema#boolean> .\n_:3ff9b69412a14904abb2b7150365bd2e326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#ValidationReport> .\n_:3ff9b69412a14904abb2b7150365bd2e326 <http://rdf4j.org/schema/rdf4j#truncated> \"false\"^^<http://www.w3.org/2001/XMLSchema#boolean> .\n_:3ff9b69412a14904abb2b7150365bd2e326 <http://www.w3.org/ns/shacl#result> _:3ff9b69412a14904abb2b7150365bd2e327 .\n_:3ff9b69412a14904abb2b7150365bd2e327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+    }
+  },
+  "fixed_records": {
+    "http": 204
+  }
+}

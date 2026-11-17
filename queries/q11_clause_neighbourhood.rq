@@ -1,0 +1,6 @@
+# Graph RAG helper: clauses that mention a given entity, with citation fields (used by 09_graph_rag.py as a template)
+SELECT ?clause ?deontic ?document ?section ?page ?text WHERE {
+  VALUES ?entity { pcd:MM-CP-E101 }
+  ?c a pc:Clause ; pc:mentions ?entity ; rdfs:label ?clause ; pc:deonticType/rdfs:label ?deontic ;
+     pc:sourceDocument/pc:documentId ?document ; pc:sectionRef ?section ; pc:pageNumber ?page ; pc:clauseText ?text .
+} ORDER BY ?document ?page

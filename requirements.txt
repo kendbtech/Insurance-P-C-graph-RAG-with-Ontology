@@ -1,0 +1,18 @@
+# Python 3.11+ . Tested with the versions on the right.
+reportlab>=4.0          # 00  synthetic PDF generation                        (5.0.1)
+pdfplumber>=0.11        # 01  layout-aware PDF text + table extraction        (0.11.10)
+pydantic>=2.5           # 04  TypedRule JSON schema (constrained decoding)    (2.12.5)
+lark>=1.1               # 04  EBNF grammar -> typed AST                        (1.3.1)
+rdflib>=7.0             # 04-10 RDF graphs, Turtle/TriG, SPARQL on local graphs (7.6.0)
+pyshacl>=0.26           # 07,10 local SHACL validation                         (0.40.1)
+requests>=2.31          # 08-10 RDF4J / GraphDB REST                           (2.34.2)
+numpy>=1.26             # 03,09 cosine similarity                              (2.5.4)
+scikit-learn>=1.4       # 03,09 TF-IDF fallback embedder                       (1.9.1)
+# Optional - better embeddings (downloads all-MiniLM-L6-v2, ~90 MB). Without it the TF-IDF fallback is used automatically.
+sentence-transformers>=3.0
+# Optional - LLM steps: pass-2 adjudication (02) and rule extraction (04 --llm) use the openai package;
+# answer generation (09) uses plain HTTPS via requests. Set OPENAI_API_KEY (and optionally OPENAI_MODEL).
+openai>=1.40
+python-dotenv>=1.0      # loads .env into os.environ for all scripts
+# ... existing code ...
+

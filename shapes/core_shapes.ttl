@@ -1,0 +1,90 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix pc:   <https://example.org/pc/ontology#> .
+@prefix pcd:  <https://example.org/pc/id/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+###########################################################################
+#  CORE SHAPES  -  structural integrity of the knowledge graph itself.
+#  (Layer 4 produces the *business rule* shapes; these guard the data model.)
+#  Portable SHACL Core only: no vendor extensions.
+###########################################################################
+
+shape:FormShape a sh:NodeShape ;
+    sh:targetClass pc:Form ;
+    sh:property [ sh:path pc:formNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ;
+                  sh:pattern "^MM-CP-(\\d{4}|E\\d{3}|FL-01)$" ;
+                  sh:message "Every form needs exactly one form number shaped like MM-CP-0010 / MM-CP-E101 / MM-CP-FL-01." ] ;
+    sh:property [ sh:path pc:editionDate ; sh:minCount 1 ; sh:pattern "^(0[1-9]|1[0-2])/20\\d{2}$" ;
+                  sh:message "Every form needs an edition date MM/YYYY." ] .
+
+shape:EndorsementShape a sh:NodeShape ;
+    sh:targetClass pc:Endorsement ;
+    sh:property [ sh:path pc:modifiesForm ; sh:minCount 1 ; sh:class pc:PolicyForm ;
+                  sh:message "An endorsement must modify at least one policy form." ] ;
+    sh:property [ sh:path pc:modifiesCoverage ; sh:minCount 1 ; sh:class pc:Coverage ;
+                  sh:message "An endorsement must state which coverage(s) it modifies." ] ;
+    sh:property [ sh:path pc:appliesInState ; sh:minCount 1 ; sh:class pc:State ;
+                  sh:message "An endorsement must be approved in at least one state, otherwise it cannot be attached anywhere." ] .
+
+shape:StateFilingShape a sh:NodeShape ;
+    sh:targetClass pc:StateFiling ;
+    sh:property [ sh:path pc:filingNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^MM-(FL|TX|NY)-\\d{4}-\\d{4}$" ] ;
+    sh:property [ sh:path pc:appliesInState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:State ] ;
+    sh:property [ sh:path pc:hasFormApproval ; sh:minCount 1 ; sh:class pc:FormApproval ;
+                  sh:message "A filing with no form approvals carries no information." ] .
+
+shape:FormApprovalShape a sh:NodeShape ;
+    sh:targetClass pc:FormApproval ;
+    sh:property [ sh:path pc:approvalOfForm ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:Form ] ;
+    sh:property [ sh:path pc:approvalInState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:State ] ;
+    sh:property [ sh:path pc:approvalStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( pcd:Approved pcd:Pending pcd:NotFiled ) ;
+                  sh:message "Approval status must be one of Approved / Pending / NotFiled." ] .
+
+shape:CoverageShape a sh:NodeShape ;
+    sh:targetClass pc:Coverage ;
+    sh:property [ sh:path pc:coverageCode ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^COV-[A-D]$" ] .
+
+shape:ClauseShape a sh:NodeShape ;
+    sh:targetClass pc:Clause ;
+    sh:property [ sh:path pc:clauseText ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 10 ] ;
+    sh:property [ sh:path pc:sourceDocument ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:Document ;
+                  sh:message "Every clause must point to the document it came from (citation guarantee)." ] ;
+    sh:property [ sh:path pc:pageNumber ; sh:minCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path pc:deonticType ; sh:maxCount 1 ; sh:in ( pcd:Obligation pcd:Permission pcd:Prohibition ) ] ;
+    sh:property [ sh:path pc:confidence ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 1 ] ;
+    sh:property [ sh:path pc:exceptionTo ; sh:class pc:Clause ;
+                  sh:message "An exception must point to the clause it modifies (never a free-floating exception)." ] .
+
+shape:TerritoryShape a sh:NodeShape ;
+    sh:targetClass pc:Territory ;
+    sh:property [ sh:path pc:territoryState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:State ] ;
+    sh:property [ sh:path pc:factorValue ; sh:minCount 1 ; sh:maxCount 1 ; sh:minExclusive 0 ] .
+
+shape:ClassCodeShape a sh:NodeShape ;
+    sh:targetClass pc:ClassCode ;
+    sh:property [ sh:path pc:classCode ; sh:minCount 1 ; sh:pattern "^\\d{4}$" ] ;
+    sh:property [ sh:path pc:classCodeStatus ; sh:minCount 1 ; sh:in ( pcd:Eligible pcd:Refer pcd:Prohibited ) ] .
+
+# ---- operational records (what Layer 6 receives). Keep these minimal: the business rules live in Layer 4/5 shapes.
+shape:PolicyShape a sh:NodeShape ;
+    sh:targetClass pc:Policy ;
+    sh:property [ sh:path pc:policyNumber ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path pc:inState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:State ] ;
+    sh:property [ sh:path pc:hasForm ; sh:minCount 1 ; sh:class pc:Form ;
+                  sh:message "A policy must carry at least one form." ] ;
+    sh:property [ sh:path pc:hasLocation ; sh:minCount 1 ; sh:class pc:Location ] ;
+    sh:property [ sh:path pc:totalInsuredValue ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] .
+
+shape:LocationShape a sh:NodeShape ;
+    sh:targetClass pc:Location ;
+    sh:property [ sh:path pc:inState ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:State ] ;
+    sh:property [ sh:path pc:inFloodZone ; sh:maxCount 1 ; sh:class pc:FloodZone ] ;
+    sh:property [ sh:path pc:inTerritory ; sh:maxCount 1 ; sh:class pc:Territory ] .
+
+shape:ClaimShape a sh:NodeShape ;
+    sh:targetClass pc:Claim ;
+    sh:property [ sh:path pc:onPolicy ; sh:minCount 1 ; sh:maxCount 1 ; sh:class pc:Policy ] ;
+    sh:property [ sh:path pc:causeOfLoss ; sh:minCount 1 ; sh:class pc:Peril ] ;
+    sh:property [ sh:path pc:noticeDelayHours ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] .

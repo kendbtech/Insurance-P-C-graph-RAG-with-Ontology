@@ -1,0 +1,22 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+shape:R08 a sh:NodeShape ;
+    rdfs:label "R08" ;
+    rdfs:comment "OBLIGATION Policy attach_endorsement | source MM-UW-CP-2025#SECTION-4/4.3 | status active" ;
+    sh:sparql [ sh:message "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:hasLocation/pc:inTerritory ?c0 .
+    FILTER(?c0 IN (<https://example.org/pc/id/FL-T03>, <https://example.org/pc/id/TX-T01>))
+    BIND(<https://example.org/pc/id/MM-CP-E310> AS ?value)
+    FILTER NOT EXISTS { $this pc:hasEndorsement ?value }
+}""" ] ;
+    sh:targetClass pc:Policy ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.3 ;
+    pc:ruleStatus "active" .
+

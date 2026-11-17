@@ -1,0 +1,216 @@
+@prefix pc:   <https://example.org/pc/ontology#> .
+@prefix pcd:  <https://example.org/pc/id/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+###########################################################################
+#  P&C Insurance POC Ontology  (OWL 2 / RDFS, small on purpose)
+#
+#  Three families of things:
+#   1. Documents and their parts  (Form, Endorsement, Manual, Filing, Clause, Chunk)
+#   2. Insurance concepts          (Coverage, Peril, Exclusion, State, Territory, ...)
+#   3. Operational records         (Policy, Location, Claim)  - what Layer 6 checks
+#
+#  Instances live in  https://example.org/pc/id/   (prefix pcd:)
+###########################################################################
+
+<https://example.org/pc/ontology> a owl:Ontology ;
+    rdfs:label "P&C Underwriting and Claims POC Ontology" ;
+    owl:versionInfo "0.3.0" ;
+    dct:description "Minimal vocabulary for grounding clauses from policy forms, endorsements, UW guidelines, rate manuals, claims manuals and state filings." .
+
+# ------------------------------------------------------------------ 1. Documents
+pc:Document a owl:Class ; rdfs:label "Document" ;
+    rdfs:comment "Any source document in the POC corpus." .
+pc:Form a owl:Class ; rdfs:subClassOf pc:Document ; rdfs:label "Form" ;
+    skos:altLabel "insurance form", "policy form number" .
+pc:PolicyForm a owl:Class ; rdfs:subClassOf pc:Form ; rdfs:label "Policy Form" ;
+    skos:altLabel "coverage form", "base form", "causes of loss form" .
+pc:Endorsement a owl:Class ; rdfs:subClassOf pc:Form ; rdfs:label "Endorsement" ;
+    skos:altLabel "rider", "amendatory endorsement", "endorsement form" ;
+    rdfs:comment "A form that modifies a policy form. Endorsement beats base form (lex specialis)." .
+pc:StateAmendatoryEndorsement a owl:Class ; rdfs:subClassOf pc:Endorsement ;
+    rdfs:label "State Amendatory Endorsement" ; skos:altLabel "state amendatory", "state form" .
+pc:Manual a owl:Class ; rdfs:subClassOf pc:Document ; rdfs:label "Manual" .
+pc:UnderwritingGuideline a owl:Class ; rdfs:subClassOf pc:Manual ; rdfs:label "Underwriting Guideline" ;
+    skos:altLabel "UW guideline", "underwriting manual", "eligibility rules" .
+pc:RateManual a owl:Class ; rdfs:subClassOf pc:Manual ; rdfs:label "Rate Manual" ;
+    skos:altLabel "rating manual", "rate pages" .
+pc:ClaimsManual a owl:Class ; rdfs:subClassOf pc:Manual ; rdfs:label "Claims Manual" ;
+    skos:altLabel "claims handling manual", "adjuster procedures" .
+pc:StateFiling a owl:Class ; rdfs:subClassOf pc:Document ; rdfs:label "State Filing" ;
+    skos:altLabel "form filing", "rate filing", "regulatory filing", "SERFF filing" .
+
+pc:Clause a owl:Class ; rdfs:label "Clause" ;
+    rdfs:comment "A rule-bearing unit of text (Layer 1 output). Exceptions are child clauses linked with pc:exceptionTo." .
+pc:Chunk a owl:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "Text Chunk" ;
+    rdfs:comment "Retrieval unit for Graph RAG; carries the verbatim text and its page/section." .
+pc:Rule a owl:Class ; rdfs:label "Compiled Rule" ;
+    rdfs:comment "Layer 4 output: a typed rule compiled from a clause, materialised as a SHACL shape." .
+
+pc:DeonticType a owl:Class ; rdfs:label "Deontic Type" .
+pcd:Obligation  a pc:DeonticType ; rdfs:label "Obligation"  ; skos:altLabel "must do", "duty", "required" .
+pcd:Permission  a pc:DeonticType ; rdfs:label "Permission"  ; skos:altLabel "may do", "coverage grant", "we will pay" .
+pcd:Prohibition a pc:DeonticType ; rdfs:label "Prohibition" ; skos:altLabel "must not do", "exclusion", "we will not pay", "ineligible" .
+
+# ------------------------------------------------------------------ 2. Insurance concepts
+pc:LineOfBusiness a owl:Class ; rdfs:label "Line of Business" .
+pcd:CommercialProperty a pc:LineOfBusiness ; rdfs:label "Commercial Property" ; skos:altLabel "CP", "property" .
+
+pc:Coverage a owl:Class ; rdfs:label "Coverage" ;
+    skos:altLabel "coverage part", "insuring agreement" .
+pcd:COV-A a pc:Coverage ; pc:coverageCode "COV-A" ; rdfs:label "Coverage A - Building" ;
+    skos:altLabel "building", "building coverage", "structure" .
+pcd:COV-B a pc:Coverage ; pc:coverageCode "COV-B" ; rdfs:label "Coverage B - Your Business Personal Property" ;
+    skos:altLabel "BPP", "business personal property", "contents", "stock" .
+pcd:COV-C a pc:Coverage ; pc:coverageCode "COV-C" ; rdfs:label "Coverage C - Personal Property of Others" ;
+    skos:altLabel "property of others", "care custody or control" .
+pcd:COV-D a pc:Coverage ; pc:coverageCode "COV-D" ; rdfs:label "Coverage D - Business Income and Extra Expense" ;
+    skos:altLabel "business income", "BI", "time element", "period of restoration" .
+
+pc:Peril a owl:Class ; rdfs:label "Peril" ; skos:altLabel "cause of loss", "hazard" .
+pcd:Water a pc:Peril ; rdfs:label "Water" ; skos:altLabel "water damage", "surface water" .
+pcd:Flood a pc:Peril ; rdfs:label "Flood" ; skos:broader pcd:Water ;
+    skos:altLabel "flooding", "surface water", "storm surge", "overflow of a body of water" .
+pcd:Windstorm a pc:Peril ; rdfs:label "Windstorm" ; skos:altLabel "wind", "hurricane", "named storm" .
+pcd:Hail a pc:Peril ; rdfs:label "Hail" .
+pcd:Fire a pc:Peril ; rdfs:label "Fire" ; skos:altLabel "fire loss" .
+pcd:EarthMovement a pc:Peril ; rdfs:label "Earth Movement" ; skos:altLabel "earthquake", "sinkhole", "landslide" .
+pcd:MechanicalBreakdown a pc:Peril ; rdfs:label "Mechanical Breakdown" ; skos:altLabel "equipment breakdown", "electrical arcing", "boiler explosion" .
+pcd:Theft a pc:Peril ; rdfs:label "Theft" ; skos:altLabel "burglary", "attempted theft" .
+pcd:Vandalism a pc:Peril ; rdfs:label "Vandalism" .
+pcd:Mold a pc:Peril ; rdfs:label "Fungus, Wet Rot and Bacteria" ; skos:altLabel "mold", "fungus", "bacteria" .
+pcd:SprinklerLeakage a pc:Peril ; rdfs:label "Sprinkler Leakage" .
+
+pc:Exclusion a owl:Class ; rdfs:label "Exclusion" ; skos:altLabel "excluded cause of loss", "we will not pay for" .
+
+pc:State a owl:Class ; rdfs:label "State" ; skos:altLabel "jurisdiction" .
+pcd:FL a pc:State ; pc:stateCode "FL" ; rdfs:label "Florida" .
+pcd:TX a pc:State ; pc:stateCode "TX" ; rdfs:label "Texas" .
+pcd:NY a pc:State ; pc:stateCode "NY" ; rdfs:label "New York" .
+
+pc:Territory a owl:Class ; rdfs:label "Rating Territory" ; skos:altLabel "territory code" .
+pc:ConstructionClass a owl:Class ; rdfs:label "Construction Class" ; skos:altLabel "ISO construction", "frame", "masonry", "fire resistive" .
+pc:ProtectionClass a owl:Class ; rdfs:label "Public Protection Class" ; skos:altLabel "PPC", "fire protection class" .
+pc:ClassCode a owl:Class ; rdfs:label "Class Code" ; skos:altLabel "occupancy class", "class of business" .
+pc:ClassCodeStatus a owl:Class ; rdfs:label "Class Code Status" .
+pcd:Eligible a pc:ClassCodeStatus ; rdfs:label "Eligible" .
+pcd:Refer a pc:ClassCodeStatus ; rdfs:label "Refer" ; skos:altLabel "referral", "manager approval" .
+pcd:Prohibited a pc:ClassCodeStatus ; rdfs:label "Prohibited" ; skos:altLabel "declined class", "unacceptable" .
+
+pc:RatingFactor a owl:Class ; rdfs:label "Rating Factor" ; skos:altLabel "credit", "debit", "factor", "base rate" .
+pc:FloodZone a owl:Class ; rdfs:label "FEMA Flood Zone" ; skos:altLabel "zone AE", "zone VE", "special flood hazard area" .
+pc:ProtectiveSafeguard a owl:Class ; rdfs:label "Protective Safeguard" ; skos:altLabel "sprinkler", "central station alarm", "fire alarm" .
+pc:AuthorityLevel a owl:Class ; rdfs:label "Authority Level" ; skos:altLabel "underwriting authority", "reserve authority", "payment authority" .
+
+pc:FilingStatus a owl:Class ; rdfs:label "Filing Status" .
+pcd:Approved a pc:FilingStatus ; rdfs:label "Approved" .
+pcd:Pending  a pc:FilingStatus ; rdfs:label "Pending" .
+pcd:NotFiled a pc:FilingStatus ; rdfs:label "Not filed" ; skos:altLabel "not available", "not approved" .
+
+pc:FormApproval a owl:Class ; rdfs:label "Form Approval" ;
+    rdfs:comment "n-ary relation: (form, state, status, edition, effective date) stated by a filing." .
+
+# ------------------------------------------------------------------ 3. Operational records (Layer 6)
+pc:Policy a owl:Class ; rdfs:label "Policy" ; skos:altLabel "policy record", "quote", "bound policy" .
+pc:Location a owl:Class ; rdfs:label "Insured Location" ; skos:altLabel "scheduled location", "premises" .
+pc:Claim a owl:Class ; rdfs:label "Claim" ; skos:altLabel "loss", "FNOL", "first notice of loss" .
+pc:Underwriter a owl:Class ; rdfs:label "Underwriter" .
+pc:Adjuster a owl:Class ; rdfs:label "Adjuster" .
+
+# ------------------------------------------------------------------ Object properties
+pc:modifiesCoverage a owl:ObjectProperty ; rdfs:domain pc:Endorsement ; rdfs:range pc:Coverage ; rdfs:label "modifies coverage" .
+pc:modifiesForm a owl:ObjectProperty ; rdfs:domain pc:Endorsement ; rdfs:range pc:PolicyForm ; rdfs:label "modifies form" .
+pc:hasExclusion a owl:ObjectProperty ; rdfs:domain pc:Form ; rdfs:range pc:Exclusion ; rdfs:label "has exclusion" .
+pc:excludesPeril a owl:ObjectProperty ; rdfs:domain pc:Exclusion ; rdfs:range pc:Peril ; rdfs:label "excludes peril" .
+pc:removesExclusion a owl:ObjectProperty ; rdfs:domain pc:Endorsement ; rdfs:range pc:Exclusion ; rdfs:label "removes exclusion" .
+pc:restoresPeril a owl:ObjectProperty ; rdfs:domain pc:Endorsement ; rdfs:range pc:Peril ; rdfs:label "restores coverage for peril" .
+pc:appliesInState a owl:ObjectProperty ; rdfs:domain pc:Document ; rdfs:range pc:State ; rdfs:label "applies in state" .
+pc:mandatoryIn a owl:ObjectProperty ; rdfs:domain pc:Endorsement ; rdfs:label "mandatory in (state or territory)" .
+pc:requiresEndorsement a owl:ObjectProperty ; rdfs:range pc:Endorsement ; rdfs:label "requires endorsement" .
+pc:supersedes a owl:ObjectProperty ; rdfs:domain pc:Form ; rdfs:range pc:Form ; rdfs:label "supersedes edition" .
+pc:references a owl:ObjectProperty ; rdfs:domain pc:Document ; rdfs:range pc:Document ; rdfs:label "references document" .
+
+pc:hasFormApproval a owl:ObjectProperty ; rdfs:domain pc:StateFiling ; rdfs:range pc:FormApproval ; rdfs:label "has form approval" .
+pc:approvalOfForm a owl:ObjectProperty ; rdfs:domain pc:FormApproval ; rdfs:range pc:Form .
+pc:approvalInState a owl:ObjectProperty ; rdfs:domain pc:FormApproval ; rdfs:range pc:State .
+pc:approvalStatus a owl:ObjectProperty ; rdfs:domain pc:FormApproval ; rdfs:range pc:FilingStatus .
+
+pc:inTerritory a owl:ObjectProperty ; rdfs:range pc:Territory .
+pc:territoryState a owl:ObjectProperty ; rdfs:domain pc:Territory ; rdfs:range pc:State .
+pc:classCodeStatus a owl:ObjectProperty ; rdfs:domain pc:ClassCode ; rdfs:range pc:ClassCodeStatus .
+pc:factorRequiresEndorsement a owl:ObjectProperty ; rdfs:domain pc:RatingFactor ; rdfs:range pc:Endorsement .
+
+# Clause / provenance
+pc:sourceDocument a owl:ObjectProperty ; rdfs:range pc:Document ; rdfs:label "source document" .
+pc:deonticType a owl:ObjectProperty ; rdfs:domain pc:Clause ; rdfs:range pc:DeonticType .
+pc:exceptionTo a owl:ObjectProperty ; rdfs:domain pc:Clause ; rdfs:range pc:Clause ; rdfs:label "is an exception to" .
+pc:mentions a owl:ObjectProperty ; rdfs:domain pc:Clause ; rdfs:label "mentions (hard-grounded entity)" .
+pc:groundedTerm a owl:ObjectProperty ; rdfs:domain pc:Clause ; rdfs:label "grounded ontology term (top-3 by embedding)" .
+pc:compiledFrom a owl:ObjectProperty ; rdfs:domain pc:Rule ; rdfs:range pc:Clause .
+pc:hasShape a owl:ObjectProperty ; rdfs:domain pc:Rule ; rdfs:label "materialised as SHACL shape" .
+pc:overriddenBy a owl:ObjectProperty ; rdfs:domain pc:Rule ; rdfs:range pc:Rule ; rdfs:label "overridden by (Layer 5 precedence)" .
+
+# Operational records
+pc:inState a owl:ObjectProperty ; rdfs:range pc:State .
+pc:hasForm a owl:ObjectProperty ; rdfs:domain pc:Policy ; rdfs:range pc:Form .
+pc:hasEndorsement a owl:ObjectProperty ; rdfs:subPropertyOf pc:hasForm ; rdfs:domain pc:Policy ; rdfs:range pc:Endorsement .
+pc:hasLocation a owl:ObjectProperty ; rdfs:domain pc:Policy ; rdfs:range pc:Location .
+pc:scheduledUnder a owl:ObjectProperty ; rdfs:domain pc:Location ; rdfs:range pc:Endorsement ; rdfs:label "scheduled under endorsement" .
+pc:inFloodZone a owl:ObjectProperty ; rdfs:domain pc:Location ; rdfs:range pc:FloodZone .
+pc:hasConstructionClass a owl:ObjectProperty ; rdfs:range pc:ConstructionClass .
+pc:hasProtectionClass a owl:ObjectProperty ; rdfs:range pc:ProtectionClass .
+pc:hasClassCode a owl:ObjectProperty ; rdfs:range pc:ClassCode .
+pc:boundBy a owl:ObjectProperty ; rdfs:domain pc:Policy ; rdfs:range pc:Underwriter .
+pc:hasAuthorityLevel a owl:ObjectProperty ; rdfs:range pc:AuthorityLevel .
+pc:onPolicy a owl:ObjectProperty ; rdfs:domain pc:Claim ; rdfs:range pc:Policy .
+pc:atLocation a owl:ObjectProperty ; rdfs:domain pc:Claim ; rdfs:range pc:Location .
+pc:causeOfLoss a owl:ObjectProperty ; rdfs:domain pc:Claim ; rdfs:range pc:Peril .
+pc:affectsCoverage a owl:ObjectProperty ; rdfs:domain pc:Claim ; rdfs:range pc:Coverage .
+
+# ------------------------------------------------------------------ Data properties
+pc:documentId a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:formNumber a owl:DatatypeProperty ; rdfs:domain pc:Form ; rdfs:range xsd:string .
+pc:editionDate a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:comment "MM/YYYY as printed on the form" .
+pc:effectiveDate a owl:DatatypeProperty ; rdfs:range xsd:date .
+pc:versionLabel a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:coverageCode a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:exclusionCode a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:stateCode a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:territoryCode a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:classCode a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:filingNumber a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:trackingNumber a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:approvalDate a owl:DatatypeProperty ; rdfs:range xsd:date .
+pc:factorCode a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:factorValue a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:sublimitAmount a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:deductiblePercent a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:deductibleMinimum a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:maxTIV a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:noticeDeadlineHours a owl:DatatypeProperty ; rdfs:range xsd:integer .
+
+pc:clauseText a owl:DatatypeProperty ; rdfs:domain pc:Clause ; rdfs:range xsd:string .
+pc:sectionRef a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:pageNumber a owl:DatatypeProperty ; rdfs:range xsd:integer .
+pc:confidence a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:classifierRoute a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:chunkText a owl:DatatypeProperty ; rdfs:domain pc:Chunk ; rdfs:range xsd:string .
+pc:ruleStatus a owl:DatatypeProperty ; rdfs:domain pc:Rule ; rdfs:range xsd:string ; rdfs:comment "active | scoped | superseded" .
+pc:ruleDSL a owl:DatatypeProperty ; rdfs:domain pc:Rule ; rdfs:range xsd:string .
+
+# Operational record attributes
+pc:policyNumber a owl:DatatypeProperty ; rdfs:range xsd:string .
+pc:totalInsuredValue a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+pc:vacantDays a owl:DatatypeProperty ; rdfs:range xsd:integer .
+pc:floodAcknowledgmentSigned a owl:DatatypeProperty ; rdfs:range xsd:boolean .
+pc:noticeDelayHours a owl:DatatypeProperty ; rdfs:domain pc:Claim ; rdfs:range xsd:integer .
+pc:acknowledgmentDelayDays a owl:DatatypeProperty ; rdfs:domain pc:Claim ; rdfs:range xsd:integer .
+pc:claimStatus a owl:DatatypeProperty ; rdfs:domain pc:Claim ; rdfs:range xsd:string .
+pc:lossDate a owl:DatatypeProperty ; rdfs:range xsd:date .
+pc:authorityMaxTIV a owl:DatatypeProperty ; rdfs:domain pc:AuthorityLevel ; rdfs:range xsd:decimal .

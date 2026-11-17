@@ -1,0 +1,5 @@
+# Which documents reference which forms / documents (the cross-document web the extraction built)
+SELECT ?from (GROUP_CONCAT(DISTINCT ?toId; separator=", ") AS ?references) WHERE {
+  ?d pc:references ?t ; pc:documentId ?from .
+  BIND(REPLACE(STR(?t), STR(pcd:), "") AS ?toId)
+} GROUP BY ?from ORDER BY ?from

@@ -1,0 +1,479 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pcd:ALM-1 a pc:RatingFactor ;
+    rdfs:label "P-9 Central Station Burglar Alarm" ;
+    pc:factorCode "ALM-1" ;
+    pc:factorRequiresEndorsement pcd:MM-CP-E415 ;
+    pc:factorValue 0.95 .
+
+pcd:ALM-2 a pc:RatingFactor ;
+    rdfs:label "P-2 Automatic Fire Alarm" ;
+    pc:factorCode "ALM-2" ;
+    pc:factorRequiresEndorsement pcd:MM-CP-E415 ;
+    pc:factorValue 0.97 .
+
+pcd:CC-0511 a pc:ClassCode ;
+    rdfs:label "Fireworks or Explosives Manufacturing" ;
+    rdfs:comment "Unacceptable fire and explosion hazard" ;
+    pc:classCode "0511" ;
+    pc:classCodeStatus pcd:Prohibited .
+
+pcd:CC-0634 a pc:ClassCode ;
+    rdfs:label "Restaurants with Cooking" ;
+    rdfs:comment "Requires UL300 hood suppression (P-1 or P-5 safeguard)" ;
+    pc:classCode "0634" ;
+    pc:classCodeStatus pcd:Refer .
+
+pcd:CC-0745 a pc:ClassCode ;
+    rdfs:label "Office Buildings - Mercantile Occupancy" ;
+    rdfs:comment "Preferred class" ;
+    pc:classCode "0745" ;
+    pc:classCodeStatus pcd:Eligible .
+
+pcd:CC-0802 a pc:ClassCode ;
+    rdfs:label "Warehouses - General Storage" ;
+    rdfs:comment "Verify protective safeguards MM-CP-E415" ;
+    pc:classCode "0802" ;
+    pc:classCodeStatus pcd:Eligible .
+
+pcd:CC-0921 a pc:ClassCode ;
+    rdfs:label "Vacant Buildings" ;
+    rdfs:comment "Vandalism and water damage frequency; see MM-CP-0010 E.5" ;
+    pc:classCode "0921" ;
+    pc:classCodeStatus pcd:Refer .
+
+pcd:CC1 a pc:ConstructionClass ;
+    rdfs:label "CC1 Frame" ;
+    rdfs:comment "Base rate per $100: COV-A 0.420, COV-B 0.510" ;
+    pc:factorValue 0.42 .
+
+pcd:CC2 a pc:ConstructionClass ;
+    rdfs:label "CC2 Joisted Masonry" ;
+    rdfs:comment "Base rate per $100: COV-A 0.350, COV-B 0.430" ;
+    pc:factorValue 0.35 .
+
+pcd:CC3 a pc:ConstructionClass ;
+    rdfs:label "CC3 Non-Combustible" ;
+    rdfs:comment "Base rate per $100: COV-A 0.290, COV-B 0.360" ;
+    pc:factorValue 0.29 .
+
+pcd:CC4 a pc:ConstructionClass ;
+    rdfs:label "CC4 Masonry Non-Combustible" ;
+    rdfs:comment "Base rate per $100: COV-A 0.240, COV-B 0.300" ;
+    pc:factorValue 0.24 .
+
+pcd:CC5 a pc:ConstructionClass ;
+    rdfs:label "CC5 Modified Fire Resistive" ;
+    rdfs:comment "Base rate per $100: COV-A 0.190, COV-B 0.240" ;
+    pc:factorValue 0.19 .
+
+pcd:CC6 a pc:ConstructionClass ;
+    rdfs:label "CC6 Fire Resistive" ;
+    rdfs:comment "Base rate per $100: COV-A 0.150, COV-B 0.200" ;
+    pc:factorValue 0.15 .
+
+pcd:FL-T01 a pc:Territory ;
+    rdfs:label "FL-T01 Inland counties" ;
+    pc:factorValue 1.1 ;
+    pc:territoryCode "FL-T01" ;
+    pc:territoryState pcd:FL .
+
+pcd:MM-CM-CP-2025 a pc:ClaimsManual ;
+    rdfs:label "Commercial Property Claims Handling Manual" ;
+    pc:appliesInState pcd:FL,
+        pcd:TX ;
+    pc:documentId "MM-CM-CP-2025" ;
+    pc:effectiveDate "2025-05-01"^^xsd:date ;
+    pc:references pcd:MM-CP-0010,
+        pcd:MM-CP-1030,
+        pcd:MM-CP-E101,
+        pcd:MM-CP-E310,
+        pcd:MM-CP-E415,
+        pcd:MM-CP-FL-01,
+        pcd:MM-FL-2025-0142,
+        pcd:MM-TX-2025-0098 ;
+    pc:versionLabel "2.0" .
+
+pcd:MM-CP-E-SERIES a pc:Document ;
+    rdfs:label "Commercial Property Endorsements Package" ;
+    pc:appliesInState pcd:FL,
+        pcd:NY,
+        pcd:TX ;
+    pc:documentId "MM-CP-E-SERIES" ;
+    pc:references pcd:MM-CP-0010,
+        pcd:MM-CP-1030,
+        pcd:MM-CP-E310,
+        pcd:MM-FL-2025-0142,
+        pcd:MM-UW-CP-2025 .
+
+pcd:MM-FILINGS-CP-2025 a pc:Document ;
+    rdfs:label "State Form and Rate Filing Register" ;
+    pc:documentId "MM-FILINGS-CP-2025" ;
+    pc:references pcd:MM-CP-0010,
+        pcd:MM-CP-E101,
+        pcd:MM-CP-E310,
+        pcd:MM-CP-FL-01,
+        pcd:MM-RM-CP-2025,
+        pcd:MM-UW-CP-2025 .
+
+pcd:NY-T07 a pc:Territory ;
+    rdfs:label "NY-T07 Metro" ;
+    rdfs:comment "Not in effect until Filing MM-NY-2025-0211 is approved" ;
+    pc:factorValue 1.2 ;
+    pc:territoryCode "NY-T07" ;
+    pc:territoryState pcd:NY .
+
+pcd:PC1 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 1" ;
+    pc:factorValue 0.85 .
+
+pcd:PC10 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 10" ;
+    pc:factorValue 2.0 .
+
+pcd:PC2 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 2" ;
+    pc:factorValue 0.85 .
+
+pcd:PC3 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 3" ;
+    pc:factorValue 0.85 .
+
+pcd:PC4 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 4" ;
+    pc:factorValue 1.0 .
+
+pcd:PC5 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 5" ;
+    pc:factorValue 1.0 .
+
+pcd:PC6 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 6" ;
+    pc:factorValue 1.0 .
+
+pcd:PC7 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 7" ;
+    pc:factorValue 1.2 .
+
+pcd:PC8 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 8" ;
+    pc:factorValue 1.2 .
+
+pcd:PC9 a pc:ProtectionClass ;
+    rdfs:label "Protection Class 9" ;
+    pc:factorValue 1.6 .
+
+pcd:SPR-1 a pc:RatingFactor ;
+    rdfs:label "P-1 Automatic Sprinkler System (full)" ;
+    pc:factorCode "SPR-1" ;
+    pc:factorRequiresEndorsement pcd:MM-CP-E415 ;
+    pc:factorValue 0.8 .
+
+pcd:TX-T04 a pc:Territory ;
+    rdfs:label "TX-T04 North and central" ;
+    pc:factorValue 0.95 ;
+    pc:territoryCode "TX-T04" ;
+    pc:territoryState pcd:TX .
+
+<https://example.org/pc/id/authority/Above-Level-3> a pc:AuthorityLevel ;
+    rdfs:label "Above Level 3" .
+
+<https://example.org/pc/id/authority/UW-Level-1-Associate> a pc:AuthorityLevel ;
+    rdfs:label "UW Level 1 (Associate)" ;
+    pc:authorityMaxTIV 5000000.0 .
+
+<https://example.org/pc/id/authority/UW-Level-2-Senior> a pc:AuthorityLevel ;
+    rdfs:label "UW Level 2 (Senior)" ;
+    pc:authorityMaxTIV 15000000.0 .
+
+<https://example.org/pc/id/authority/UW-Level-3-Underwriting-Manager> a pc:AuthorityLevel ;
+    rdfs:label "UW Level 3 (Underwriting Manager)" ;
+    pc:authorityMaxTIV 25000000.0 .
+
+pcd:FL-T03 a pc:Territory ;
+    rdfs:label "FL-T03 Tier 1 coastal counties" ;
+    rdfs:comment "MM-CP-E310 mandatory (MM-UW-CP-2025 4.3)" ;
+    pc:factorValue 1.45 ;
+    pc:territoryCode "FL-T03" ;
+    pc:territoryState pcd:FL .
+
+pcd:MM-CP-0010-Ed-07-2022 a pc:PolicyForm ;
+    pc:editionDate "07/2022" ;
+    pc:formNumber "MM-CP-0010" .
+
+pcd:MM-CP-1030-Ed-07-2022 a pc:PolicyForm ;
+    pc:editionDate "07/2022" ;
+    pc:formNumber "MM-CP-1030" .
+
+pcd:MM-TX-2025-0098 a pc:StateFiling ;
+    rdfs:label "TX form and rate filing MM-TX-2025-0098" ;
+    pc:appliesInState pcd:TX ;
+    pc:filingNumber "MM-TX-2025-0098" ;
+    pc:hasFormApproval <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-0010>,
+        <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-1030>,
+        <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E101>,
+        <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E205>,
+        <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E310>,
+        <https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E415> .
+
+pcd:TX-T01 a pc:Territory ;
+    rdfs:label "TX-T01 Gulf coast counties" ;
+    rdfs:comment "MM-CP-E310 mandatory" ;
+    pc:factorValue 1.35 ;
+    pc:territoryCode "TX-T01" ;
+    pc:territoryState pcd:TX .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-0010> a pc:FormApproval ;
+    rdfs:comment "Replaces Ed. 07/2022" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-0010 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-1030> a pc:FormApproval ;
+    rdfs:comment "Replaces Ed. 07/2022" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-1030 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E101> a pc:FormApproval ;
+    rdfs:comment "New form" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-E101 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "06/2025" .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E205> a pc:FormApproval ;
+    rdfs:comment "No change" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-E205 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E310> a pc:FormApproval ;
+    rdfs:comment "Mandatory in Tier 1 coastal counties" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-E310 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "03/2025" .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E415> a pc:FormApproval ;
+    rdfs:comment "No change" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-E415 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-FL-01> a pc:FormApproval ;
+    rdfs:comment "Mandatory on all FL policies; replaces Ed. 01/2023" ;
+    pc:approvalInState pcd:FL ;
+    pc:approvalOfForm pcd:MM-CP-FL-01 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "07/2025" .
+
+<https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-0010> a pc:FormApproval ;
+    rdfs:comment "Replaces Ed. 07/2022" ;
+    pc:approvalInState pcd:TX ;
+    pc:approvalOfForm pcd:MM-CP-0010 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-1030> a pc:FormApproval ;
+    rdfs:comment "Replaces Ed. 07/2022" ;
+    pc:approvalInState pcd:TX ;
+    pc:approvalOfForm pcd:MM-CP-1030 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E101> a pc:FormApproval ;
+    rdfs:comment "New form" ;
+    pc:approvalInState pcd:TX ;
+    pc:approvalOfForm pcd:MM-CP-E101 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "06/2025" .
+
+<https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E205> a pc:FormApproval ;
+    rdfs:comment "No change" ;
+    pc:approvalInState pcd:TX ;
+    pc:approvalOfForm pcd:MM-CP-E205 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+<https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E310> a pc:FormApproval ;
+    rdfs:comment "Mandatory in TX-T01" ;
+    pc:approvalInState pcd:TX ;
+    pc:approvalOfForm pcd:MM-CP-E310 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "03/2025" .
+
+<https://example.org/pc/id/approval/MM-TX-2025-0098/MM-CP-E415> a pc:FormApproval ;
+    rdfs:comment "No change" ;
+    pc:approvalInState pcd:TX ;
+    pc:approvalOfForm pcd:MM-CP-E415 ;
+    pc:approvalStatus pcd:Approved ;
+    pc:editionDate "01/2025" .
+
+pcd:EXCL-EQ a pc:Exclusion ;
+    rdfs:label "Earth Movement" ;
+    pc:excludesPeril pcd:EarthMovement ;
+    pc:exclusionCode "EXCL-EQ" .
+
+pcd:EXCL-MOLD a pc:Exclusion ;
+    rdfs:label "Fungus, Wet Rot and Bacteria" ;
+    pc:excludesPeril pcd:Mold ;
+    pc:exclusionCode "EXCL-MOLD" .
+
+pcd:EXCL-WAR a pc:Exclusion ;
+    rdfs:label "War and Military Action" ;
+    pc:exclusionCode "EXCL-WAR" .
+
+pcd:EXCL-WEAR a pc:Exclusion ;
+    rdfs:label "Wear and Tear" ;
+    pc:exclusionCode "EXCL-WEAR" .
+
+pcd:MM-FL-2025-0142 a pc:StateFiling ;
+    rdfs:label "FL form and rate filing MM-FL-2025-0142" ;
+    pc:appliesInState pcd:FL ;
+    pc:filingNumber "MM-FL-2025-0142" ;
+    pc:hasFormApproval <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-0010>,
+        <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-1030>,
+        <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E101>,
+        <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E205>,
+        <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E310>,
+        <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-E415>,
+        <https://example.org/pc/id/approval/MM-FL-2025-0142/MM-CP-FL-01> .
+
+pcd:MM-RM-CP-2025 a pc:RateManual ;
+    rdfs:label "Commercial Property Rate Manual" ;
+    pc:documentId "MM-RM-CP-2025" ;
+    pc:editionDate "07/2025" ;
+    pc:effectiveDate "2025-07-01"^^xsd:date ;
+    pc:references pcd:MM-CP-E101,
+        pcd:MM-CP-E310,
+        pcd:MM-CP-E415 .
+
+pcd:MM-UW-CP-2025 a pc:UnderwritingGuideline ;
+    rdfs:label "Commercial Property Underwriting Guidelines" ;
+    pc:appliesInState pcd:FL,
+        pcd:NY,
+        pcd:TX ;
+    pc:documentId "MM-UW-CP-2025" ;
+    pc:effectiveDate "2025-07-01"^^xsd:date ;
+    pc:references pcd:MM-CP-0010,
+        pcd:MM-CP-1030,
+        pcd:MM-CP-E101,
+        pcd:MM-CP-E310,
+        pcd:MM-CP-E415,
+        pcd:MM-CP-FL-01,
+        pcd:MM-NY-2025-0211,
+        pcd:MM-RM-CP-2025 ;
+    pc:versionLabel "3.2" .
+
+pcd:EXCL-FLD a pc:Exclusion ;
+    rdfs:label "Water (flood, surface water, overflow)" ;
+    pc:excludesPeril pcd:Flood,
+        pcd:Water ;
+    pc:exclusionCode "EXCL-FLD" .
+
+pcd:MM-CP-E205 a pc:Endorsement ;
+    rdfs:label "Equipment Breakdown Endorsement" ;
+    rdfs:comment "Rating: Per $100 of COV-A + COV-B limit; 0.025" ;
+    pc:appliesInState pcd:FL,
+        pcd:TX ;
+    pc:editionDate "01/2025" ;
+    pc:formNumber "MM-CP-E205" ;
+    pc:modifiesCoverage pcd:COV-A,
+        pcd:COV-B ;
+    pc:modifiesForm pcd:MM-CP-0010,
+        pcd:MM-CP-1030 ;
+    pc:restoresPeril pcd:MechanicalBreakdown ;
+    pc:sublimitAmount 100000.0 .
+
+pcd:MM-CP-FL-01 a pc:StateAmendatoryEndorsement ;
+    rdfs:label "Florida Amendatory Endorsement" ;
+    rdfs:comment "Rating: No charge (mandatory); 1.00" ;
+    pc:appliesInState pcd:FL ;
+    pc:editionDate "07/2025" ;
+    pc:formNumber "MM-CP-FL-01" ;
+    pc:mandatoryIn pcd:FL ;
+    pc:modifiesCoverage pcd:COV-A ;
+    pc:modifiesForm pcd:MM-CP-0010 .
+
+pcd:MM-CP-E101 a pc:Endorsement ;
+    rdfs:label "Flood Coverage Endorsement - Scheduled Locations" ;
+    rdfs:comment "Rating: Per $100 of Flood Sublimit; 0.350 in zone X; 0.900 in zones A/AE; 1.400 in zones V/VE" ;
+    pc:appliesInState pcd:FL,
+        pcd:TX ;
+    pc:deductibleMinimum 25000.0 ;
+    pc:deductiblePercent 5.0 ;
+    pc:editionDate "06/2025" ;
+    pc:formNumber "MM-CP-E101" ;
+    pc:modifiesCoverage pcd:COV-A,
+        pcd:COV-B ;
+    pc:modifiesForm pcd:MM-CP-0010,
+        pcd:MM-CP-1030 ;
+    pc:removesExclusion pcd:EXCL-FLD ;
+    pc:restoresPeril pcd:Flood ;
+    pc:sublimitAmount 250000.0 .
+
+pcd:MM-CP-1030 a pc:PolicyForm ;
+    rdfs:label "Causes of Loss - Special Form" ;
+    pc:editionDate "01/2025" ;
+    pc:formNumber "MM-CP-1030" ;
+    pc:hasExclusion pcd:EXCL-EQ,
+        pcd:EXCL-FLD,
+        pcd:EXCL-MOLD,
+        pcd:EXCL-WAR,
+        pcd:EXCL-WEAR ;
+    pc:supersedes pcd:MM-CP-1030-Ed-07-2022 .
+
+pcd:MM-CP-E310 a pc:Endorsement ;
+    rdfs:label "Windstorm or Hail Percentage Deductible" ;
+    rdfs:comment "Rating: Factor on COV-A + COV-B premium; WH-2 0.92 / WH-5 0.85" ;
+    pc:appliesInState pcd:FL,
+        pcd:TX ;
+    pc:editionDate "03/2025" ;
+    pc:formNumber "MM-CP-E310" ;
+    pc:mandatoryIn pcd:FL,
+        pcd:FL-T03,
+        pcd:TX-T01 ;
+    pc:modifiesCoverage pcd:COV-A,
+        pcd:COV-B ;
+    pc:modifiesForm pcd:MM-CP-0010 .
+
+pcd:MM-CP-E415 a pc:Endorsement ;
+    rdfs:label "Protective Safeguards Endorsement" ;
+    rdfs:comment "Rating: No charge (enables SPR/ALM factors); 1.00" ;
+    pc:appliesInState pcd:FL,
+        pcd:TX ;
+    pc:editionDate "01/2025" ;
+    pc:formNumber "MM-CP-E415" ;
+    pc:modifiesCoverage pcd:COV-A,
+        pcd:COV-B,
+        pcd:COV-C ;
+    pc:modifiesForm pcd:MM-CP-0010 .
+
+pcd:MM-CP-0010 a pc:PolicyForm ;
+    rdfs:label "Building and Personal Property Coverage Form" ;
+    pc:appliesInState pcd:FL,
+        pcd:TX ;
+    pc:documentId "MM-CP-0010" ;
+    pc:editionDate "01/2025" ;
+    pc:formNumber "MM-CP-0010" ;
+    pc:hasExclusion pcd:EXCL-EQ,
+        pcd:EXCL-FLD,
+        pcd:EXCL-MOLD,
+        pcd:EXCL-WAR,
+        pcd:EXCL-WEAR ;
+    pc:references pcd:MM-CP-1030,
+        pcd:MM-CP-E101,
+        pcd:MM-CP-E205,
+        pcd:MM-CP-E310,
+        pcd:MM-CP-E415,
+        pcd:MM-CP-FL-01 ;
+    pc:supersedes pcd:MM-CP-0010-Ed-07-2022 .
+

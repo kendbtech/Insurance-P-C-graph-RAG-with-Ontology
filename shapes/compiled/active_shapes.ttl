@@ -1,0 +1,201 @@
+@prefix ns1: <https://example.org/pc/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<https://example.org/pc/shape/R01> a sh:NodeShape ;
+    rdfs:label "R01" ;
+    rdfs:comment "PROHIBITION Claim pay_for_loss | source MM-CP-0010#SECTION-B/B.1 | status scoped" ;
+    sh:sparql [ sh:message "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:onPolicy/pc:hasForm ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/MM-CP-0010>)
+    $this pc:causeOfLoss ?value .
+    FILTER(?value IN (<https://example.org/pc/id/Flood>))
+    FILTER NOT EXISTS {
+      $this pc:onPolicy/pc:hasEndorsement ?c200 .
+    FILTER(?c200 = <https://example.org/pc/id/MM-CP-E101>)
+      $this pc:atLocation/pc:scheduledUnder ?c201 .
+    FILTER(?c201 = <https://example.org/pc/id/MM-CP-E101>)
+      $this pc:affectsCoverage ?c202 .
+    FILTER(?c202 IN (<https://example.org/pc/id/COV-A>, <https://example.org/pc/id/COV-B>))
+    }
+}""" ] ;
+    sh:targetClass ns1:Claim ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-CP-0010_SECTION-B_B.1> ;
+    ns1:ruleStatus "scoped" .
+
+<https://example.org/pc/shape/R02> a sh:NodeShape ;
+    rdfs:label "R02" ;
+    rdfs:comment "PERMISSION Claim pay_for_loss | source MM-CP-E-SERIES#1-MM-CP-E101/1.2 | status active" ;
+    sh:sparql [ sh:message "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:causeOfLoss ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/Flood>)
+    $this pc:onPolicy/pc:hasEndorsement ?c1 .
+    FILTER(?c1 = <https://example.org/pc/id/MM-CP-E101>)
+    BIND($this AS ?value)
+    FILTER NOT EXISTS { { $this pc:atLocation/pc:scheduledUnder ?c100 .
+    FILTER(?c100 = <https://example.org/pc/id/MM-CP-E101>) } { $this pc:affectsCoverage ?c101 .
+    FILTER(?c101 IN (<https://example.org/pc/id/COV-A>, <https://example.org/pc/id/COV-B>)) } }
+}""" ] ;
+    sh:targetClass ns1:Claim ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-CP-E-SERIES_1-MM-CP-E101_1.2> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R03> a sh:NodeShape ;
+    rdfs:label "R03" ;
+    rdfs:comment "OBLIGATION Claim report_loss | source MM-CP-0010#SECTION-E/E.3 | status scoped" ;
+    sh:sparql [ sh:message "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b))." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:onPolicy/pc:inState ?c0 .
+    FILTER(?c0 != <https://example.org/pc/id/FL>)
+    $this pc:noticeDelayHours ?value . FILTER(?value > 72)
+}""" ] ;
+    sh:targetClass ns1:Claim ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-CP-0010_SECTION-E_E.3> ;
+    ns1:ruleStatus "scoped" .
+
+<https://example.org/pc/shape/R04> a sh:NodeShape ;
+    rdfs:label "R04" ;
+    rdfs:comment "OBLIGATION Claim report_loss | source MM-CP-E-SERIES#5-MM-CP-FL-01/5.3 | status active" ;
+    sh:sparql [ sh:message "In Florida the notice period is 14 days (MM-CP-FL-01 Section 5.3 amends E.3(b))." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:onPolicy/pc:inState ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/FL>)
+    $this pc:noticeDelayHours ?value . FILTER(?value > 336)
+}""" ] ;
+    sh:targetClass ns1:Claim ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-CP-E-SERIES_5-MM-CP-FL-01_5.3> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R05> a sh:NodeShape ;
+    rdfs:label "R05" ;
+    rdfs:comment "PROHIBITION Policy bind | source MM-UW-CP-2025#SECTION-2/2.3 | status active" ;
+    sh:property [ sh:message "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)." ;
+            sh:not [ sh:hasValue <https://example.org/pc/id/CC-0511> ] ;
+            sh:path ns1:hasClassCode ] ;
+    sh:targetClass ns1:Policy ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-UW-CP-2025_SECTION-2_2.3> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R06> a sh:NodeShape ;
+    rdfs:label "R06" ;
+    rdfs:comment "PROHIBITION Policy attach_form | source MM-UW-CP-2025#SECTION-4/4.6 | status active" ;
+    sh:sparql [ sh:message "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:hasForm ?value ; pc:inState ?st .
+    FILTER NOT EXISTS { ?ap a pc:FormApproval ; pc:approvalOfForm ?value ; pc:approvalInState ?st ; pc:approvalStatus pcd:Approved }
+}""" ] ;
+    sh:targetClass ns1:Policy ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-UW-CP-2025_SECTION-4_4.6> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R07> a sh:NodeShape ;
+    rdfs:label "R07" ;
+    rdfs:comment "OBLIGATION Policy attach_endorsement | source MM-UW-CP-2025#SECTION-4/4.2 | status active" ;
+    sh:sparql [ sh:message "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:inState ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/FL>)
+    BIND(<https://example.org/pc/id/MM-CP-FL-01> AS ?value)
+    FILTER NOT EXISTS { $this pc:hasEndorsement ?value }
+}""" ] ;
+    sh:targetClass ns1:Policy ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-UW-CP-2025_SECTION-4_4.2> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R08> a sh:NodeShape ;
+    rdfs:label "R08" ;
+    rdfs:comment "OBLIGATION Policy attach_endorsement | source MM-UW-CP-2025#SECTION-4/4.3 | status active" ;
+    sh:sparql [ sh:message "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:hasLocation/pc:inTerritory ?c0 .
+    FILTER(?c0 IN (<https://example.org/pc/id/FL-T03>, <https://example.org/pc/id/TX-T01>))
+    BIND(<https://example.org/pc/id/MM-CP-E310> AS ?value)
+    FILTER NOT EXISTS { $this pc:hasEndorsement ?value }
+}""" ] ;
+    sh:targetClass ns1:Policy ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-UW-CP-2025_SECTION-4_4.3> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R09> a sh:NodeShape ;
+    rdfs:label "R09" ;
+    rdfs:comment "OBLIGATION Location schedule_location | source MM-UW-CP-2025#SECTION-4/4.4 | status active" ;
+    sh:sparql [ sh:message "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:inFloodZone ?c0 .
+    FILTER(?c0 IN (<https://example.org/pc/id/A>, <https://example.org/pc/id/AE>, <https://example.org/pc/id/V>, <https://example.org/pc/id/VE>))
+    BIND(<https://example.org/pc/id/MM-CP-E101> AS ?value)
+    FILTER NOT EXISTS { $this pc:scheduledUnder ?value }
+    FILTER NOT EXISTS {
+      $this ^pc:hasLocation/pc:floodAcknowledgmentSigned ?c200 .
+    FILTER(?c200 = true)
+    }
+}""" ] ;
+    sh:targetClass ns1:Location ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-UW-CP-2025_SECTION-4_4.4> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R10> a sh:NodeShape ;
+    rdfs:label "R10" ;
+    rdfs:comment "PROHIBITION Policy bind | source MM-UW-CP-2025#SECTION-3/3.1 | status active" ;
+    sh:sparql [ sh:message "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:totalInsuredValue ?c0 .
+    $this pc:boundBy/pc:hasAuthorityLevel/pc:authorityMaxTIV ?v0 .
+    FILTER(?c0 > ?v0)
+    BIND($this AS ?value)
+}""" ] ;
+    sh:targetClass ns1:Policy ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-UW-CP-2025_SECTION-3_3.1> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R11> a sh:NodeShape ;
+    rdfs:label "R11" ;
+    rdfs:comment "PROHIBITION Claim pay_for_loss | source MM-CP-0010#SECTION-E/E.5 | status active" ;
+    sh:sparql [ sh:message "Building vacant more than 60 days: vandalism, sprinkler leakage, water damage and theft are not covered (MM-CP-0010 E.5)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:atLocation/pc:vacantDays ?c0 .
+    FILTER(?c0 > 60)
+    $this pc:causeOfLoss ?value .
+    FILTER(?value IN (<https://example.org/pc/id/Vandalism>, <https://example.org/pc/id/SprinklerLeakage>, <https://example.org/pc/id/Theft>, <https://example.org/pc/id/Water>))
+}""" ] ;
+    sh:targetClass ns1:Claim ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-CP-0010_SECTION-E_E.5> ;
+    ns1:ruleStatus "active" .
+
+<https://example.org/pc/shape/R12> a sh:NodeShape ;
+    rdfs:label "R12" ;
+    rdfs:comment "OBLIGATION Claim acknowledge_claim | source MM-CM-CP-2025#SECTION-1/1.2 | status active" ;
+    sh:sparql [ sh:message "Adjuster must acknowledge a Florida claim in writing within 14 calendar days (MM-CM-CP-2025 1.2)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:onPolicy/pc:inState ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/FL>)
+    $this pc:acknowledgmentDelayDays ?value . FILTER(?value > 14)
+}""" ] ;
+    sh:targetClass ns1:Claim ;
+    ns1:compiledFrom <https://example.org/pc/id/MM-CM-CP-2025_SECTION-1_1.2> ;
+    ns1:ruleStatus "active" .
+

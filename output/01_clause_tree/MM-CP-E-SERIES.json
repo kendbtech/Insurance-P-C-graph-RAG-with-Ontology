@@ -1,0 +1,588 @@
+{
+  "doc_id": "MM-CP-E-SERIES",
+  "file": "02_endorsements_MM-CP-E-series.pdf",
+  "doc_type": "EndorsementPackage",
+  "title": "Commercial Property Endorsements Package",
+  "metadata": {
+    "Package": "MM-CP-E-SERIES",
+    "Edition Dates": "E101 06/2025; E205 01/2025; E310 03/2025; E415 01/2025; FL-01 07/2025",
+    "Modifies Forms": "MM-CP-0010 (Ed. 01/2025), MM-CP-1030 (Ed. 01/2025)",
+    "State Availability": "See Section 6 and State Filings MM-FL-2025-0142, MM-TX-2025-0098, MM-NY-2025-0211"
+  },
+  "sections": [
+    {
+      "id": "FRONT",
+      "title": "Front matter",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Field",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Package",
+              "MM-CP-E-SERIES"
+            ],
+            [
+              "Edition Dates",
+              "E101 06/2025; E205 01/2025; E310 03/2025; E415 01/2025; FL-01 07/2025"
+            ],
+            [
+              "Modifies Forms",
+              "MM-CP-0010 (Ed. 01/2025), MM-CP-1030 (Ed. 01/2025)"
+            ],
+            [
+              "State Availability",
+              "See Section 6 and State Filings MM-FL-2025-0142, MM-TX-2025-0098, MM-NY-2025-0211"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-CP-E-SERIES#FRONT/T1"
+        }
+      ]
+    },
+    {
+      "id": "1-MM-CP-E101",
+      "title": "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025)",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-E-SERIES#1-MM-CP-E101/1.1",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "1-MM-CP-E101",
+          "section_title": "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025)",
+          "ref": "1.1",
+          "page": 1,
+          "text": "1.1 This endorsement modifies insurance provided under MM-CP-0010 and MM-CP-1030. It applies only to the scheduled locations listed in the Schedule below and to Coverages COV-A (Building) and COV-B (Your Business Personal Property).",
+          "full_text": "1.1 This endorsement modifies insurance provided under MM-CP-0010 and MM-CP-1030. It applies only to the scheduled locations listed in the Schedule below and to Coverages COV-A (Building) and COV-B (Your Business Personal Property).",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010",
+              "MM-CP-1030"
+            ],
+            "coverage": [
+              "COV-A",
+              "COV-B"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#1-MM-CP-E101/1.2",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "1-MM-CP-E101",
+          "section_title": "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025)",
+          "ref": "1.2",
+          "page": 1,
+          "text": "1.2 Coverage Grant. Exclusion EXCL-FLD (Water) in Section B.1.g of MM-CP-1030 is deleted with respect to the peril of Flood for the scheduled locations. We will pay for direct physical loss of or damage to Covered Property at a scheduled location caused by Flood, subject to the Flood Sublimit and Flood Deductible shown in the Schedule.",
+          "full_text": "1.2 Coverage Grant. Exclusion EXCL-FLD (Water) in Section B.1.g of MM-CP-1030 is deleted with respect to the peril of Flood for the scheduled locations. We will pay for direct physical loss of or damage to Covered Property at a scheduled location caused by Flood, subject to the Flood Sublimit and Flood Deductible shown in the Schedule.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-1030"
+            ],
+            "exclusion": [
+              "EXCL-FLD"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#1-MM-CP-E101/1.3",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "1-MM-CP-E101",
+          "section_title": "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025)",
+          "ref": "1.3",
+          "page": 1,
+          "text": "1.3 Flood Deductible. A deductible of 5% of the Limit of Insurance for COV-A at the scheduled location applies to each Flood occurrence, but not less than $25,000. This deductible replaces the deductible in Section D of MM-CP-0010 for the peril of Flood only.",
+          "full_text": "1.3 Flood Deductible. A deductible of 5% of the Limit of Insurance for COV-A at the scheduled location applies to each Flood occurrence, but not less than $25,000. This deductible replaces the deductible in Section D of MM-CP-0010 for the peril of Flood only.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-E-SERIES#1-MM-CP-E101/1.3/x1",
+              "text": "but not less than $25,000.",
+              "exception_to": "MM-CP-E-SERIES#1-MM-CP-E101/1.3"
+            }
+          ],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ],
+            "coverage": [
+              "COV-A"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#1-MM-CP-E101/1.4",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "1-MM-CP-E101",
+          "section_title": "1. MM-CP-E101 - FLOOD COVERAGE ENDORSEMENT - SCHEDULED LOCATIONS (Ed. 06/2025)",
+          "ref": "1.4",
+          "page": 1,
+          "text": "1.4 Limitations. We will not pay under this endorsement for loss to property in the open, for loss at any location that is not a scheduled location, or for loss caused by Flood that begins before the effective date of this endorsement or within 72 hours after it. Coverage COV-D (Business Income) is not extended by this endorsement unless the Schedule shows a COV-D Flood Sublimit.",
+          "full_text": "1.4 Limitations. We will not pay under this endorsement for loss to property in the open, for loss at any location that is not a scheduled location, or for loss caused by Flood that begins before the effective date of this endorsement or within 72 hours after it. Coverage COV-D (Business Income) is not extended by this endorsement unless the Schedule shows a COV-D Flood Sublimit.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-E-SERIES#1-MM-CP-E101/1.4/x1",
+              "text": "is not extended by this endorsement unless the Schedule shows a COV-D Flood Sublimit.",
+              "exception_to": "MM-CP-E-SERIES#1-MM-CP-E101/1.4"
+            }
+          ],
+          "ids": {
+            "coverage": [
+              "COV-D"
+            ]
+          }
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Schedule Item",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Flood Sublimit (COV-A + COV-B, per location)",
+              "$250,000"
+            ],
+            [
+              "Flood Deductible",
+              "5% of COV-A limit, minimum $25,000"
+            ],
+            [
+              "Annual Aggregate",
+              "$500,000"
+            ],
+            [
+              "Eligible Flood Zones",
+              "AE, A, VE, X (shaded)"
+            ],
+            [
+              "Available States",
+              "FL, TX"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-CP-E-SERIES#1-MM-CP-E101/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "2-MM-CP-E205",
+      "title": "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025)",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-E-SERIES#2-MM-CP-E205/2.1",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "2-MM-CP-E205",
+          "section_title": "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025)",
+          "ref": "2.1",
+          "page": 1,
+          "text": "2.1 This endorsement modifies MM-CP-0010 Coverages COV-A and COV-B. We will pay for direct physical damage to Covered Property caused by a Breakdown to Covered Equipment, including mechanical breakdown, electrical arcing and steam boiler explosion.",
+          "full_text": "2.1 This endorsement modifies MM-CP-0010 Coverages COV-A and COV-B. We will pay for direct physical damage to Covered Property caused by a Breakdown to Covered Equipment, including mechanical breakdown, electrical arcing and steam boiler explosion.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ],
+            "coverage": [
+              "COV-A",
+              "COV-B"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#2-MM-CP-E205/2.2",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "2-MM-CP-E205",
+          "section_title": "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025)",
+          "ref": "2.2",
+          "page": 1,
+          "text": "2.2 The exclusion for mechanical breakdown in MM-CP-1030 Section B.2.d does not apply to the extent coverage is provided by this endorsement.",
+          "full_text": "2.2 The exclusion for mechanical breakdown in MM-CP-1030 Section B.2.d does not apply to the extent coverage is provided by this endorsement.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-E-SERIES#2-MM-CP-E205/2.2/x1",
+              "text": "does not apply to the extent coverage is provided by this endorsement.",
+              "exception_to": "MM-CP-E-SERIES#2-MM-CP-E205/2.2"
+            }
+          ],
+          "ids": {
+            "form": [
+              "MM-CP-1030"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#2-MM-CP-E205/2.3",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "2-MM-CP-E205",
+          "section_title": "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025)",
+          "ref": "2.3",
+          "page": 1,
+          "text": "2.3 The most we will pay for loss under this endorsement is $100,000 per occurrence unless a higher limit is shown in the Declarations.",
+          "full_text": "2.3 The most we will pay for loss under this endorsement is $100,000 per occurrence unless a higher limit is shown in the Declarations.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-E-SERIES#2-MM-CP-E205/2.3/x1",
+              "text": "unless a higher limit is shown in the Declarations.",
+              "exception_to": "MM-CP-E-SERIES#2-MM-CP-E205/2.3"
+            }
+          ],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#2-MM-CP-E205/2.4",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "2-MM-CP-E205",
+          "section_title": "2. MM-CP-E205 - EQUIPMENT BREAKDOWN ENDORSEMENT (Ed. 01/2025)",
+          "ref": "2.4",
+          "page": 1,
+          "text": "2.4 You must maintain all Covered Equipment in accordance with the manufacturer's recommendations.",
+          "full_text": "2.4 You must maintain all Covered Equipment in accordance with the manufacturer's recommendations.",
+          "exceptions": [],
+          "ids": {}
+        }
+      ],
+      "tables": [],
+      "page": 1
+    },
+    {
+      "id": "3-MM-CP-E310",
+      "title": "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025)",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-E-SERIES#3-MM-CP-E310/3.1",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "3-MM-CP-E310",
+          "section_title": "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025)",
+          "ref": "3.1",
+          "page": 2,
+          "text": "3.1 This endorsement modifies Section D - Deductible of MM-CP-0010 for Coverage COV-A and COV-B.",
+          "full_text": "3.1 This endorsement modifies Section D - Deductible of MM-CP-0010 for Coverage COV-A and COV-B.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ],
+            "coverage": [
+              "COV-A",
+              "COV-B"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#3-MM-CP-E310/3.2",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "3-MM-CP-E310",
+          "section_title": "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025)",
+          "ref": "3.2",
+          "page": 2,
+          "text": "3.2 For loss caused by Windstorm or Hail, the deductible is the percentage shown in the Declarations (2% or 5%) of the Limit of Insurance for the damaged property, replacing the flat deductible.",
+          "full_text": "3.2 For loss caused by Windstorm or Hail, the deductible is the percentage shown in the Declarations (2% or 5%) of the Limit of Insurance for the damaged property, replacing the flat deductible.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#3-MM-CP-E310/3.3",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "3-MM-CP-E310",
+          "section_title": "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025)",
+          "ref": "3.3",
+          "page": 2,
+          "text": "3.3 In Florida the Windstorm deductible applies as a Hurricane deductible on a calendar-year basis as required by Filing MM-FL-2025-0142.",
+          "full_text": "3.3 In Florida the Windstorm deductible applies as a Hurricane deductible on a calendar-year basis as required by Filing MM-FL-2025-0142.",
+          "exceptions": [],
+          "ids": {
+            "state": [
+              "FL"
+            ],
+            "filing": [
+              "MM-FL-2025-0142"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#3-MM-CP-E310/3.4",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "3-MM-CP-E310",
+          "section_title": "3. MM-CP-E310 - WINDSTORM OR HAIL PERCENTAGE DEDUCTIBLE (Ed. 03/2025)",
+          "ref": "3.4",
+          "page": 2,
+          "text": "3.4 This endorsement is mandatory for risks located in Florida Tier 1 coastal counties and in Texas territory TX-T01 per Underwriting Guideline MM-UW-CP-2025 Section 4.3.",
+          "full_text": "3.4 This endorsement is mandatory for risks located in Florida Tier 1 coastal counties and in Texas territory TX-T01 per Underwriting Guideline MM-UW-CP-2025 Section 4.3.",
+          "exceptions": [],
+          "ids": {
+            "state": [
+              "TX"
+            ],
+            "territory": [
+              "TX-T01"
+            ],
+            "document": [
+              "MM-UW-CP-2025"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 2
+    },
+    {
+      "id": "4-MM-CP-E415",
+      "title": "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025)",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-E-SERIES#4-MM-CP-E415/4.1",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "4-MM-CP-E415",
+          "section_title": "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025)",
+          "ref": "4.1",
+          "page": 3,
+          "text": "4.1 As a condition of this insurance, you are required to maintain the protective devices or services listed in the Schedule (for example P-1 Automatic Sprinkler System, P-2 Automatic Fire Alarm, P-9 Central Station Burglar Alarm).",
+          "full_text": "4.1 As a condition of this insurance, you are required to maintain the protective devices or services listed in the Schedule (for example P-1 Automatic Sprinkler System, P-2 Automatic Fire Alarm, P-9 Central Station Burglar Alarm).",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#4-MM-CP-E415/4.2",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "4-MM-CP-E415",
+          "section_title": "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025)",
+          "ref": "4.2",
+          "page": 3,
+          "text": "4.2 You must notify us within 48 hours if any listed protective safeguard is impaired or out of service, except when the impairment is due to ordinary maintenance that is completed within 24 hours.",
+          "full_text": "4.2 You must notify us within 48 hours if any listed protective safeguard is impaired or out of service, except when the impairment is due to ordinary maintenance that is completed within 24 hours.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-E-SERIES#4-MM-CP-E415/4.2/x1",
+              "text": "except when the impairment is due to ordinary maintenance that is completed within 24 hours.",
+              "exception_to": "MM-CP-E-SERIES#4-MM-CP-E415/4.2"
+            }
+          ],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#4-MM-CP-E415/4.3",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "4-MM-CP-E415",
+          "section_title": "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025)",
+          "ref": "4.3",
+          "page": 3,
+          "text": "4.3 We will not pay for loss or damage caused by or resulting from fire if, prior to the fire, you knew of any suspension or impairment in any protective safeguard listed in the Schedule and failed to notify us of that fact.",
+          "full_text": "4.3 We will not pay for loss or damage caused by or resulting from fire if, prior to the fire, you knew of any suspension or impairment in any protective safeguard listed in the Schedule and failed to notify us of that fact.",
+          "exceptions": [],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#4-MM-CP-E415/4.4",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "4-MM-CP-E415",
+          "section_title": "4. MM-CP-E415 - PROTECTIVE SAFEGUARDS ENDORSEMENT (Ed. 01/2025)",
+          "ref": "4.4",
+          "page": 3,
+          "text": "4.4 This endorsement modifies Coverages COV-A, COV-B and COV-C.",
+          "full_text": "4.4 This endorsement modifies Coverages COV-A, COV-B and COV-C.",
+          "exceptions": [],
+          "ids": {
+            "coverage": [
+              "COV-A",
+              "COV-B",
+              "COV-C"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "5-MM-CP-FL-01",
+      "title": "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025)",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.1",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "5-MM-CP-FL-01",
+          "section_title": "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025)",
+          "ref": "5.1",
+          "page": 3,
+          "text": "5.1 This endorsement modifies MM-CP-0010 for policies issued in the State of Florida (FL) and supersedes any conflicting provision in the base form.",
+          "full_text": "5.1 This endorsement modifies MM-CP-0010 for policies issued in the State of Florida (FL) and supersedes any conflicting provision in the base form.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ],
+            "state": [
+              "FL"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.2",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "5-MM-CP-FL-01",
+          "section_title": "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025)",
+          "ref": "5.2",
+          "page": 3,
+          "text": "5.2 Cancellation. We may cancel this policy only for the reasons permitted by Florida law and we must mail written notice of cancellation at least 45 days before the effective date of cancellation, except 10 days for nonpayment of premium.",
+          "full_text": "5.2 Cancellation. We may cancel this policy only for the reasons permitted by Florida law and we must mail written notice of cancellation at least 45 days before the effective date of cancellation, except 10 days for nonpayment of premium.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.2/x1",
+              "text": "except 10 days for nonpayment of premium.",
+              "exception_to": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.2"
+            }
+          ],
+          "ids": {}
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.3",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "5-MM-CP-FL-01",
+          "section_title": "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025)",
+          "ref": "5.3",
+          "page": 3,
+          "text": "5.3 Section E.3(b) of MM-CP-0010 is amended to read: you must give us prompt notice of the loss or damage, and in no event later than 14 days after you become aware of it.",
+          "full_text": "5.3 Section E.3(b) of MM-CP-0010 is amended to read: you must give us prompt notice of the loss or damage, and in no event later than 14 days after you become aware of it.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.4",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "5-MM-CP-FL-01",
+          "section_title": "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025)",
+          "ref": "5.4",
+          "page": 3,
+          "text": "5.4 Hurricane Deductible Disclosure. Where MM-CP-E310 is attached, the Declarations must display the hurricane deductible in dollars and as a percentage.",
+          "full_text": "5.4 Hurricane Deductible Disclosure. Where MM-CP-E310 is attached, the Declarations must display the hurricane deductible in dollars and as a percentage.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E310"
+            ]
+          }
+        },
+        {
+          "clause_id": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.5",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "5-MM-CP-FL-01",
+          "section_title": "5. MM-CP-FL-01 - FLORIDA AMENDATORY ENDORSEMENT (Ed. 07/2025)",
+          "ref": "5.5",
+          "page": 3,
+          "text": "5.5 Coverage COV-A is amended to include the cost to comply with any ordinance or law up to $25,000 per occurrence.",
+          "full_text": "5.5 Coverage COV-A is amended to include the cost to comply with any ordinance or law up to $25,000 per occurrence.",
+          "exceptions": [],
+          "ids": {
+            "coverage": [
+              "COV-A"
+            ]
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "6-ENDORSEMENTAVAILABILITYMATRIX",
+      "title": "6. ENDORSEMENT AVAILABILITY MATRIX",
+      "clauses": [
+        {
+          "clause_id": "MM-CP-E-SERIES#6-ENDORSEMENTAVAILABILITYMATRIX/6.1",
+          "doc_id": "MM-CP-E-SERIES",
+          "section": "6-ENDORSEMENTAVAILABILITYMATRIX",
+          "section_title": "6. ENDORSEMENT AVAILABILITY MATRIX",
+          "ref": "6.1",
+          "page": 3,
+          "text": "6.1 Precedence. Where an endorsement conflicts with the base form, the endorsement controls. Where a state amendatory endorsement conflicts with any other endorsement, the state amendatory endorsement controls. Where two editions of the same form are in force, the later edition controls.",
+          "full_text": "6.1 Precedence. Where an endorsement conflicts with the base form, the endorsement controls. Where a state amendatory endorsement conflicts with any other endorsement, the state amendatory endorsement controls. Where two editions of the same form are in force, the later edition controls.",
+          "exceptions": [],
+          "ids": {}
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Endorsement",
+            "Edition",
+            "Modifies Coverages",
+            "Modifies Forms",
+            "FL",
+            "TX",
+            "NY"
+          ],
+          "rows": [
+            [
+              "MM-CP-E101",
+              "06/2025",
+              "COV-A, COV-B",
+              "MM-CP-0010, MM-CP-1030",
+              "Approved",
+              "Approved",
+              "Not filed"
+            ],
+            [
+              "MM-CP-E205",
+              "01/2025",
+              "COV-A, COV-B",
+              "MM-CP-0010, MM-CP-1030",
+              "Approved",
+              "Approved",
+              "Pending"
+            ],
+            [
+              "MM-CP-E310",
+              "03/2025",
+              "COV-A, COV-B",
+              "MM-CP-0010",
+              "Approved (mandatory Tier 1)",
+              "Approved",
+              "Not filed"
+            ],
+            [
+              "MM-CP-E415",
+              "01/2025",
+              "COV-A, COV-B, COV-C",
+              "MM-CP-0010",
+              "Approved",
+              "Approved",
+              "Pending"
+            ],
+            [
+              "MM-CP-FL-01",
+              "07/2025",
+              "COV-A",
+              "MM-CP-0010",
+              "Approved (mandatory)",
+              "N/A",
+              "N/A"
+            ]
+          ],
+          "page": 3,
+          "table_id": "MM-CP-E-SERIES#6-ENDORSEMENTAVAILABILITYMATRIX/T1"
+        }
+      ],
+      "page": 3
+    }
+  ],
+  "dropped_by_gatekeeper": [
+    {
+      "clause_id": "MM-CP-E-SERIES#FRONT/p1",
+      "reason": "front-matter",
+      "text": "Commercial Property Endorsements Package Meridian Mutual Insurance Company (fictional). Endorsements modifying form MM-C"
+    },
+    {
+      "clause_id": "MM-CP-E-SERIES#FRONT/p1",
+      "reason": "front-matter",
+      "text": "SYNTHETIC DOCUMENT FOR TRAINING AND TESTING. Not a real insurance form. Carrier, forms, codes and figures are fictional."
+    }
+  ]
+}

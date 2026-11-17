@@ -1,0 +1,4 @@
+# How many clauses of each deontic type per document (Layer 2 output in the graph)
+SELECT ?document ?deontic (COUNT(?c) AS ?clauses) (AVG(?conf) AS ?avgConfidence) WHERE {
+  ?c a pc:Clause ; pc:sourceDocument/pc:documentId ?document ; pc:deonticType/rdfs:label ?deontic ; pc:confidence ?conf .
+} GROUP BY ?document ?deontic ORDER BY ?document ?deontic

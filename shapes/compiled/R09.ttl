@@ -1,0 +1,26 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+shape:R09 a sh:NodeShape ;
+    rdfs:label "R09" ;
+    rdfs:comment "OBLIGATION Location schedule_location | source MM-UW-CP-2025#SECTION-4/4.4 | status active" ;
+    sh:sparql [ sh:message "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:inFloodZone ?c0 .
+    FILTER(?c0 IN (<https://example.org/pc/id/A>, <https://example.org/pc/id/AE>, <https://example.org/pc/id/V>, <https://example.org/pc/id/VE>))
+    BIND(<https://example.org/pc/id/MM-CP-E101> AS ?value)
+    FILTER NOT EXISTS { $this pc:scheduledUnder ?value }
+    FILTER NOT EXISTS {
+      $this ^pc:hasLocation/pc:floodAcknowledgmentSigned ?c200 .
+    FILTER(?c200 = true)
+    }
+}""" ] ;
+    sh:targetClass pc:Location ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.4 ;
+    pc:ruleStatus "active" .
+

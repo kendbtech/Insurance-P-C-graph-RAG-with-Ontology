@@ -1,0 +1,6 @@
+# Every compiled rule: status, what it was compiled from, which document/page, and what overrides it
+SELECT ?rule ?status ?sourceClause ?document ?page ?overriddenBy WHERE {
+  ?r a pc:Rule ; rdfs:label ?rule ; pc:ruleStatus ?status ; pc:compiledFrom ?c .
+  ?c rdfs:label ?sourceClause ; pc:sourceDocument/pc:documentId ?document ; pc:pageNumber ?page .
+  OPTIONAL { ?r pc:overriddenBy/rdfs:label ?overriddenBy }
+} ORDER BY ?rule

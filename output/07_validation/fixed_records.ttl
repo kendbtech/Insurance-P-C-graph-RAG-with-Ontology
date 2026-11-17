@@ -1,0 +1,60 @@
+@prefix ns1: <https://example.org/pc/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/pc/id/MM-CP-E999> a ns1:Endorsement ;
+    ns1:appliesInState <https://example.org/pc/id/TX> ;
+    ns1:editionDate "01/2025" ;
+    ns1:formNumber "MM-CP-E999" ;
+    ns1:modifiesCoverage <https://example.org/pc/id/COV-A> ;
+    ns1:modifiesForm <https://example.org/pc/id/MM-CP-0010> .
+
+<https://example.org/pc/id/claim/CLM-0002> a ns1:Claim ;
+    ns1:affectsCoverage <https://example.org/pc/id/COV-A> ;
+    ns1:atLocation <https://example.org/pc/id/location/LOC-0002> ;
+    ns1:causeOfLoss <https://example.org/pc/id/Flood> ;
+    ns1:noticeDelayHours 20 ;
+    ns1:onPolicy <https://example.org/pc/id/policy/POL-FL-0002> .
+
+<https://example.org/pc/id/claim/CLM-0003> a ns1:Claim ;
+    ns1:atLocation <https://example.org/pc/id/location/LOC-0003> ;
+    ns1:causeOfLoss <https://example.org/pc/id/Fire> ;
+    ns1:noticeDelayHours 48 ;
+    ns1:onPolicy <https://example.org/pc/id/policy/POL-TX-0003> .
+
+<https://example.org/pc/id/policy/POL-NY-0099> a ns1:Policy ;
+    ns1:boundBy <https://example.org/pc/id/uw/jane-doe> ;
+    ns1:hasClassCode <https://example.org/pc/id/CC-0745> ;
+    ns1:hasForm <https://example.org/pc/id/MM-CP-0010> ;
+    ns1:hasLocation <https://example.org/pc/id/location/LOC-0099> ;
+    ns1:inState <https://example.org/pc/id/TX> ;
+    ns1:policyNumber "POL-NY-0099" ;
+    ns1:totalInsuredValue 4500000.0 .
+
+<https://example.org/pc/id/location/LOC-0099> a ns1:Location ;
+    ns1:inState <https://example.org/pc/id/TX> .
+
+<https://example.org/pc/id/policy/POL-FL-0002> a ns1:Policy ;
+    ns1:hasEndorsement <https://example.org/pc/id/MM-CP-E101>,
+        <https://example.org/pc/id/MM-CP-E310>,
+        <https://example.org/pc/id/MM-CP-FL-01> ;
+    ns1:hasForm <https://example.org/pc/id/MM-CP-0010>,
+        <https://example.org/pc/id/MM-CP-1030> ;
+    ns1:hasLocation <https://example.org/pc/id/location/LOC-0002> ;
+    ns1:inState <https://example.org/pc/id/FL> ;
+    ns1:policyNumber "POL-FL-0002" .
+
+<https://example.org/pc/id/policy/POL-TX-0003> a ns1:Policy ;
+    ns1:hasForm <https://example.org/pc/id/MM-CP-0010> ;
+    ns1:hasLocation <https://example.org/pc/id/location/LOC-0003> ;
+    ns1:inState <https://example.org/pc/id/TX> ;
+    ns1:policyNumber "POL-TX-0003" .
+
+<https://example.org/pc/id/location/LOC-0002> a ns1:Location ;
+    ns1:inFloodZone <https://example.org/pc/id/VE> ;
+    ns1:inState <https://example.org/pc/id/FL> ;
+    ns1:inTerritory <https://example.org/pc/id/FL-T03> ;
+    ns1:scheduledUnder <https://example.org/pc/id/MM-CP-E101> .
+
+<https://example.org/pc/id/location/LOC-0003> a ns1:Location ;
+    ns1:inState <https://example.org/pc/id/TX> .
+

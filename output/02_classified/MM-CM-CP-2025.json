@@ -1,0 +1,641 @@
+{
+  "doc_id": "MM-CM-CP-2025",
+  "file": "05_claims_manual_MM-CM-CP-2025.pdf",
+  "doc_type": "ClaimsManual",
+  "title": "Commercial Property Claims Handling Manual",
+  "metadata": {
+    "Document ID": "MM-CM-CP-2025",
+    "Version": "2.0",
+    "Effective Date": "05/01/2025",
+    "Applies To Forms": "MM-CP-0010, MM-CP-1030, MM-CP-E101, MM-CP-E205, MM-CP-E310, MM-CP-E415, MM-CP-FL-01",
+    "States In Scope": "FL, TX"
+  },
+  "sections": [
+    {
+      "id": "FRONT",
+      "title": "Front matter",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Field",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Document ID",
+              "MM-CM-CP-2025"
+            ],
+            [
+              "Version",
+              "2.0"
+            ],
+            [
+              "Effective Date",
+              "05/01/2025"
+            ],
+            [
+              "Applies To Forms",
+              "MM-CP-0010, MM-CP-1030, MM-CP-E101, MM-CP-E205, MM-CP-E310, MM-CP-E415, MM-CP-FL-01"
+            ],
+            [
+              "States In Scope",
+              "FL, TX"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-CM-CP-2025#FRONT/T1"
+        }
+      ]
+    },
+    {
+      "id": "SECTION-1",
+      "title": "SECTION 1 - FIRST NOTICE OF LOSS (FNOL)",
+      "clauses": [
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-1/1.1",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-1",
+          "section_title": "SECTION 1 - FIRST NOTICE OF LOSS (FNOL)",
+          "ref": "1.1",
+          "page": 1,
+          "text": "1.1 The insured is required by MM-CP-0010 Section E.3(b) to report loss within 72 hours of becoming aware of it; in Florida, MM-CP-FL-01 Section 5.3 extends this period to 14 days. Late notice must not be used to deny a claim unless the delay prejudiced our investigation.",
+          "full_text": "1.1 The insured is required by MM-CP-0010 Section E.3(b) to report loss within 72 hours of becoming aware of it; in Florida, MM-CP-FL-01 Section 5.3 extends this period to 14 days. Late notice must not be used to deny a claim unless the delay prejudiced our investigation.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CM-CP-2025#SECTION-1/1.1/x1",
+              "text": "unless the delay prejudiced our investigation.",
+              "exception_to": "MM-CM-CP-2025#SECTION-1/1.1",
+              "classification": {
+                "deontic": "Permission",
+                "confidence": 0.34,
+                "route": "pass2-rules",
+                "scores": {
+                  "Prohibition": 0.0,
+                  "Obligation": 0.0,
+                  "Permission": 0.0
+                }
+              }
+            }
+          ],
+          "ids": {
+            "form": [
+              "MM-CP-0010",
+              "MM-CP-FL-01"
+            ],
+            "state": [
+              "FL"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 0.517,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 7.0,
+              "Obligation": 7.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-1/1.2",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-1",
+          "section_title": "SECTION 1 - FIRST NOTICE OF LOSS (FNOL)",
+          "ref": "1.2",
+          "page": 1,
+          "text": "1.2 The adjuster must acknowledge receipt of every claim in writing within 14 calendar days in Florida and within 15 business days in Texas, per the applicable state claims-handling requirements referenced in Filings MM-FL-2025-0142 and MM-TX-2025-0098.",
+          "full_text": "1.2 The adjuster must acknowledge receipt of every claim in writing within 14 calendar days in Florida and within 15 business days in Texas, per the applicable state claims-handling requirements referenced in Filings MM-FL-2025-0142 and MM-TX-2025-0098.",
+          "exceptions": [],
+          "ids": {
+            "state": [
+              "FL",
+              "TX"
+            ],
+            "filing": [
+              "MM-FL-2025-0142",
+              "MM-TX-2025-0098"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 5.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-1/1.3",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-1",
+          "section_title": "SECTION 1 - FIRST NOTICE OF LOSS (FNOL)",
+          "ref": "1.3",
+          "page": 1,
+          "text": "1.3 At FNOL the adjuster must record: policy number, form edition of MM-CP-0010 in force, all attached endorsements, date of loss, cause of loss, and the scheduled location involved.",
+          "full_text": "1.3 At FNOL the adjuster must record: policy number, form edition of MM-CP-0010 in force, all attached endorsements, date of loss, cause of loss, and the scheduled location involved.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 1
+    },
+    {
+      "id": "SECTION-2",
+      "title": "SECTION 2 - COVERAGE VERIFICATION",
+      "clauses": [
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-2/2.1",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - COVERAGE VERIFICATION",
+          "ref": "2.1",
+          "page": 1,
+          "text": "2.1 The adjuster must verify that the form edition and endorsements on the policy match the editions approved in the applicable State Filing before issuing any coverage position.",
+          "full_text": "2.1 The adjuster must verify that the form edition and endorsements on the policy match the editions approved in the applicable State Filing before issuing any coverage position.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 0.714,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 1.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-2/2.2",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - COVERAGE VERIFICATION",
+          "ref": "2.2",
+          "page": 1,
+          "text": "2.2 For any loss involving water, the adjuster must determine whether the cause of loss is Flood as excluded by EXCL-FLD in MM-CP-1030 Section B.1.g, and then check whether MM-CP-E101 is attached and whether the damaged premises is a scheduled location under that endorsement.",
+          "full_text": "2.2 For any loss involving water, the adjuster must determine whether the cause of loss is Flood as excluded by EXCL-FLD in MM-CP-1030 Section B.1.g, and then check whether MM-CP-E101 is attached and whether the damaged premises is a scheduled location under that endorsement.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-1030",
+              "MM-CP-E101"
+            ],
+            "exclusion": [
+              "EXCL-FLD"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-2/2.3",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - COVERAGE VERIFICATION",
+          "ref": "2.3",
+          "page": 1,
+          "text": "2.3 If MM-CP-E101 is attached and the premises is a scheduled location, Flood damage to COV-A and COV-B is covered up to the Flood Sublimit of $250,000 subject to the 5% Flood Deductible; COV-D is not covered unless the Schedule shows a COV-D Flood Sublimit.",
+          "full_text": "2.3 If MM-CP-E101 is attached and the premises is a scheduled location, Flood damage to COV-A and COV-B is covered up to the Flood Sublimit of $250,000 subject to the 5% Flood Deductible; COV-D is not covered unless the Schedule shows a COV-D Flood Sublimit.",
+          "exceptions": [
+            {
+              "clause_id": "MM-CM-CP-2025#SECTION-2/2.3/x1",
+              "text": "unless the Schedule shows a COV-D Flood Sublimit.",
+              "exception_to": "MM-CM-CP-2025#SECTION-2/2.3",
+              "classification": {
+                "deontic": "Permission",
+                "confidence": 0.34,
+                "route": "pass2-rules",
+                "scores": {
+                  "Prohibition": 0.0,
+                  "Obligation": 0.0,
+                  "Permission": 0.0
+                }
+              }
+            }
+          ],
+          "ids": {
+            "form": [
+              "MM-CP-E101"
+            ],
+            "coverage": [
+              "COV-A",
+              "COV-B",
+              "COV-D"
+            ]
+          },
+          "classification": {
+            "deontic": "Permission",
+            "confidence": 0.565,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 6.5,
+              "Obligation": 0.0,
+              "Permission": 5.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-2/2.4",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - COVERAGE VERIFICATION",
+          "ref": "2.4",
+          "page": 1,
+          "text": "2.4 If MM-CP-E101 is not attached, or the premises is not a scheduled location, Flood damage is not covered and a reservation of rights letter must be issued within 10 business days.",
+          "full_text": "2.4 If MM-CP-E101 is not attached, or the premises is not a scheduled location, Flood damage is not covered and a reservation of rights letter must be issued within 10 business days.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E101"
+            ]
+          },
+          "classification": {
+            "deontic": "Prohibition",
+            "confidence": 0.579,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 5.5,
+              "Obligation": 4.0,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Cause of Loss",
+            "Exclusion Code",
+            "Restoring Endorsement",
+            "Coverage Position"
+          ],
+          "rows": [
+            [
+              "Flood / surface water",
+              "EXCL-FLD",
+              "MM-CP-E101 (scheduled locations only)",
+              "Covered only if E101 attached and location scheduled"
+            ],
+            [
+              "Earth movement",
+              "EXCL-EQ",
+              "None available",
+              "Not covered"
+            ],
+            [
+              "Mechanical breakdown",
+              "B.2.d",
+              "MM-CP-E205",
+              "Covered up to $100,000 if E205 attached"
+            ],
+            [
+              "Windstorm / hail",
+              "None (covered peril)",
+              "MM-CP-E310 changes deductible",
+              "Covered, apply 2% or 5% deductible"
+            ],
+            [
+              "Fire with impaired sprinkler",
+              "MM-CP-E415 4.3",
+              "None",
+              "Not covered if insured knew of impairment and did not notify"
+            ],
+            [
+              "Fungus / mold",
+              "EXCL-MOLD",
+              "None available",
+              "Not covered except limited $15,000 clean-up"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-CM-CP-2025#SECTION-2/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "SECTION-3",
+      "title": "SECTION 3 - RESERVES AND AUTHORITY",
+      "clauses": [
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-3/3.1",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-3",
+          "section_title": "SECTION 3 - RESERVES AND AUTHORITY",
+          "ref": "3.1",
+          "page": 3,
+          "text": "3.1 An adjuster must not set a reserve or issue a payment above his or her authority.",
+          "full_text": "3.1 An adjuster must not set a reserve or issue a payment above his or her authority.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Prohibition",
+            "confidence": 0.545,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 3.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-3/3.2",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-3",
+          "section_title": "SECTION 3 - RESERVES AND AUTHORITY",
+          "ref": "3.2",
+          "page": 3,
+          "text": "3.2 Initial reserves must be set within 5 business days of FNOL and reviewed every 30 days.",
+          "full_text": "3.2 Initial reserves must be set within 5 business days of FNOL and reviewed every 30 days.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 4.0,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Adjuster Level",
+            "Reserve Authority",
+            "Payment Authority",
+            "Escalation"
+          ],
+          "rows": [
+            [
+              "Adjuster I",
+              "$25,000",
+              "$15,000",
+              "Adjuster II"
+            ],
+            [
+              "Adjuster II",
+              "$100,000",
+              "$75,000",
+              "Claims Supervisor"
+            ],
+            [
+              "Claims Supervisor",
+              "$500,000",
+              "$350,000",
+              "Claims Manager"
+            ],
+            [
+              "Claims Manager",
+              "$2,000,000",
+              "$1,500,000",
+              "VP Claims; notify reinsurance above $1,000,000"
+            ]
+          ],
+          "page": 3,
+          "table_id": "MM-CM-CP-2025#SECTION-3/T1"
+        }
+      ],
+      "page": 3
+    },
+    {
+      "id": "SECTION-4",
+      "title": "SECTION 4 - PROOF OF LOSS AND PAYMENT",
+      "clauses": [
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-4/4.1",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - PROOF OF LOSS AND PAYMENT",
+          "ref": "4.1",
+          "page": 3,
+          "text": "4.1 Under MM-CP-0010 Section E.3(d) the insured must submit a signed, sworn proof of loss within 60 days of our request. The adjuster may extend this period in writing.",
+          "full_text": "4.1 Under MM-CP-0010 Section E.3(d) the insured must submit a signed, sworn proof of loss within 60 days of our request. The adjuster may extend this period in writing.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 0.533,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 4.0,
+              "Permission": 3.5
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-4/4.2",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - PROOF OF LOSS AND PAYMENT",
+          "ref": "4.2",
+          "page": 3,
+          "text": "4.2 Under Section E.4 we must state our coverage position within 30 days of receiving the proof of loss and pay undisputed amounts within 30 days.",
+          "full_text": "4.2 Under Section E.4 we must state our coverage position within 30 days of receiving the proof of loss and pay undisputed amounts within 30 days.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 5.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-4/4.3",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - PROOF OF LOSS AND PAYMENT",
+          "ref": "4.3",
+          "page": 3,
+          "text": "4.3 When a percentage deductible applies under MM-CP-E310 or MM-CP-E101, the adjuster must document the Limit of Insurance used to calculate the deductible and the resulting dollar amount.",
+          "full_text": "4.3 When a percentage deductible applies under MM-CP-E310 or MM-CP-E101, the adjuster must document the Limit of Insurance used to calculate the deductible and the resulting dollar amount.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E101",
+              "MM-CP-E310"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "SECTION-5",
+      "title": "SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS",
+      "clauses": [
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-5/5.1",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-5",
+          "section_title": "SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS",
+          "ref": "5.1",
+          "page": 3,
+          "text": "5.1 For any theft, vandalism, sprinkler leakage or water damage claim the adjuster must determine whether the building was vacant for more than 60 consecutive days before the loss (MM-CP-0010 Section E.5). If so, the loss is not covered.",
+          "full_text": "5.1 For any theft, vandalism, sprinkler leakage or water damage claim the adjuster must determine whether the building was vacant for more than 60 consecutive days before the loss (MM-CP-0010 Section E.5). If so, the loss is not covered.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ]
+          },
+          "classification": {
+            "deontic": "Prohibition",
+            "confidence": 0.688,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 5.5,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-5/5.2",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-5",
+          "section_title": "SECTION 5 - VACANCY AND PROTECTIVE SAFEGUARDS",
+          "ref": "5.2",
+          "page": 3,
+          "text": "5.2 For fire losses at premises with MM-CP-E415, the adjuster must obtain evidence that the scheduled protective safeguards were operational, or that any impairment was reported to us within 48 hours.",
+          "full_text": "5.2 For fire losses at premises with MM-CP-E415, the adjuster must obtain evidence that the scheduled protective safeguards were operational, or that any impairment was reported to us within 48 hours.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E415"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 4.0,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "SECTION-6",
+      "title": "SECTION 6 - SUBROGATION AND SALVAGE",
+      "clauses": [
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-6/6.1",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-6",
+          "section_title": "SECTION 6 - SUBROGATION AND SALVAGE",
+          "ref": "6.1",
+          "page": 3,
+          "text": "6.1 The adjuster must evaluate subrogation potential on every claim above $10,000 and must preserve evidence.",
+          "full_text": "6.1 The adjuster must evaluate subrogation potential on every claim above $10,000 and must preserve evidence.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 5.0,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-CM-CP-2025#SECTION-6/6.2",
+          "doc_id": "MM-CM-CP-2025",
+          "section": "SECTION-6",
+          "section_title": "SECTION 6 - SUBROGATION AND SALVAGE",
+          "ref": "6.2",
+          "page": 3,
+          "text": "6.2 Salvage must be offered for sale within 30 days of payment where the recovery is expected to exceed $2,500.",
+          "full_text": "6.2 Salvage must be offered for sale within 30 days of payment where the recovery is expected to exceed $2,500.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 4.0,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    }
+  ],
+  "dropped_by_gatekeeper": [
+    {
+      "clause_id": "MM-CM-CP-2025#FRONT/p1",
+      "reason": "front-matter",
+      "text": "Commercial Property Claims Handling Manual Meridian Mutual Insurance Company (fictional). Internal claims procedures."
+    },
+    {
+      "clause_id": "MM-CM-CP-2025#FRONT/p1",
+      "reason": "front-matter",
+      "text": "SYNTHETIC DOCUMENT FOR TRAINING AND TESTING. Not a real insurance form. Carrier, forms, codes and figures are fictional."
+    }
+  ]
+}

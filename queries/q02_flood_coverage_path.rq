@@ -1,0 +1,8 @@
+# Flood on a MM-CP-0010 policy: which exclusion removes it, which endorsement restores it, on what terms, where approved?
+SELECT ?exclusion ?excludedPeril ?restoringEndorsement ?sublimit ?deductiblePct ?deductibleMin (GROUP_CONCAT(DISTINCT ?stCode; separator=", ") AS ?approvedStates) WHERE {
+  pcd:MM-CP-0010 pc:hasExclusion ?x . ?x pc:exclusionCode ?exclusion ; pc:excludesPeril pcd:Flood ; pc:excludesPeril ?p . ?p rdfs:label ?excludedPeril .
+  ?e pc:removesExclusion ?x ; pc:formNumber ?restoringEndorsement .
+  OPTIONAL { ?e pc:sublimitAmount ?sublimit } OPTIONAL { ?e pc:deductiblePercent ?deductiblePct } OPTIONAL { ?e pc:deductibleMinimum ?deductibleMin }
+  ?ap pc:approvalOfForm ?e ; pc:approvalStatus pcd:Approved ; pc:approvalInState ?st . ?st pc:stateCode ?stCode .
+  FILTER(?p = pcd:Flood)
+} GROUP BY ?exclusion ?excludedPeril ?restoringEndorsement ?sublimit ?deductiblePct ?deductibleMin

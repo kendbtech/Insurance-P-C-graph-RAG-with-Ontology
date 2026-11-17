@@ -1,0 +1,6 @@
+PREFIX pc:   <https://example.org/pc/ontology#>
+PREFIX pcd:  <https://example.org/pc/id/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX sh:   <http://www.w3.org/ns/shacl#>
+PREFIX onto: <http://www.ontotext.com/>

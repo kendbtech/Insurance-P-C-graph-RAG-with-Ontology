@@ -1,0 +1,16 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+shape:R05 a sh:NodeShape ;
+    rdfs:label "R05" ;
+    rdfs:comment "PROHIBITION Policy bind | source MM-UW-CP-2025#SECTION-2/2.3 | status active" ;
+    sh:property [ sh:message "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)." ;
+            sh:not [ sh:hasValue pcd:CC-0511 ] ;
+            sh:path pc:hasClassCode ] ;
+    sh:targetClass pc:Policy ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-2_2.3 ;
+    pc:ruleStatus "active" .
+

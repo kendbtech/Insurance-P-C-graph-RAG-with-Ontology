@@ -1,0 +1,7 @@
+# Inference check (RDFS-Plus ruleset): pc:Endorsement rdfs:subClassOf pc:Form, so asking for "?f a pc:Form"
+# must ALSO return the endorsements even though no triple says "MM-CP-E101 a pc:Form" explicitly.
+# ?assertedType shows what was actually loaded; ?f matching pc:Form is the inferred part.
+SELECT ?f ?form ?assertedType WHERE {
+  ?f a pc:Form ; pc:formNumber ?form ; a ?assertedType .
+  FILTER(?assertedType IN (pc:PolicyForm, pc:Endorsement, pc:StateAmendatoryEndorsement))
+} ORDER BY ?form

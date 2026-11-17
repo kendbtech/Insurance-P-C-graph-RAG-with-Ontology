@@ -1,0 +1,720 @@
+{
+  "doc_id": "MM-UW-CP-2025",
+  "file": "03_underwriting_guidelines_MM-UW-CP-2025.pdf",
+  "doc_type": "UnderwritingGuideline",
+  "title": "Commercial Property Underwriting Guidelines",
+  "metadata": {
+    "Document ID": "MM-UW-CP-2025",
+    "Version": "3.2",
+    "Effective Date": "07/01/2025",
+    "Applies To Forms": "MM-CP-0010 (Ed. 01/2025), MM-CP-1030 (Ed. 01/2025) and E-series endorsements",
+    "States In Scope": "FL, TX (NY pending Filing MM-NY-2025-0211)"
+  },
+  "sections": [
+    {
+      "id": "FRONT",
+      "title": "Front matter",
+      "clauses": [],
+      "tables": [
+        {
+          "header": [
+            "Field",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Document ID",
+              "MM-UW-CP-2025"
+            ],
+            [
+              "Version",
+              "3.2"
+            ],
+            [
+              "Effective Date",
+              "07/01/2025"
+            ],
+            [
+              "Applies To Forms",
+              "MM-CP-0010 (Ed. 01/2025), MM-CP-1030 (Ed. 01/2025) and E-series endorsements"
+            ],
+            [
+              "States In Scope",
+              "FL, TX (NY pending Filing MM-NY-2025-0211)"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-UW-CP-2025#FRONT/T1"
+        }
+      ]
+    },
+    {
+      "id": "SECTION-1",
+      "title": "SECTION 1 - PURPOSE AND SCOPE",
+      "clauses": [
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-1/1.1",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-1",
+          "section_title": "SECTION 1 - PURPOSE AND SCOPE",
+          "ref": "1.1",
+          "page": 1,
+          "text": "1.1 These guidelines govern the acceptance, pricing referral and binding of Commercial Property risks written on form MM-CP-0010.",
+          "full_text": "1.1 These guidelines govern the acceptance, pricing referral and binding of Commercial Property risks written on form MM-CP-0010.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ]
+          },
+          "classification": {
+            "deontic": "Permission",
+            "confidence": 0.34,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 0.0,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-1/1.2",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-1",
+          "section_title": "SECTION 1 - PURPOSE AND SCOPE",
+          "ref": "1.2",
+          "page": 1,
+          "text": "1.2 Underwriters must apply these guidelines together with Rate Manual MM-RM-CP-2025 and the state filings listed above.",
+          "full_text": "1.2 Underwriters must apply these guidelines together with Rate Manual MM-RM-CP-2025 and the state filings listed above.",
+          "exceptions": [],
+          "ids": {
+            "document": [
+              "MM-RM-CP-2025"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-1/1.3",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-1",
+          "section_title": "SECTION 1 - PURPOSE AND SCOPE",
+          "ref": "1.3",
+          "page": 1,
+          "text": "1.3 Any exception to these guidelines requires written approval from an Underwriting Manager and must be documented in the underwriting file.",
+          "full_text": "1.3 Any exception to these guidelines requires written approval from an Underwriting Manager and must be documented in the underwriting file.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 1
+    },
+    {
+      "id": "SECTION-2",
+      "title": "SECTION 2 - ELIGIBILITY",
+      "clauses": [
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-2/2.1",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - ELIGIBILITY",
+          "ref": "2.1",
+          "page": 1,
+          "text": "2.1 Eligible Risks. A risk is eligible if all of the following are true: (a) construction class is CC1 through CC6; (b) Public Protection Class is PC1 through PC8; (c) the building is not vacant and has not been vacant for more than 60 consecutive days in the prior 12 months; (d) Total Insured Value (TIV) does not exceed $25,000,000 per location; (e) the class code is not listed as Prohibited in Section 2.3.",
+          "full_text": "2.1 Eligible Risks. A risk is eligible if all of the following are true: (a) construction class is CC1 through CC6; (b) Public Protection Class is PC1 through PC8; (c) the building is not vacant and has not been vacant for more than 60 consecutive days in the prior 12 months; (d) Total Insured Value (TIV) does not exceed $25,000,000 per location; (e) the class code is not listed as Prohibited in Section 2.3.",
+          "exceptions": [],
+          "ids": {
+            "construction": [
+              "CC1",
+              "CC6"
+            ],
+            "protection": [
+              "PC1",
+              "PC8"
+            ]
+          },
+          "classification": {
+            "deontic": "Permission",
+            "confidence": 0.667,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 3.0,
+              "Obligation": 0.0,
+              "Permission": 6.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-2/2.2",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - ELIGIBILITY",
+          "ref": "2.2",
+          "page": 1,
+          "text": "2.2 Referral Risks. The following risks may be written only with Underwriting Manager approval: Protection Class PC9 or PC10; buildings over 50 years old without updated electrical, plumbing, heating and roof within the last 25 years; class code 0921 (Vacant Buildings); any location in FEMA flood zone A, AE, V or VE that does not carry MM-CP-E101.",
+          "full_text": "2.2 Referral Risks. The following risks may be written only with Underwriting Manager approval: Protection Class PC9 or PC10; buildings over 50 years old without updated electrical, plumbing, heating and roof within the last 25 years; class code 0921 (Vacant Buildings); any location in FEMA flood zone A, AE, V or VE that does not carry MM-CP-E101.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E101"
+            ],
+            "classcode": [
+              "0921"
+            ],
+            "protection": [
+              "PC10",
+              "PC9"
+            ]
+          },
+          "classification": {
+            "deontic": "Permission",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 0.0,
+              "Permission": 4.5
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-2/2.3",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-2",
+          "section_title": "SECTION 2 - ELIGIBILITY",
+          "ref": "2.3",
+          "page": 1,
+          "text": "2.3 Prohibited Risks. Underwriters must not quote or bind any risk with class code 0511, any risk with unresolved open fire code violations, or any risk located in a state where form MM-CP-0010 is not approved (currently NY, pending Filing MM-NY-2025-0211).",
+          "full_text": "2.3 Prohibited Risks. Underwriters must not quote or bind any risk with class code 0511, any risk with unresolved open fire code violations, or any risk located in a state where form MM-CP-0010 is not approved (currently NY, pending Filing MM-NY-2025-0211).",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010"
+            ],
+            "state": [
+              "NY"
+            ],
+            "filing": [
+              "MM-NY-2025-0211"
+            ],
+            "classcode": [
+              "0511"
+            ]
+          },
+          "classification": {
+            "deontic": "Prohibition",
+            "confidence": 0.632,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 6.0,
+              "Obligation": 2.5,
+              "Permission": 1.0
+            }
+          }
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Class Code",
+            "Description",
+            "Status",
+            "Reason"
+          ],
+          "rows": [
+            [
+              "0511",
+              "Fireworks or Explosives Manufacturing",
+              "Prohibited",
+              "Unacceptable fire and explosion hazard"
+            ],
+            [
+              "0921",
+              "Vacant Buildings",
+              "Refer",
+              "Vandalism and water damage frequency; see MM-CP-0010 E.5"
+            ],
+            [
+              "0745",
+              "Office Buildings - Mercantile Occupancy",
+              "Eligible",
+              "Preferred class"
+            ],
+            [
+              "0802",
+              "Warehouses - General Storage",
+              "Eligible",
+              "Verify protective safeguards MM-CP-E415"
+            ],
+            [
+              "0634",
+              "Restaurants with Cooking",
+              "Refer",
+              "Requires UL300 hood suppression (P-1 or P-5 safeguard)"
+            ]
+          ],
+          "page": 1,
+          "table_id": "MM-UW-CP-2025#SECTION-2/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "SECTION-3",
+      "title": "SECTION 3 - AUTHORITY LIMITS",
+      "clauses": [
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-3/3.1",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-3",
+          "section_title": "SECTION 3 - AUTHORITY LIMITS",
+          "ref": "3.1",
+          "page": 2,
+          "text": "3.1 An underwriter must not bind a risk that exceeds his or her authority level.",
+          "full_text": "3.1 An underwriter must not bind a risk that exceeds his or her authority level.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Prohibition",
+            "confidence": 0.545,
+            "route": "pass2-rules",
+            "scores": {
+              "Prohibition": 3.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-3/3.2",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-3",
+          "section_title": "SECTION 3 - AUTHORITY LIMITS",
+          "ref": "3.2",
+          "page": 2,
+          "text": "3.2 Where a risk exceeds the authority of the assigned underwriter, the file must be referred before a quote is released.",
+          "full_text": "3.2 Where a risk exceeds the authority of the assigned underwriter, the file must be referred before a quote is released.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [
+        {
+          "header": [
+            "Authority Level",
+            "Maximum TIV Per Location",
+            "Maximum Policy Premium",
+            "Approval Required"
+          ],
+          "rows": [
+            [
+              "UW Level 1 (Associate)",
+              "$5,000,000",
+              "$75,000",
+              "None within limits"
+            ],
+            [
+              "UW Level 2 (Senior)",
+              "$15,000,000",
+              "$250,000",
+              "None within limits"
+            ],
+            [
+              "UW Level 3 (Underwriting Manager)",
+              "$25,000,000",
+              "$600,000",
+              "None within limits"
+            ],
+            [
+              "Above Level 3",
+              "Over $25,000,000",
+              "Over $600,000",
+              "Chief Underwriting Officer and facultative reinsurance"
+            ]
+          ],
+          "page": 2,
+          "table_id": "MM-UW-CP-2025#SECTION-3/T1"
+        }
+      ],
+      "page": 1
+    },
+    {
+      "id": "SECTION-4",
+      "title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+      "clauses": [
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-4/4.1",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+          "ref": "4.1",
+          "page": 3,
+          "text": "4.1 Every policy must include the base coverage form MM-CP-0010 and the causes of loss form MM-CP-1030 in the edition approved in the state of the risk.",
+          "full_text": "4.1 Every policy must include the base coverage form MM-CP-0010 and the causes of loss form MM-CP-1030 in the edition approved in the state of the risk.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-0010",
+              "MM-CP-1030"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 0.846,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 5.5,
+              "Permission": 1.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-4/4.2",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+          "ref": "4.2",
+          "page": 3,
+          "text": "4.2 Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement.",
+          "full_text": "4.2 Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-FL-01"
+            ],
+            "state": [
+              "FL"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 5.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-4/4.3",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+          "ref": "4.3",
+          "page": 3,
+          "text": "4.3 MM-CP-E310 Windstorm or Hail Percentage Deductible is mandatory for all locations in Florida Tier 1 coastal counties and in Texas rating territory TX-T01; a 5% deductible is required within one mile of the coast and 2% elsewhere in those territories.",
+          "full_text": "4.3 MM-CP-E310 Windstorm or Hail Percentage Deductible is mandatory for all locations in Florida Tier 1 coastal counties and in Texas rating territory TX-T01; a 5% deductible is required within one mile of the coast and 2% elsewhere in those territories.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E310"
+            ],
+            "state": [
+              "TX"
+            ],
+            "territory": [
+              "TX-T01"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 6.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-4/4.4",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+          "ref": "4.4",
+          "page": 3,
+          "text": "4.4 Any scheduled location in FEMA flood zone A, AE, V or VE must carry MM-CP-E101 Flood Coverage Endorsement, or the insured must sign a Flood Exclusion Acknowledgment form before binding.",
+          "full_text": "4.4 Any scheduled location in FEMA flood zone A, AE, V or VE must carry MM-CP-E101 Flood Coverage Endorsement, or the insured must sign a Flood Exclusion Acknowledgment form before binding.",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E101"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 5.0,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-4/4.5",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+          "ref": "4.5",
+          "page": 3,
+          "text": "4.5 MM-CP-E415 Protective Safeguards is required when the rate manual applies a sprinkler credit (factor SPR-1) or a central station alarm credit (factor ALM-1).",
+          "full_text": "4.5 MM-CP-E415 Protective Safeguards is required when the rate manual applies a sprinkler credit (factor SPR-1) or a central station alarm credit (factor ALM-1).",
+          "exceptions": [],
+          "ids": {
+            "form": [
+              "MM-CP-E415"
+            ],
+            "factor": [
+              "ALM-1",
+              "SPR-1"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 3.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-4/4.6",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-4",
+          "section_title": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS",
+          "ref": "4.6",
+          "page": 3,
+          "text": "4.6 Endorsements may be attached only in states where the State Filing shows the status Approved.",
+          "full_text": "4.6 Endorsements may be attached only in states where the State Filing shows the status Approved.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Permission",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 0.0,
+              "Permission": 5.5
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "SECTION-5",
+      "title": "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION",
+      "clauses": [
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-5/5.1",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-5",
+          "section_title": "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION",
+          "ref": "5.1",
+          "page": 3,
+          "text": "5.1 Before releasing a quote the underwriter must verify: eligibility under Section 2; that the premium was developed from Rate Manual MM-RM-CP-2025; and that all required endorsements under Section 4 are included.",
+          "full_text": "5.1 Before releasing a quote the underwriter must verify: eligibility under Section 2; that the premium was developed from Rate Manual MM-RM-CP-2025; and that all required endorsements under Section 4 are included.",
+          "exceptions": [],
+          "ids": {
+            "document": [
+              "MM-RM-CP-2025"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 4.0,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-5/5.2",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-5",
+          "section_title": "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION",
+          "ref": "5.2",
+          "page": 3,
+          "text": "5.2 Before binding, the underwriter must verify that every form edition on the policy matches the edition approved in the applicable State Filing.",
+          "full_text": "5.2 Before binding, the underwriter must verify that every form edition on the policy matches the edition approved in the applicable State Filing.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 0.714,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 1.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-5/5.3",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-5",
+          "section_title": "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION",
+          "ref": "5.3",
+          "page": 3,
+          "text": "5.3 The underwriting file must document the flood zone determination for every scheduled location.",
+          "full_text": "5.3 The underwriting file must document the flood zone determination for every scheduled location.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-5/5.4",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-5",
+          "section_title": "SECTION 5 - QUOTING, BINDING AND DOCUMENTATION",
+          "ref": "5.4",
+          "page": 3,
+          "text": "5.4 Inspections are required within 60 days of binding for any location with TIV above $2,000,000 or Protection Class PC7 or higher.",
+          "full_text": "5.4 Inspections are required within 60 days of binding for any location with TIV above $2,000,000 or Protection Class PC7 or higher.",
+          "exceptions": [],
+          "ids": {
+            "protection": [
+              "PC7"
+            ]
+          },
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 3.0,
+              "Permission": 0.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    },
+    {
+      "id": "SECTION-6",
+      "title": "SECTION 6 - RENEWAL REVIEW",
+      "clauses": [
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-6/6.1",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-6",
+          "section_title": "SECTION 6 - RENEWAL REVIEW",
+          "ref": "6.1",
+          "page": 3,
+          "text": "6.1 At renewal the underwriter must confirm that form editions remain current and that no State Filing has withdrawn a form in use.",
+          "full_text": "6.1 At renewal the underwriter must confirm that form editions remain current and that no State Filing has withdrawn a form in use.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 1.0,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 0.0
+            }
+          }
+        },
+        {
+          "clause_id": "MM-UW-CP-2025#SECTION-6/6.3",
+          "doc_id": "MM-UW-CP-2025",
+          "section": "SECTION-6",
+          "section_title": "SECTION 6 - RENEWAL REVIEW",
+          "ref": "6.3",
+          "page": 3,
+          "text": "6.3 Where a newer edition of a form has been approved, the newer edition must be attached at renewal.",
+          "full_text": "6.3 Where a newer edition of a form has been approved, the newer edition must be attached at renewal.",
+          "exceptions": [],
+          "ids": {},
+          "classification": {
+            "deontic": "Obligation",
+            "confidence": 0.714,
+            "route": "pass1",
+            "scores": {
+              "Prohibition": 0.0,
+              "Obligation": 2.5,
+              "Permission": 1.0
+            }
+          }
+        }
+      ],
+      "tables": [],
+      "page": 3
+    }
+  ],
+  "dropped_by_gatekeeper": [
+    {
+      "clause_id": "MM-UW-CP-2025#FRONT/p1",
+      "reason": "front-matter",
+      "text": "Commercial Property Underwriting Guidelines Meridian Mutual Insurance Company (fictional). Internal underwriting manual."
+    },
+    {
+      "clause_id": "MM-UW-CP-2025#FRONT/p1",
+      "reason": "front-matter",
+      "text": "SYNTHETIC DOCUMENT FOR TRAINING AND TESTING. Not a real insurance form. Carrier, forms, codes and figures are fictional."
+    },
+    {
+      "clause_id": "MM-UW-CP-2025#SECTION-6/6.2",
+      "reason": "no-rule-signal",
+      "text": "6.2 Loss ratio above 65% over the prior three years requires Underwriting Manager review."
+    }
+  ]
+}

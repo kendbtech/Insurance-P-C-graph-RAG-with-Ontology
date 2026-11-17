@@ -1,0 +1,26 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+shape:R02 a sh:NodeShape ;
+    rdfs:label "R02" ;
+    rdfs:comment "PERMISSION Claim pay_for_loss | source MM-CP-E-SERIES#1-MM-CP-E101/1.2 | status active" ;
+    sh:sparql [ sh:message "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:causeOfLoss ?c0 .
+    FILTER(?c0 = <https://example.org/pc/id/Flood>)
+    $this pc:onPolicy/pc:hasEndorsement ?c1 .
+    FILTER(?c1 = <https://example.org/pc/id/MM-CP-E101>)
+    BIND($this AS ?value)
+    FILTER NOT EXISTS { { $this pc:atLocation/pc:scheduledUnder ?c100 .
+    FILTER(?c100 = <https://example.org/pc/id/MM-CP-E101>) } { $this pc:affectsCoverage ?c101 .
+    FILTER(?c101 IN (<https://example.org/pc/id/COV-A>, <https://example.org/pc/id/COV-B>)) } }
+}""" ] ;
+    sh:targetClass pc:Claim ;
+    pc:compiledFrom pcd:MM-CP-E-SERIES_1-MM-CP-E101_1.2 ;
+    pc:ruleStatus "active" .
+

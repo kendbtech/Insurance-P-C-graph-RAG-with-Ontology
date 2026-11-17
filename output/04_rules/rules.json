@@ -1,0 +1,478 @@
+{
+  "compiled": [
+    {
+      "rule_id": "R01",
+      "dsl": "PROHIBITION Claim pay_for_loss Peril:Flood WHEN Claim.onPolicy.hasForm = MM-CP-0010 SOURCE MM-CP-0010#SECTION-B/B.1",
+      "ast": {
+        "deontic": "PROHIBITION",
+        "subject": "Claim",
+        "action": "pay_for_loss",
+        "object": {
+          "type": "Peril",
+          "ids": [
+            "Flood"
+          ]
+        },
+        "when": [
+          {
+            "path": [
+              "Claim",
+              "onPolicy",
+              "hasForm"
+            ],
+            "op": "=",
+            "value": {
+              "id": "MM-CP-0010"
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-CP-0010#SECTION-B/B.1"
+      },
+      "message": "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement.",
+      "source_clause": "MM-CP-0010#SECTION-B/B.1",
+      "layer2_deontic": "Permission",
+      "shape_iri": "https://example.org/pc/shape/R01",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R02",
+      "dsl": "PERMISSION Claim pay_for_loss Peril:Flood WHEN Claim.causeOfLoss = Flood WHEN Claim.onPolicy.hasEndorsement = MM-CP-E101 REQUIRES Claim.atLocation.scheduledUnder = MM-CP-E101 REQUIRES Claim.affectsCoverage IN (COV-A, COV-B) SOURCE MM-CP-E-SERIES#1-MM-CP-E101/1.2",
+      "ast": {
+        "deontic": "PERMISSION",
+        "subject": "Claim",
+        "action": "pay_for_loss",
+        "object": {
+          "type": "Peril",
+          "ids": [
+            "Flood"
+          ]
+        },
+        "when": [
+          {
+            "path": [
+              "Claim",
+              "causeOfLoss"
+            ],
+            "op": "=",
+            "value": {
+              "id": "Flood"
+            }
+          },
+          {
+            "path": [
+              "Claim",
+              "onPolicy",
+              "hasEndorsement"
+            ],
+            "op": "=",
+            "value": {
+              "id": "MM-CP-E101"
+            }
+          }
+        ],
+        "requires": [
+          {
+            "path": [
+              "Claim",
+              "atLocation",
+              "scheduledUnder"
+            ],
+            "op": "=",
+            "value": {
+              "id": "MM-CP-E101"
+            }
+          },
+          {
+            "path": [
+              "Claim",
+              "affectsCoverage"
+            ],
+            "op": "IN",
+            "value": {
+              "list": [
+                "COV-A",
+                "COV-B"
+              ]
+            }
+          }
+        ],
+        "unless": [],
+        "within": null,
+        "source": "MM-CP-E-SERIES#1-MM-CP-E101/1.2"
+      },
+      "message": "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible).",
+      "source_clause": "MM-CP-E-SERIES#1-MM-CP-E101/1.2",
+      "layer2_deontic": "Permission",
+      "shape_iri": "https://example.org/pc/shape/R02",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R03",
+      "dsl": "OBLIGATION Claim report_loss NONE WITHIN 72 hours SOURCE MM-CP-0010#SECTION-E/E.3",
+      "ast": {
+        "deontic": "OBLIGATION",
+        "subject": "Claim",
+        "action": "report_loss",
+        "object": null,
+        "when": [],
+        "requires": [],
+        "unless": [],
+        "within": {
+          "value": 72,
+          "unit": "hours"
+        },
+        "source": "MM-CP-0010#SECTION-E/E.3"
+      },
+      "message": "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b)).",
+      "source_clause": "MM-CP-0010#SECTION-E/E.3",
+      "layer2_deontic": "Obligation",
+      "shape_iri": "https://example.org/pc/shape/R03",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R04",
+      "dsl": "OBLIGATION Claim report_loss NONE WHEN Claim.onPolicy.inState = FL WITHIN 14 days SOURCE MM-CP-E-SERIES#5-MM-CP-FL-01/5.3",
+      "ast": {
+        "deontic": "OBLIGATION",
+        "subject": "Claim",
+        "action": "report_loss",
+        "object": null,
+        "when": [
+          {
+            "path": [
+              "Claim",
+              "onPolicy",
+              "inState"
+            ],
+            "op": "=",
+            "value": {
+              "id": "FL"
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": {
+          "value": 14,
+          "unit": "days"
+        },
+        "source": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.3"
+      },
+      "message": "In Florida the notice period is 14 days (MM-CP-FL-01 Section 5.3 amends E.3(b)).",
+      "source_clause": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.3",
+      "layer2_deontic": "Obligation",
+      "shape_iri": "https://example.org/pc/shape/R04",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R05",
+      "dsl": "PROHIBITION Policy bind ClassCode:CC-0511 SOURCE MM-UW-CP-2025#SECTION-2/2.3",
+      "ast": {
+        "deontic": "PROHIBITION",
+        "subject": "Policy",
+        "action": "bind",
+        "object": {
+          "type": "ClassCode",
+          "ids": [
+            "CC-0511"
+          ]
+        },
+        "when": [],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-UW-CP-2025#SECTION-2/2.3"
+      },
+      "message": "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3).",
+      "source_clause": "MM-UW-CP-2025#SECTION-2/2.3",
+      "layer2_deontic": "Prohibition",
+      "shape_iri": "https://example.org/pc/shape/R05",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R06",
+      "dsl": "PROHIBITION Policy attach_form Form:ANY SOURCE MM-UW-CP-2025#SECTION-4/4.6",
+      "ast": {
+        "deontic": "PROHIBITION",
+        "subject": "Policy",
+        "action": "attach_form",
+        "object": {
+          "type": "Form",
+          "ids": [
+            "ANY"
+          ]
+        },
+        "when": [],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-UW-CP-2025#SECTION-4/4.6"
+      },
+      "message": "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1).",
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.6",
+      "layer2_deontic": "Permission",
+      "shape_iri": "https://example.org/pc/shape/R06",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R07",
+      "dsl": "OBLIGATION Policy attach_endorsement Endorsement:MM-CP-FL-01 WHEN Policy.inState = FL SOURCE MM-UW-CP-2025#SECTION-4/4.2",
+      "ast": {
+        "deontic": "OBLIGATION",
+        "subject": "Policy",
+        "action": "attach_endorsement",
+        "object": {
+          "type": "Endorsement",
+          "ids": [
+            "MM-CP-FL-01"
+          ]
+        },
+        "when": [
+          {
+            "path": [
+              "Policy",
+              "inState"
+            ],
+            "op": "=",
+            "value": {
+              "id": "FL"
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-UW-CP-2025#SECTION-4/4.2"
+      },
+      "message": "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2).",
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.2",
+      "layer2_deontic": "Obligation",
+      "shape_iri": "https://example.org/pc/shape/R07",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R08",
+      "dsl": "OBLIGATION Policy attach_endorsement Endorsement:MM-CP-E310 WHEN Policy.hasLocation.inTerritory IN (FL-T03, TX-T01) SOURCE MM-UW-CP-2025#SECTION-4/4.3",
+      "ast": {
+        "deontic": "OBLIGATION",
+        "subject": "Policy",
+        "action": "attach_endorsement",
+        "object": {
+          "type": "Endorsement",
+          "ids": [
+            "MM-CP-E310"
+          ]
+        },
+        "when": [
+          {
+            "path": [
+              "Policy",
+              "hasLocation",
+              "inTerritory"
+            ],
+            "op": "IN",
+            "value": {
+              "list": [
+                "FL-T03",
+                "TX-T01"
+              ]
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-UW-CP-2025#SECTION-4/4.3"
+      },
+      "message": "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3).",
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.3",
+      "layer2_deontic": "Obligation",
+      "shape_iri": "https://example.org/pc/shape/R08",
+      "status": "active",
+      "warnings": [
+        "cross-document identifier FL-T03: not in clause text, resolved from corpus tables; confirm in review"
+      ]
+    },
+    {
+      "rule_id": "R09",
+      "dsl": "OBLIGATION Location schedule_location Endorsement:MM-CP-E101 WHEN Location.inFloodZone IN (A, AE, V, VE) UNLESS Location.^hasLocation.floodAcknowledgmentSigned = true SOURCE MM-UW-CP-2025#SECTION-4/4.4",
+      "ast": {
+        "deontic": "OBLIGATION",
+        "subject": "Location",
+        "action": "schedule_location",
+        "object": {
+          "type": "Endorsement",
+          "ids": [
+            "MM-CP-E101"
+          ]
+        },
+        "when": [
+          {
+            "path": [
+              "Location",
+              "inFloodZone"
+            ],
+            "op": "IN",
+            "value": {
+              "list": [
+                "A",
+                "AE",
+                "V",
+                "VE"
+              ]
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [
+          [
+            {
+              "path": [
+                "Location",
+                "^hasLocation",
+                "floodAcknowledgmentSigned"
+              ],
+              "op": "=",
+              "value": {
+                "bool": true
+              }
+            }
+          ]
+        ],
+        "within": null,
+        "source": "MM-UW-CP-2025#SECTION-4/4.4"
+      },
+      "message": "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4).",
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.4",
+      "layer2_deontic": "Obligation",
+      "shape_iri": "https://example.org/pc/shape/R09",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R10",
+      "dsl": "PROHIBITION Policy bind NONE WHEN Policy.totalInsuredValue > Policy.boundBy.hasAuthorityLevel.authorityMaxTIV SOURCE MM-UW-CP-2025#SECTION-3/3.1",
+      "ast": {
+        "deontic": "PROHIBITION",
+        "subject": "Policy",
+        "action": "bind",
+        "object": null,
+        "when": [
+          {
+            "path": [
+              "Policy",
+              "totalInsuredValue"
+            ],
+            "op": ">",
+            "value": {
+              "path": [
+                "Policy",
+                "boundBy",
+                "hasAuthorityLevel",
+                "authorityMaxTIV"
+              ]
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-UW-CP-2025#SECTION-3/3.1"
+      },
+      "message": "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1).",
+      "source_clause": "MM-UW-CP-2025#SECTION-3/3.1",
+      "layer2_deontic": "Prohibition",
+      "shape_iri": "https://example.org/pc/shape/R10",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R11",
+      "dsl": "PROHIBITION Claim pay_for_loss Peril:Vandalism,SprinklerLeakage,Theft,Water WHEN Claim.atLocation.vacantDays > 60 SOURCE MM-CP-0010#SECTION-E/E.5",
+      "ast": {
+        "deontic": "PROHIBITION",
+        "subject": "Claim",
+        "action": "pay_for_loss",
+        "object": {
+          "type": "Peril",
+          "ids": [
+            "Vandalism",
+            "SprinklerLeakage",
+            "Theft",
+            "Water"
+          ]
+        },
+        "when": [
+          {
+            "path": [
+              "Claim",
+              "atLocation",
+              "vacantDays"
+            ],
+            "op": ">",
+            "value": {
+              "number": 60
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": null,
+        "source": "MM-CP-0010#SECTION-E/E.5"
+      },
+      "message": "Building vacant more than 60 days: vandalism, sprinkler leakage, water damage and theft are not covered (MM-CP-0010 E.5).",
+      "source_clause": "MM-CP-0010#SECTION-E/E.5",
+      "layer2_deontic": "Prohibition",
+      "shape_iri": "https://example.org/pc/shape/R11",
+      "status": "active",
+      "warnings": []
+    },
+    {
+      "rule_id": "R12",
+      "dsl": "OBLIGATION Claim acknowledge_claim NONE WHEN Claim.onPolicy.inState = FL WITHIN 14 days SOURCE MM-CM-CP-2025#SECTION-1/1.2",
+      "ast": {
+        "deontic": "OBLIGATION",
+        "subject": "Claim",
+        "action": "acknowledge_claim",
+        "object": null,
+        "when": [
+          {
+            "path": [
+              "Claim",
+              "onPolicy",
+              "inState"
+            ],
+            "op": "=",
+            "value": {
+              "id": "FL"
+            }
+          }
+        ],
+        "requires": [],
+        "unless": [],
+        "within": {
+          "value": 14,
+          "unit": "days"
+        },
+        "source": "MM-CM-CP-2025#SECTION-1/1.2"
+      },
+      "message": "Adjuster must acknowledge a Florida claim in writing within 14 calendar days (MM-CM-CP-2025 1.2).",
+      "source_clause": "MM-CM-CP-2025#SECTION-1/1.2",
+      "layer2_deontic": "Obligation",
+      "shape_iri": "https://example.org/pc/shape/R12",
+      "status": "active",
+      "warnings": []
+    }
+  ],
+  "rejected": []
+}

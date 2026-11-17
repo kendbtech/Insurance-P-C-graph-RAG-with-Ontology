@@ -1,0 +1,55 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pcd:MM-CP-E999 a pc:Endorsement ;
+    pc:editionDate "01/2025" ;
+    pc:formNumber "MM-CP-E999" ;
+    pc:modifiesForm pcd:MM-CP-0010 .
+
+<https://example.org/pc/id/claim/CLM-0002> a pc:Claim ;
+    pc:affectsCoverage pcd:COV-A ;
+    pc:atLocation <https://example.org/pc/id/location/LOC-0002> ;
+    pc:causeOfLoss pcd:Flood ;
+    pc:noticeDelayHours 20 ;
+    pc:onPolicy <https://example.org/pc/id/policy/POL-FL-0002> .
+
+<https://example.org/pc/id/claim/CLM-0003> a pc:Claim ;
+    pc:atLocation <https://example.org/pc/id/location/LOC-0003> ;
+    pc:causeOfLoss pcd:Fire ;
+    pc:noticeDelayHours 80 ;
+    pc:onPolicy <https://example.org/pc/id/policy/POL-TX-0003> .
+
+<https://example.org/pc/id/policy/POL-NY-0099> a pc:Policy ;
+    pc:boundBy <https://example.org/pc/id/uw/jane-doe> ;
+    pc:hasClassCode pcd:CC-0511 ;
+    pc:hasForm pcd:MM-CP-0010 ;
+    pc:hasLocation <https://example.org/pc/id/location/LOC-0099> ;
+    pc:inState pcd:NY ;
+    pc:policyNumber "POL-NY-0099" ;
+    pc:totalInsuredValue 9000000.0 .
+
+<https://example.org/pc/id/location/LOC-0099> a pc:Location ;
+    pc:inState pcd:NY .
+
+<https://example.org/pc/id/policy/POL-FL-0002> a pc:Policy ;
+    pc:hasForm pcd:MM-CP-0010,
+        pcd:MM-CP-1030 ;
+    pc:hasLocation <https://example.org/pc/id/location/LOC-0002> ;
+    pc:inState pcd:FL ;
+    pc:policyNumber "POL-FL-0002" .
+
+<https://example.org/pc/id/policy/POL-TX-0003> a pc:Policy ;
+    pc:hasForm pcd:MM-CP-0010 ;
+    pc:hasLocation <https://example.org/pc/id/location/LOC-0003> ;
+    pc:inState pcd:TX ;
+    pc:policyNumber "POL-TX-0003" .
+
+<https://example.org/pc/id/location/LOC-0002> a pc:Location ;
+    pc:inFloodZone pcd:VE ;
+    pc:inState pcd:FL ;
+    pc:inTerritory pcd:FL-T03 .
+
+<https://example.org/pc/id/location/LOC-0003> a pc:Location ;
+    pc:inState pcd:TX .
+

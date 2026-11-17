@@ -1,0 +1,21 @@
+{
+  "gate": 0.6,
+  "docs": {
+    "MM-CP-0010": 16,
+    "MM-CP-E-SERIES": 22,
+    "MM-UW-CP-2025": 20,
+    "MM-RM-CP-2025": 6,
+    "MM-CM-CP-2025": 16,
+    "MM-FILINGS-CP-2025": 10
+  },
+  "routes": {
+    "pass1": 63,
+    "pass2-rules": 27,
+    "pass2-llm": 0
+  },
+  "labels": {
+    "Permission": 37,
+    "Prohibition": 15,
+    "Obligation": 38
+  }
+}

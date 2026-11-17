@@ -1,0 +1,729 @@
+{
+  "q01_endorsements_modifying_covA_in_TX": {
+    "title": "Which endorsements modify Coverage A (Building) and are approved for use in Texas?",
+    "columns": [
+      "endorsement",
+      "title",
+      "edition",
+      "status"
+    ],
+    "rows": [
+      {
+        "endorsement": "MM-CP-E101",
+        "title": "Flood Coverage Endorsement - Scheduled Locations",
+        "edition": "06/2025",
+        "status": "Approved"
+      },
+      {
+        "endorsement": "MM-CP-E205",
+        "title": "Equipment Breakdown Endorsement",
+        "edition": "01/2025",
+        "status": "Approved"
+      },
+      {
+        "endorsement": "MM-CP-E310",
+        "title": "Windstorm or Hail Percentage Deductible",
+        "edition": "03/2025",
+        "status": "Approved"
+      },
+      {
+        "endorsement": "MM-CP-E415",
+        "title": "Protective Safeguards Endorsement",
+        "edition": "01/2025",
+        "status": "Approved"
+      }
+    ]
+  },
+  "q02_flood_coverage_path": {
+    "title": "Flood on a MM-CP-0010 policy: which exclusion removes it, which endorsement restores it, on what terms, where approved?",
+    "columns": [
+      "exclusion",
+      "excludedPeril",
+      "restoringEndorsement",
+      "sublimit",
+      "deductiblePct",
+      "deductibleMin",
+      "approvedStates"
+    ],
+    "rows": [
+      {
+        "exclusion": "EXCL-FLD",
+        "excludedPeril": "Flood",
+        "restoringEndorsement": "MM-CP-E101",
+        "sublimit": "250000.0",
+        "deductiblePct": "5.0",
+        "deductibleMin": "25000.0",
+        "approvedStates": "TX, FL"
+      }
+    ]
+  },
+  "q03_form_state_matrix": {
+    "title": "Form x state approval matrix as stated by the filings",
+    "columns": [
+      "form",
+      "state",
+      "status",
+      "edition",
+      "filing"
+    ],
+    "rows": [
+      {
+        "form": "MM-CP-0010",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-FL-2025-0142"
+      },
+      {
+        "form": "MM-CP-0010",
+        "state": "TX",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-TX-2025-0098"
+      },
+      {
+        "form": "MM-CP-1030",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-FL-2025-0142"
+      },
+      {
+        "form": "MM-CP-1030",
+        "state": "TX",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-TX-2025-0098"
+      },
+      {
+        "form": "MM-CP-E101",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "06/2025",
+        "filing": "MM-FL-2025-0142"
+      },
+      {
+        "form": "MM-CP-E101",
+        "state": "TX",
+        "status": "Approved",
+        "edition": "06/2025",
+        "filing": "MM-TX-2025-0098"
+      },
+      {
+        "form": "MM-CP-E205",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-FL-2025-0142"
+      },
+      {
+        "form": "MM-CP-E205",
+        "state": "TX",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-TX-2025-0098"
+      },
+      {
+        "form": "MM-CP-E310",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "03/2025",
+        "filing": "MM-FL-2025-0142"
+      },
+      {
+        "form": "MM-CP-E310",
+        "state": "TX",
+        "status": "Approved",
+        "edition": "03/2025",
+        "filing": "MM-TX-2025-0098"
+      },
+      {
+        "form": "MM-CP-E415",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-FL-2025-0142"
+      },
+      {
+        "form": "MM-CP-E415",
+        "state": "TX",
+        "status": "Approved",
+        "edition": "01/2025",
+        "filing": "MM-TX-2025-0098"
+      },
+      {
+        "form": "MM-CP-FL-01",
+        "state": "FL",
+        "status": "Approved",
+        "edition": "07/2025",
+        "filing": "MM-FL-2025-0142"
+      }
+    ]
+  },
+  "q04_mandatory_endorsements": {
+    "title": "Where is each endorsement mandatory (state or rating territory) and what factor applies?",
+    "columns": [
+      "endorsement",
+      "mandatoryIn",
+      "label",
+      "territoryFactor"
+    ],
+    "rows": [
+      {
+        "endorsement": "MM-CP-E310",
+        "mandatoryIn": "FL-T03",
+        "label": "FL-T03 Tier 1 coastal counties",
+        "territoryFactor": "1.45"
+      },
+      {
+        "endorsement": "MM-CP-E310",
+        "mandatoryIn": "TX-T01",
+        "label": "TX-T01 Gulf coast counties",
+        "territoryFactor": "1.35"
+      },
+      {
+        "endorsement": "MM-CP-E310",
+        "mandatoryIn": "FL",
+        "label": "Florida",
+        "territoryFactor": null
+      },
+      {
+        "endorsement": "MM-CP-FL-01",
+        "mandatoryIn": "FL",
+        "label": "Florida",
+        "territoryFactor": null
+      }
+    ]
+  },
+  "q05_deontic_counts": {
+    "title": "How many clauses of each deontic type per document (Layer 2 output in the graph)",
+    "columns": [
+      "document",
+      "deontic",
+      "clauses",
+      "avgConfidence"
+    ],
+    "rows": [
+      {
+        "document": "MM-CM-CP-2025",
+        "deontic": "Obligation",
+        "clauses": "12",
+        "avgConfidence": "0.897"
+      },
+      {
+        "document": "MM-CM-CP-2025",
+        "deontic": "Permission",
+        "clauses": "1",
+        "avgConfidence": "0.565"
+      },
+      {
+        "document": "MM-CM-CP-2025",
+        "deontic": "Prohibition",
+        "clauses": "3",
+        "avgConfidence": "0.604"
+      },
+      {
+        "document": "MM-CP-0010",
+        "deontic": "Obligation",
+        "clauses": "1",
+        "avgConfidence": "0.824"
+      },
+      {
+        "document": "MM-CP-0010",
+        "deontic": "Permission",
+        "clauses": "10",
+        "avgConfidence": "0.7297"
+      },
+      {
+        "document": "MM-CP-0010",
+        "deontic": "Prohibition",
+        "clauses": "5",
+        "avgConfidence": "1.0"
+      },
+      {
+        "document": "MM-CP-E-SERIES",
+        "deontic": "Obligation",
+        "clauses": "7",
+        "avgConfidence": "1.0"
+      },
+      {
+        "document": "MM-CP-E-SERIES",
+        "deontic": "Permission",
+        "clauses": "13",
+        "avgConfidence": "0.612538461538461538461538"
+      },
+      {
+        "document": "MM-CP-E-SERIES",
+        "deontic": "Prohibition",
+        "clauses": "2",
+        "avgConfidence": "0.8845"
+      },
+      {
+        "document": "MM-FILINGS-CP-2025",
+        "deontic": "Obligation",
+        "clauses": "4",
+        "avgConfidence": "0.9285"
+      },
+      {
+        "document": "MM-FILINGS-CP-2025",
+        "deontic": "Permission",
+        "clauses": "3",
+        "avgConfidence": "0.56"
+      },
+      {
+        "document": "MM-FILINGS-CP-2025",
+        "deontic": "Prohibition",
+        "clauses": "3",
+        "avgConfidence": "0.639333333333333333333333"
+      },
+      {
+        "document": "MM-RM-CP-2025",
+        "deontic": "Permission",
+        "clauses": "6",
+        "avgConfidence": "0.34"
+      },
+      {
+        "document": "MM-UW-CP-2025",
+        "deontic": "Obligation",
+        "clauses": "14",
+        "avgConfidence": "0.948142857142857142857143"
+      },
+      {
+        "document": "MM-UW-CP-2025",
+        "deontic": "Permission",
+        "clauses": "4",
+        "avgConfidence": "0.75175"
+      },
+      {
+        "document": "MM-UW-CP-2025",
+        "deontic": "Prohibition",
+        "clauses": "2",
+        "avgConfidence": "0.5885"
+      }
+    ]
+  },
+  "q06_obligations_with_deadlines": {
+    "title": "Obligations that carry a deadline, with exceptions kept next to them",
+    "columns": [
+      "clause",
+      "page",
+      "deadline",
+      "exception"
+    ],
+    "rows": [
+      {
+        "clause": "MM-CM-CP-2025 1.1",
+        "page": "1",
+        "deadline": "within 72 hours",
+        "exception": "unless the delay prejudiced our investigation."
+      },
+      {
+        "clause": "MM-CM-CP-2025 1.2",
+        "page": "1",
+        "deadline": "within 14 calendar days",
+        "exception": null
+      },
+      {
+        "clause": "MM-CM-CP-2025 3.2",
+        "page": "3",
+        "deadline": "within 5 business days",
+        "exception": null
+      },
+      {
+        "clause": "MM-CM-CP-2025 4.1",
+        "page": "3",
+        "deadline": "within 60 days",
+        "exception": null
+      },
+      {
+        "clause": "MM-CM-CP-2025 4.2",
+        "page": "3",
+        "deadline": "within 30 days",
+        "exception": null
+      },
+      {
+        "clause": "MM-CM-CP-2025 5.2",
+        "page": "3",
+        "deadline": "within 48 hours",
+        "exception": null
+      },
+      {
+        "clause": "MM-CM-CP-2025 6.2",
+        "page": "3",
+        "deadline": "within 30 days",
+        "exception": null
+      },
+      {
+        "clause": "MM-CP-0010 E.3",
+        "page": "3",
+        "deadline": "within 60 days",
+        "exception": null
+      },
+      {
+        "clause": "MM-CP-E-SERIES 4.2",
+        "page": "3",
+        "deadline": "within 48 hours",
+        "exception": "except when the impairment is due to ordinary maintenance that is completed within 24 hours."
+      },
+      {
+        "clause": "MM-FILINGS-CP-2025 1.3",
+        "page": "1",
+        "deadline": "within 14 calendar days",
+        "exception": null
+      },
+      {
+        "clause": "MM-FILINGS-CP-2025 2.3",
+        "page": "1",
+        "deadline": "within 15 business days",
+        "exception": null
+      },
+      {
+        "clause": "MM-FILINGS-CP-2025 4.3",
+        "page": "2",
+        "deadline": "within 5 business days",
+        "exception": null
+      },
+      {
+        "clause": "MM-UW-CP-2025 5.4",
+        "page": "3",
+        "deadline": "within 60 days",
+        "exception": null
+      }
+    ]
+  },
+  "q07_rules_provenance": {
+    "title": "Every compiled rule: status, what it was compiled from, which document/page, and what overrides it",
+    "columns": [
+      "rule",
+      "status",
+      "sourceClause",
+      "document",
+      "page",
+      "overriddenBy"
+    ],
+    "rows": [
+      {
+        "rule": "R01",
+        "status": "scoped",
+        "sourceClause": "MM-CP-0010 B.1",
+        "document": "MM-CP-0010",
+        "page": "2",
+        "overriddenBy": "R02"
+      },
+      {
+        "rule": "R02",
+        "status": "active",
+        "sourceClause": "MM-CP-E-SERIES 1.2",
+        "document": "MM-CP-E-SERIES",
+        "page": "1",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R03",
+        "status": "scoped",
+        "sourceClause": "MM-CP-0010 E.3",
+        "document": "MM-CP-0010",
+        "page": "3",
+        "overriddenBy": "R04"
+      },
+      {
+        "rule": "R04",
+        "status": "active",
+        "sourceClause": "MM-CP-E-SERIES 5.3",
+        "document": "MM-CP-E-SERIES",
+        "page": "3",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R05",
+        "status": "active",
+        "sourceClause": "MM-UW-CP-2025 2.3",
+        "document": "MM-UW-CP-2025",
+        "page": "1",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R06",
+        "status": "active",
+        "sourceClause": "MM-UW-CP-2025 4.6",
+        "document": "MM-UW-CP-2025",
+        "page": "3",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R07",
+        "status": "active",
+        "sourceClause": "MM-UW-CP-2025 4.2",
+        "document": "MM-UW-CP-2025",
+        "page": "3",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R08",
+        "status": "active",
+        "sourceClause": "MM-UW-CP-2025 4.3",
+        "document": "MM-UW-CP-2025",
+        "page": "3",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R09",
+        "status": "active",
+        "sourceClause": "MM-UW-CP-2025 4.4",
+        "document": "MM-UW-CP-2025",
+        "page": "3",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R10",
+        "status": "active",
+        "sourceClause": "MM-UW-CP-2025 3.1",
+        "document": "MM-UW-CP-2025",
+        "page": "2",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R11",
+        "status": "active",
+        "sourceClause": "MM-CP-0010 E.5",
+        "document": "MM-CP-0010",
+        "page": "3",
+        "overriddenBy": null
+      },
+      {
+        "rule": "R12",
+        "status": "active",
+        "sourceClause": "MM-CM-CP-2025 1.2",
+        "document": "MM-CM-CP-2025",
+        "page": "1",
+        "overriddenBy": null
+      }
+    ]
+  },
+  "q08_inference_check": {
+    "title": "Inference check (RDFS-Plus ruleset): pc:Endorsement rdfs:subClassOf pc:Form, so asking for \"?f a pc:Form\"",
+    "columns": [
+      "f",
+      "form",
+      "assertedType"
+    ],
+    "rows": [
+      {
+        "f": "https://example.org/pc/id/MM-CP-0010",
+        "form": "MM-CP-0010",
+        "assertedType": "https://example.org/pc/ontology#PolicyForm"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-0010-Ed-07-2022",
+        "form": "MM-CP-0010",
+        "assertedType": "https://example.org/pc/ontology#PolicyForm"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-1030",
+        "form": "MM-CP-1030",
+        "assertedType": "https://example.org/pc/ontology#PolicyForm"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-1030-Ed-07-2022",
+        "form": "MM-CP-1030",
+        "assertedType": "https://example.org/pc/ontology#PolicyForm"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-E101",
+        "form": "MM-CP-E101",
+        "assertedType": "https://example.org/pc/ontology#Endorsement"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-E205",
+        "form": "MM-CP-E205",
+        "assertedType": "https://example.org/pc/ontology#Endorsement"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-E310",
+        "form": "MM-CP-E310",
+        "assertedType": "https://example.org/pc/ontology#Endorsement"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-E415",
+        "form": "MM-CP-E415",
+        "assertedType": "https://example.org/pc/ontology#Endorsement"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-FL-01",
+        "form": "MM-CP-FL-01",
+        "assertedType": "https://example.org/pc/ontology#Endorsement"
+      },
+      {
+        "f": "https://example.org/pc/id/MM-CP-FL-01",
+        "form": "MM-CP-FL-01",
+        "assertedType": "https://example.org/pc/ontology#StateAmendatoryEndorsement"
+      }
+    ]
+  },
+  "q08b_explicit_only": {
+    "title": "Same question restricted to asserted triples. FROM onto:explicit is a GraphDB pseudo-graph (not standard SPARQL);",
+    "columns": [
+      "form"
+    ],
+    "rows": []
+  },
+  "q09_class_codes": {
+    "title": "q09_class_codes",
+    "columns": [
+      "code",
+      "description",
+      "status",
+      "reason"
+    ],
+    "rows": [
+      {
+        "code": "0745",
+        "description": "Office Buildings - Mercantile Occupancy",
+        "status": "Eligible",
+        "reason": "Preferred class"
+      },
+      {
+        "code": "0802",
+        "description": "Warehouses - General Storage",
+        "status": "Eligible",
+        "reason": "Verify protective safeguards MM-CP-E415"
+      },
+      {
+        "code": "0511",
+        "description": "Fireworks or Explosives Manufacturing",
+        "status": "Prohibited",
+        "reason": "Unacceptable fire and explosion hazard"
+      },
+      {
+        "code": "0634",
+        "description": "Restaurants with Cooking",
+        "status": "Refer",
+        "reason": "Requires UL300 hood suppression (P-1 or P-5 safeguard)"
+      },
+      {
+        "code": "0921",
+        "description": "Vacant Buildings",
+        "status": "Refer",
+        "reason": "Vandalism and water damage frequency; see MM-CP-0010 E.5"
+      }
+    ]
+  },
+  "q10_document_cross_references": {
+    "title": "Which documents reference which forms / documents (the cross-document web the extraction built)",
+    "columns": [
+      "from",
+      "references"
+    ],
+    "rows": [
+      {
+        "from": "MM-CM-CP-2025",
+        "references": "MM-CP-E415, MM-CP-0010, MM-CP-1030, MM-CP-E101, MM-CP-E310, MM-CP-FL-01, MM-FL-2025-0142, MM-TX-2025-0098"
+      },
+      {
+        "from": "MM-CP-0010",
+        "references": "MM-CP-E415, MM-CP-1030, MM-CP-E101, MM-CP-E310, MM-CP-FL-01, MM-CP-E205"
+      },
+      {
+        "from": "MM-CP-E-SERIES",
+        "references": "MM-CP-0010, MM-CP-1030, MM-CP-E310, MM-FL-2025-0142, MM-UW-CP-2025"
+      },
+      {
+        "from": "MM-FILINGS-CP-2025",
+        "references": "MM-CP-0010, MM-CP-E101, MM-CP-E310, MM-CP-FL-01, MM-UW-CP-2025, MM-RM-CP-2025"
+      },
+      {
+        "from": "MM-RM-CP-2025",
+        "references": "MM-CP-E415, MM-CP-E101, MM-CP-E310"
+      },
+      {
+        "from": "MM-UW-CP-2025",
+        "references": "MM-CP-E415, MM-CP-0010, MM-CP-1030, MM-CP-E101, MM-CP-E310, MM-CP-FL-01, MM-RM-CP-2025, MM-NY-2025-0211"
+      }
+    ]
+  },
+  "q11_clause_neighbourhood": {
+    "title": "Graph RAG helper: clauses that mention a given entity, with citation fields (used by 09_graph_rag.py as a template)",
+    "columns": [
+      "clause",
+      "deontic",
+      "document",
+      "section",
+      "page",
+      "text"
+    ],
+    "rows": [
+      {
+        "clause": "MM-CM-CP-2025 2.2",
+        "deontic": "Obligation",
+        "document": "MM-CM-CP-2025",
+        "section": "SECTION 2 - COVERAGE VERIFICATION / 2.2",
+        "page": "1",
+        "text": "2.2 For any loss involving water, the adjuster must determine whether the cause of loss is Flood as excluded by EXCL-FLD in MM-CP-1030 Section B.1.g, and then check whether MM-CP-E101 is attached and whether the damaged premises is a scheduled location under that endorsement."
+      },
+      {
+        "clause": "MM-CM-CP-2025 2.3",
+        "deontic": "Permission",
+        "document": "MM-CM-CP-2025",
+        "section": "SECTION 2 - COVERAGE VERIFICATION / 2.3",
+        "page": "1",
+        "text": "2.3 If MM-CP-E101 is attached and the premises is a scheduled location, Flood damage to COV-A and COV-B is covered up to the Flood Sublimit of $250,000 subject to the 5% Flood Deductible; COV-D is not covered unless the Schedule shows a COV-D Flood Sublimit."
+      },
+      {
+        "clause": "MM-CM-CP-2025 2.4",
+        "deontic": "Prohibition",
+        "document": "MM-CM-CP-2025",
+        "section": "SECTION 2 - COVERAGE VERIFICATION / 2.4",
+        "page": "1",
+        "text": "2.4 If MM-CP-E101 is not attached, or the premises is not a scheduled location, Flood damage is not covered and a reservation of rights letter must be issued within 10 business days."
+      },
+      {
+        "clause": "MM-CM-CP-2025 4.3",
+        "deontic": "Obligation",
+        "document": "MM-CM-CP-2025",
+        "section": "SECTION 4 - PROOF OF LOSS AND PAYMENT / 4.3",
+        "page": "3",
+        "text": "4.3 When a percentage deductible applies under MM-CP-E310 or MM-CP-E101, the adjuster must document the Limit of Insurance used to calculate the deductible and the resulting dollar amount."
+      },
+      {
+        "clause": "MM-CP-0010 G.1",
+        "deontic": "Permission",
+        "document": "MM-CP-0010",
+        "section": "SECTION G - OPTIONAL COVERAGES AND ENDORSEMENTS / G.1",
+        "page": "3",
+        "text": "G.1 The following endorsements may be attached to this form when shown in the Declarations: MM-CP-E101 Flood Coverage Endorsement - Scheduled Locations; MM-CP-E205 Equipment Breakdown Endorsement; MM-CP-E310 Windstorm or Hail Percentage Deductible; MM-CP-E415 Protective Safeguards Endorsement. State amendatory endorsements such as MM-CP-FL-01 (Florida) are attached automatically where required by the state filing."
+      },
+      {
+        "clause": "MM-FILINGS-CP-2025 3.2",
+        "deontic": "Prohibition",
+        "document": "MM-FILINGS-CP-2025",
+        "section": "FILING 3 - NEW YORK (NY) - MM-NY-2025-0211 / 3.2",
+        "page": "2",
+        "text": "3.2 Forms MM-CP-E101 and MM-CP-E310 were not included in this filing and must not be used in New York."
+      },
+      {
+        "clause": "MM-RM-CP-2025 8.2",
+        "deontic": "Permission",
+        "document": "MM-RM-CP-2025",
+        "section": "RULE 8 - WORKED EXAMPLE / 8.2",
+        "page": "3",
+        "text": "8.2 Adding MM-CP-E101 with a $250,000 flood sublimit in zone AE adds 250,000 / 100 x 0.900 = $2,250."
+      },
+      {
+        "clause": "MM-UW-CP-2025 2.2",
+        "deontic": "Permission",
+        "document": "MM-UW-CP-2025",
+        "section": "SECTION 2 - ELIGIBILITY / 2.2",
+        "page": "1",
+        "text": "2.2 Referral Risks. The following risks may be written only with Underwriting Manager approval: Protection Class PC9 or PC10; buildings over 50 years old without updated electrical, plumbing, heating and roof within the last 25 years; class code 0921 (Vacant Buildings); any location in FEMA flood zone A, AE, V or VE that does not carry MM-CP-E101."
+      },
+      {
+        "clause": "MM-UW-CP-2025 4.4",
+        "deontic": "Obligation",
+        "document": "MM-UW-CP-2025",
+        "section": "SECTION 4 - REQUIRED ENDORSEMENTS AND FORMS / 4.4",
+        "page": "3",
+        "text": "4.4 Any scheduled location in FEMA flood zone A, AE, V or VE must carry MM-CP-E101 Flood Coverage Endorsement, or the insured must sign a Flood Exclusion Acknowledgment form before binding."
+      }
+    ]
+  }
+}

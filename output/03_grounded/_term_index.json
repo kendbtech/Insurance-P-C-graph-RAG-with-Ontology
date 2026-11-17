@@ -1,0 +1,598 @@
+{
+  "backend": "all-MiniLM-L6-v2",
+  "terms": [
+    {
+      "iri": "https://example.org/pc/id/CommercialProperty",
+      "label": "Commercial Property",
+      "kind": "individual",
+      "altLabels": [
+        "CP",
+        "property"
+      ],
+      "text": "Commercial Property; CP; property"
+    },
+    {
+      "iri": "https://example.org/pc/id/COV-B",
+      "label": "Coverage B - Your Business Personal Property",
+      "kind": "individual",
+      "altLabels": [
+        "BPP",
+        "business personal property",
+        "contents",
+        "stock"
+      ],
+      "text": "Coverage B - Your Business Personal Property; BPP; business personal property; contents; stock"
+    },
+    {
+      "iri": "https://example.org/pc/id/Obligation",
+      "label": "Obligation",
+      "kind": "individual",
+      "altLabels": [
+        "must do",
+        "duty",
+        "required"
+      ],
+      "text": "Obligation; must do; duty; required"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#PolicyForm",
+      "label": "Policy Form",
+      "kind": "class",
+      "altLabels": [
+        "coverage form",
+        "base form",
+        "causes of loss form"
+      ],
+      "text": "Policy Form; coverage form; base form; causes of loss form"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#StateAmendatoryEndorsement",
+      "label": "State Amendatory Endorsement",
+      "kind": "class",
+      "altLabels": [
+        "state amendatory",
+        "state form"
+      ],
+      "text": "State Amendatory Endorsement; state amendatory; state form"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#ClassCodeStatus",
+      "label": "Class Code Status",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Class Code Status"
+    },
+    {
+      "iri": "https://example.org/pc/id/TX",
+      "label": "Texas",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Texas"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#RateManual",
+      "label": "Rate Manual",
+      "kind": "class",
+      "altLabels": [
+        "rating manual",
+        "rate pages"
+      ],
+      "text": "Rate Manual; rating manual; rate pages"
+    },
+    {
+      "iri": "https://example.org/pc/id/Mold",
+      "label": "Fungus, Wet Rot and Bacteria",
+      "kind": "individual",
+      "altLabels": [
+        "mold",
+        "fungus",
+        "bacteria"
+      ],
+      "text": "Fungus, Wet Rot and Bacteria; mold; fungus; bacteria"
+    },
+    {
+      "iri": "https://example.org/pc/id/Permission",
+      "label": "Permission",
+      "kind": "individual",
+      "altLabels": [
+        "may do",
+        "coverage grant",
+        "we will pay"
+      ],
+      "text": "Permission; may do; coverage grant; we will pay"
+    },
+    {
+      "iri": "https://example.org/pc/id/MechanicalBreakdown",
+      "label": "Mechanical Breakdown",
+      "kind": "individual",
+      "altLabels": [
+        "equipment breakdown",
+        "electrical arcing",
+        "boiler explosion"
+      ],
+      "text": "Mechanical Breakdown; equipment breakdown; electrical arcing; boiler explosion"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Chunk",
+      "label": "Text Chunk",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Text Chunk; Retrieval unit for Graph RAG; carries the verbatim text and its page/section."
+    },
+    {
+      "iri": "https://example.org/pc/id/Refer",
+      "label": "Refer",
+      "kind": "individual",
+      "altLabels": [
+        "referral",
+        "manager approval"
+      ],
+      "text": "Refer; referral; manager approval"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Claim",
+      "label": "Claim",
+      "kind": "class",
+      "altLabels": [
+        "loss",
+        "FNOL",
+        "first notice of loss"
+      ],
+      "text": "Claim; loss; FNOL; first notice of loss"
+    },
+    {
+      "iri": "https://example.org/pc/id/Prohibition",
+      "label": "Prohibition",
+      "kind": "individual",
+      "altLabels": [
+        "must not do",
+        "exclusion",
+        "we will not pay",
+        "ineligible"
+      ],
+      "text": "Prohibition; must not do; exclusion; we will not pay; ineligible"
+    },
+    {
+      "iri": "https://example.org/pc/id/NotFiled",
+      "label": "Not filed",
+      "kind": "individual",
+      "altLabels": [
+        "not available",
+        "not approved"
+      ],
+      "text": "Not filed; not available; not approved"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Territory",
+      "label": "Rating Territory",
+      "kind": "class",
+      "altLabels": [
+        "territory code"
+      ],
+      "text": "Rating Territory; territory code"
+    },
+    {
+      "iri": "https://example.org/pc/id/NY",
+      "label": "New York",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "New York"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Endorsement",
+      "label": "Endorsement",
+      "kind": "class",
+      "altLabels": [
+        "rider",
+        "amendatory endorsement",
+        "endorsement form"
+      ],
+      "text": "Endorsement; rider; amendatory endorsement; endorsement form; A form that modifies a policy form. Endorsement beats base form (lex specialis)."
+    },
+    {
+      "iri": "https://example.org/pc/ontology#ClaimsManual",
+      "label": "Claims Manual",
+      "kind": "class",
+      "altLabels": [
+        "claims handling manual",
+        "adjuster procedures"
+      ],
+      "text": "Claims Manual; claims handling manual; adjuster procedures"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Policy",
+      "label": "Policy",
+      "kind": "class",
+      "altLabels": [
+        "policy record",
+        "quote",
+        "bound policy"
+      ],
+      "text": "Policy; policy record; quote; bound policy"
+    },
+    {
+      "iri": "https://example.org/pc/id/Theft",
+      "label": "Theft",
+      "kind": "individual",
+      "altLabels": [
+        "burglary",
+        "attempted theft"
+      ],
+      "text": "Theft; burglary; attempted theft"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#ClassCode",
+      "label": "Class Code",
+      "kind": "class",
+      "altLabels": [
+        "occupancy class",
+        "class of business"
+      ],
+      "text": "Class Code; occupancy class; class of business"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Manual",
+      "label": "Manual",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Manual"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Rule",
+      "label": "Compiled Rule",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Compiled Rule; Layer 4 output: a typed rule compiled from a clause, materialised as a SHACL shape."
+    },
+    {
+      "iri": "https://example.org/pc/ontology#LineOfBusiness",
+      "label": "Line of Business",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Line of Business"
+    },
+    {
+      "iri": "https://example.org/pc/id/Flood",
+      "label": "Flood",
+      "kind": "individual",
+      "altLabels": [
+        "flooding",
+        "surface water",
+        "storm surge",
+        "overflow of a body of water"
+      ],
+      "text": "Flood; flooding; surface water; storm surge; overflow of a body of water"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#ProtectionClass",
+      "label": "Public Protection Class",
+      "kind": "class",
+      "altLabels": [
+        "PPC",
+        "fire protection class"
+      ],
+      "text": "Public Protection Class; PPC; fire protection class"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Coverage",
+      "label": "Coverage",
+      "kind": "class",
+      "altLabels": [
+        "coverage part",
+        "insuring agreement"
+      ],
+      "text": "Coverage; coverage part; insuring agreement"
+    },
+    {
+      "iri": "https://example.org/pc/id/EarthMovement",
+      "label": "Earth Movement",
+      "kind": "individual",
+      "altLabels": [
+        "earthquake",
+        "sinkhole",
+        "landslide"
+      ],
+      "text": "Earth Movement; earthquake; sinkhole; landslide"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#DeonticType",
+      "label": "Deontic Type",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Deontic Type"
+    },
+    {
+      "iri": "https://example.org/pc/id/Water",
+      "label": "Water",
+      "kind": "individual",
+      "altLabels": [
+        "water damage",
+        "surface water"
+      ],
+      "text": "Water; water damage; surface water"
+    },
+    {
+      "iri": "https://example.org/pc/id/Eligible",
+      "label": "Eligible",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Eligible"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Clause",
+      "label": "Clause",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Clause; A rule-bearing unit of text (Layer 1 output). Exceptions are child clauses linked with pc:exceptionTo."
+    },
+    {
+      "iri": "https://example.org/pc/id/FL",
+      "label": "Florida",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Florida"
+    },
+    {
+      "iri": "https://example.org/pc/id/Pending",
+      "label": "Pending",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Pending"
+    },
+    {
+      "iri": "https://example.org/pc/id/Fire",
+      "label": "Fire",
+      "kind": "individual",
+      "altLabels": [
+        "fire loss"
+      ],
+      "text": "Fire; fire loss"
+    },
+    {
+      "iri": "https://example.org/pc/id/Vandalism",
+      "label": "Vandalism",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Vandalism"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#State",
+      "label": "State",
+      "kind": "class",
+      "altLabels": [
+        "jurisdiction"
+      ],
+      "text": "State; jurisdiction"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#StateFiling",
+      "label": "State Filing",
+      "kind": "class",
+      "altLabels": [
+        "form filing",
+        "rate filing",
+        "regulatory filing",
+        "SERFF filing"
+      ],
+      "text": "State Filing; form filing; rate filing; regulatory filing; SERFF filing"
+    },
+    {
+      "iri": "https://example.org/pc/id/Windstorm",
+      "label": "Windstorm",
+      "kind": "individual",
+      "altLabels": [
+        "wind",
+        "hurricane",
+        "named storm"
+      ],
+      "text": "Windstorm; wind; hurricane; named storm"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#ConstructionClass",
+      "label": "Construction Class",
+      "kind": "class",
+      "altLabels": [
+        "ISO construction",
+        "frame",
+        "masonry",
+        "fire resistive"
+      ],
+      "text": "Construction Class; ISO construction; frame; masonry; fire resistive"
+    },
+    {
+      "iri": "https://example.org/pc/id/Prohibited",
+      "label": "Prohibited",
+      "kind": "individual",
+      "altLabels": [
+        "declined class",
+        "unacceptable"
+      ],
+      "text": "Prohibited; declined class; unacceptable"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#ProtectiveSafeguard",
+      "label": "Protective Safeguard",
+      "kind": "class",
+      "altLabels": [
+        "sprinkler",
+        "central station alarm",
+        "fire alarm"
+      ],
+      "text": "Protective Safeguard; sprinkler; central station alarm; fire alarm"
+    },
+    {
+      "iri": "https://example.org/pc/id/Hail",
+      "label": "Hail",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Hail"
+    },
+    {
+      "iri": "https://example.org/pc/id/SprinklerLeakage",
+      "label": "Sprinkler Leakage",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Sprinkler Leakage"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Adjuster",
+      "label": "Adjuster",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Adjuster"
+    },
+    {
+      "iri": "https://example.org/pc/id/COV-D",
+      "label": "Coverage D - Business Income and Extra Expense",
+      "kind": "individual",
+      "altLabels": [
+        "business income",
+        "BI",
+        "time element",
+        "period of restoration"
+      ],
+      "text": "Coverage D - Business Income and Extra Expense; business income; BI; time element; period of restoration"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Peril",
+      "label": "Peril",
+      "kind": "class",
+      "altLabels": [
+        "cause of loss",
+        "hazard"
+      ],
+      "text": "Peril; cause of loss; hazard"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#FilingStatus",
+      "label": "Filing Status",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Filing Status"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#AuthorityLevel",
+      "label": "Authority Level",
+      "kind": "class",
+      "altLabels": [
+        "underwriting authority",
+        "reserve authority",
+        "payment authority"
+      ],
+      "text": "Authority Level; underwriting authority; reserve authority; payment authority"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Form",
+      "label": "Form",
+      "kind": "class",
+      "altLabels": [
+        "insurance form",
+        "policy form number"
+      ],
+      "text": "Form; insurance form; policy form number"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Location",
+      "label": "Insured Location",
+      "kind": "class",
+      "altLabels": [
+        "scheduled location",
+        "premises"
+      ],
+      "text": "Insured Location; scheduled location; premises"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#UnderwritingGuideline",
+      "label": "Underwriting Guideline",
+      "kind": "class",
+      "altLabels": [
+        "UW guideline",
+        "underwriting manual",
+        "eligibility rules"
+      ],
+      "text": "Underwriting Guideline; UW guideline; underwriting manual; eligibility rules"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#FloodZone",
+      "label": "FEMA Flood Zone",
+      "kind": "class",
+      "altLabels": [
+        "zone AE",
+        "zone VE",
+        "special flood hazard area"
+      ],
+      "text": "FEMA Flood Zone; zone AE; zone VE; special flood hazard area"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#FormApproval",
+      "label": "Form Approval",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Form Approval; n-ary relation: (form, state, status, edition, effective date) stated by a filing."
+    },
+    {
+      "iri": "https://example.org/pc/ontology#RatingFactor",
+      "label": "Rating Factor",
+      "kind": "class",
+      "altLabels": [
+        "credit",
+        "debit",
+        "factor",
+        "base rate"
+      ],
+      "text": "Rating Factor; credit; debit; factor; base rate"
+    },
+    {
+      "iri": "https://example.org/pc/id/COV-C",
+      "label": "Coverage C - Personal Property of Others",
+      "kind": "individual",
+      "altLabels": [
+        "property of others",
+        "care custody or control"
+      ],
+      "text": "Coverage C - Personal Property of Others; property of others; care custody or control"
+    },
+    {
+      "iri": "https://example.org/pc/id/Approved",
+      "label": "Approved",
+      "kind": "individual",
+      "altLabels": [],
+      "text": "Approved"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Exclusion",
+      "label": "Exclusion",
+      "kind": "class",
+      "altLabels": [
+        "excluded cause of loss",
+        "we will not pay for"
+      ],
+      "text": "Exclusion; excluded cause of loss; we will not pay for"
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Document",
+      "label": "Document",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Document; Any source document in the POC corpus."
+    },
+    {
+      "iri": "https://example.org/pc/ontology#Underwriter",
+      "label": "Underwriter",
+      "kind": "class",
+      "altLabels": [],
+      "text": "Underwriter"
+    },
+    {
+      "iri": "https://example.org/pc/id/COV-A",
+      "label": "Coverage A - Building",
+      "kind": "individual",
+      "altLabels": [
+        "building",
+        "building coverage",
+        "structure"
+      ],
+      "text": "Coverage A - Building; building; building coverage; structure"
+    }
+  ]
+}

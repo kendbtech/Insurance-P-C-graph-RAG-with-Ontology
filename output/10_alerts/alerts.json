@@ -1,0 +1,70 @@
+[
+  {
+    "event": "Bind",
+    "note": "Coastal FL bind with no FL-01, no E310, flood zone AE not scheduled -> expect 3 underwriter alerts",
+    "triples_in_change": 16,
+    "status": "rejected",
+    "alerts": [
+      {
+        "checkpoint": "Bind",
+        "to": "Underwriter",
+        "rule": "R07",
+        "record": "policy/POL-FL-0100",
+        "offending_value": "MM-CP-FL-01",
+        "message": "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2).",
+        "ts": "2026-10-13T22:44:25+00:00"
+      },
+      {
+        "checkpoint": "Bind",
+        "to": "Underwriter",
+        "rule": "R08",
+        "record": "policy/POL-FL-0100",
+        "offending_value": "MM-CP-E310",
+        "message": "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3).",
+        "ts": "2026-10-13T22:44:25+00:00"
+      },
+      {
+        "checkpoint": "Bind",
+        "to": "Underwriter",
+        "rule": "R09",
+        "record": "location/LOC-0100",
+        "offending_value": "MM-CP-E101",
+        "message": "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4).",
+        "ts": "2026-10-13T22:44:25+00:00"
+      }
+    ]
+  },
+  {
+    "event": "FNOL",
+    "note": "Flood claim at an UNscheduled location on the valid FL policy -> expect adjuster alert (R01 exclusion stands)",
+    "triples_in_change": 13,
+    "status": "rejected",
+    "alerts": [
+      {
+        "checkpoint": "FNOL",
+        "to": "Adjuster",
+        "rule": "R01",
+        "record": "claim/CLM-0200",
+        "offending_value": "Flood",
+        "message": "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement.",
+        "ts": "2026-10-13T22:44:25+00:00"
+      },
+      {
+        "checkpoint": "FNOL",
+        "to": "Adjuster",
+        "rule": "R02",
+        "record": "claim/CLM-0200",
+        "offending_value": "claim/CLM-0200",
+        "message": "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible).",
+        "ts": "2026-10-13T22:44:25+00:00"
+      }
+    ]
+  },
+  {
+    "event": "Bind",
+    "note": "Clean TX bind -> expect accepted, 0 alerts",
+    "triples_in_change": 18,
+    "status": "accepted",
+    "alerts": []
+  }
+]

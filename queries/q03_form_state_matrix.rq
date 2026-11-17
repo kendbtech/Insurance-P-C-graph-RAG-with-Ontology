@@ -1,0 +1,5 @@
+# Form x state approval matrix as stated by the filings
+SELECT ?form ?state ?status ?edition ?filing WHERE {
+  ?f a pc:StateFiling ; pc:filingNumber ?filing ; pc:hasFormApproval ?ap .
+  ?ap pc:approvalOfForm/pc:formNumber ?form ; pc:approvalInState/pc:stateCode ?state ; pc:approvalStatus/rdfs:label ?status ; pc:editionDate ?edition .
+} ORDER BY ?form ?state

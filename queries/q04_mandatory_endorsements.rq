@@ -1,0 +1,6 @@
+# Where is each endorsement mandatory (state or rating territory) and what factor applies?
+SELECT ?endorsement ?mandatoryIn ?label ?territoryFactor WHERE {
+  ?e a pc:Endorsement ; pc:formNumber ?endorsement ; pc:mandatoryIn ?t .
+  ?t rdfs:label ?label . BIND(REPLACE(STR(?t), STR(pcd:), "") AS ?mandatoryIn)
+  OPTIONAL { ?t pc:factorValue ?territoryFactor }
+} ORDER BY ?endorsement

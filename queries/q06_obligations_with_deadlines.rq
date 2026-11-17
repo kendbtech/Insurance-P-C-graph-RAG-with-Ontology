@@ -1,0 +1,7 @@
+# Obligations that carry a deadline, with exceptions kept next to them
+SELECT ?clause ?page ?deadline ?exception WHERE {
+  ?c a pc:Clause ; pc:deonticType pcd:Obligation ; pc:clauseText ?text ; rdfs:label ?clause ; pc:pageNumber ?page .
+  FILTER(REGEX(?text, "within [0-9]+ (hours|days|business days|calendar days)", "i"))
+  BIND(REPLACE(?text, "^.*?(within [0-9]+ (hours|days|business days|calendar days)).*$", "$1", "i") AS ?deadline)
+  OPTIONAL { ?x pc:exceptionTo ?c ; pc:clauseText ?exception }
+} ORDER BY ?clause

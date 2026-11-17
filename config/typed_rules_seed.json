@@ -1,0 +1,98 @@
+{
+  "_comment": "Layer 4 step 1 output (constrained decoding). In the POC this file stands in for the model: each object is exactly the JSON a schema-constrained LLM must emit for the referenced clause (schema = rulec.TypedRule). Run 04_compile_rules.py --llm to regenerate it with an LLM when OPENAI_API_KEY is set. Steps 2 and 3 (grammar parse, SHACL compile) never use a model.",
+  "rules": [
+    {
+      "rule_id": "R01", "deontic": "PROHIBITION", "subject": "Claim", "action": "pay_for_loss",
+      "object_type": "Peril", "object_ids": ["Flood"],
+      "conditions": [{"path": "Claim.onPolicy.hasForm", "op": "=", "value": "MM-CP-0010"}],
+      "exceptions": [],
+      "source_clause": "MM-CP-0010#SECTION-B/B.1",
+      "message": "Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restoring endorsement."
+    },
+    {
+      "rule_id": "R02", "deontic": "PERMISSION", "subject": "Claim", "action": "pay_for_loss",
+      "object_type": "Peril", "object_ids": ["Flood"],
+      "conditions": [
+        {"path": "Claim.causeOfLoss", "op": "=", "value": "Flood"},
+        {"path": "Claim.onPolicy.hasEndorsement", "op": "=", "value": "MM-CP-E101"}
+      ],
+      "requirements": [
+        {"path": "Claim.atLocation.scheduledUnder", "op": "=", "value": "MM-CP-E101"},
+        {"path": "Claim.affectsCoverage", "op": "IN", "value": ["COV-A", "COV-B"]}
+      ],
+      "source_clause": "MM-CP-E-SERIES#1-MM-CP-E101/1.2",
+      "message": "MM-CP-E101 restores Flood only for scheduled locations and only for COV-A / COV-B (sublimit $250,000, 5% deductible)."
+    },
+    {
+      "rule_id": "R03", "deontic": "OBLIGATION", "subject": "Claim", "action": "report_loss",
+      "object_type": null, "object_ids": [],
+      "deadline": {"value": 72, "unit": "hours"},
+      "source_clause": "MM-CP-0010#SECTION-E/E.3",
+      "message": "Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b))."
+    },
+    {
+      "rule_id": "R04", "deontic": "OBLIGATION", "subject": "Claim", "action": "report_loss",
+      "object_type": null, "object_ids": [],
+      "conditions": [{"path": "Claim.onPolicy.inState", "op": "=", "value": "FL"}],
+      "deadline": {"value": 14, "unit": "days"},
+      "source_clause": "MM-CP-E-SERIES#5-MM-CP-FL-01/5.3",
+      "message": "In Florida the notice period is 14 days (MM-CP-FL-01 Section 5.3 amends E.3(b))."
+    },
+    {
+      "rule_id": "R05", "deontic": "PROHIBITION", "subject": "Policy", "action": "bind",
+      "object_type": "ClassCode", "object_ids": ["CC-0511"],
+      "source_clause": "MM-UW-CP-2025#SECTION-2/2.3",
+      "message": "Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3)."
+    },
+    {
+      "rule_id": "R06", "deontic": "PROHIBITION", "subject": "Policy", "action": "attach_form",
+      "object_type": "Form", "object_ids": ["ANY"],
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.6",
+      "message": "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)."
+    },
+    {
+      "rule_id": "R07", "deontic": "OBLIGATION", "subject": "Policy", "action": "attach_endorsement",
+      "object_type": "Endorsement", "object_ids": ["MM-CP-FL-01"],
+      "conditions": [{"path": "Policy.inState", "op": "=", "value": "FL"}],
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.2",
+      "message": "Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2)."
+    },
+    {
+      "rule_id": "R08", "deontic": "OBLIGATION", "subject": "Policy", "action": "attach_endorsement",
+      "object_type": "Endorsement", "object_ids": ["MM-CP-E310"],
+      "conditions": [{"path": "Policy.hasLocation.inTerritory", "op": "IN", "value": ["FL-T03", "TX-T01"]}],
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.3",
+      "message": "MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-CP-2025 4.3)."
+    },
+    {
+      "rule_id": "R09", "deontic": "OBLIGATION", "subject": "Location", "action": "schedule_location",
+      "object_type": "Endorsement", "object_ids": ["MM-CP-E101"],
+      "conditions": [{"path": "Location.inFloodZone", "op": "IN", "value": ["A", "AE", "V", "VE"]}],
+      "exceptions": [{"path": "Location.^hasLocation.floodAcknowledgmentSigned", "op": "=", "value": true}],
+      "source_clause": "MM-UW-CP-2025#SECTION-4/4.4",
+      "message": "A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion Acknowledgment is signed (MM-UW-CP-2025 4.4)."
+    },
+    {
+      "rule_id": "R10", "deontic": "PROHIBITION", "subject": "Policy", "action": "bind",
+      "object_type": null, "object_ids": [],
+      "conditions": [{"path": "Policy.totalInsuredValue", "op": ">", "value": "Policy.boundBy.hasAuthorityLevel.authorityMaxTIV"}],
+      "source_clause": "MM-UW-CP-2025#SECTION-3/3.1",
+      "message": "Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1)."
+    },
+    {
+      "rule_id": "R11", "deontic": "PROHIBITION", "subject": "Claim", "action": "pay_for_loss",
+      "object_type": "Peril", "object_ids": ["Vandalism", "SprinklerLeakage", "Theft", "Water"],
+      "conditions": [{"path": "Claim.atLocation.vacantDays", "op": ">", "value": 60}],
+      "source_clause": "MM-CP-0010#SECTION-E/E.5",
+      "message": "Building vacant more than 60 days: vandalism, sprinkler leakage, water damage and theft are not covered (MM-CP-0010 E.5)."
+    },
+    {
+      "rule_id": "R12", "deontic": "OBLIGATION", "subject": "Claim", "action": "acknowledge_claim",
+      "object_type": null, "object_ids": [],
+      "conditions": [{"path": "Claim.onPolicy.inState", "op": "=", "value": "FL"}],
+      "deadline": {"value": 14, "unit": "days"},
+      "source_clause": "MM-CM-CP-2025#SECTION-1/1.2",
+      "message": "Adjuster must acknowledge a Florida claim in writing within 14 calendar days (MM-CM-CP-2025 1.2)."
+    }
+  ]
+}

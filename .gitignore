@@ -1,0 +1,12 @@
+# Secrets — never commit these
+.env
+
+# Virtual environment
+.venv/
+
+# IDE per-user state
+.idea/workspace.xml
+
+# Python bytecode
+__pycache__/
+*.pyc

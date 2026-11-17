@@ -1,0 +1,11 @@
+conforms=False
+ndf9bb5ee0ad64aaba716ca76d24799f2b4	pcd:MM-CP-E999	An endorsement must state which coverage(s) it modifies.
+ndf9bb5ee0ad64aaba716ca76d24799f2b5	pcd:MM-CP-E999	An endorsement must be approved in at least one state, otherwise it cannot be attached anywhere
+R01	pcd:claim/CLM-0002	Flood is excluded (EXCL-FLD, MM-CP-1030 B.1.g via MM-CP-0010 Section B.1). Check for a restorin
+R07	pcd:policy/POL-FL-0002	Florida policies must include MM-CP-FL-01 Florida Amendatory Endorsement (MM-UW-CP-2025 4.2).
+R10	pcd:policy/POL-NY-0099	Underwriter must not bind a risk above his or her authority level (MM-UW-CP-2025 3.1).
+R06	pcd:policy/POL-NY-0099	A form may be attached only where the State Filing shows status Approved for the policy state (
+R09	pcd:location/LOC-0002	A location in flood zone A/AE/V/VE must be scheduled under MM-CP-E101 unless a Flood Exclusion 
+R03	pcd:claim/CLM-0003	Insured must give notice of loss within 72 hours (MM-CP-0010 E.3(b)).
+R08	pcd:policy/POL-FL-0002	MM-CP-E310 is mandatory for locations in FL Tier 1 coastal counties (FL-T03) and TX-T01 (MM-UW-
+n2cdb512e8c984b95bf6292271604a7edb5	pcd:policy/POL-NY-0099	Class code 0511 (Fireworks or Explosives Manufacturing) is prohibited (MM-UW-CP-2025 2.3).

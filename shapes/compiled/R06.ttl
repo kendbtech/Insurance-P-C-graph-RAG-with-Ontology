@@ -1,0 +1,20 @@
+@prefix pc: <https://example.org/pc/ontology#> .
+@prefix pcd: <https://example.org/pc/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://example.org/pc/shape/> .
+
+shape:R06 a sh:NodeShape ;
+    rdfs:label "R06" ;
+    rdfs:comment "PROHIBITION Policy attach_form | source MM-UW-CP-2025#SECTION-4/4.6 | status active" ;
+    sh:sparql [ sh:message "A form may be attached only where the State Filing shows status Approved for the policy state (MM-UW-CP-2025 4.6; MM-FILINGS-CP-2025 4.1)." ;
+            sh:select """PREFIX pc: <https://example.org/pc/ontology#>
+PREFIX pcd: <https://example.org/pc/id/>
+SELECT $this ?value WHERE {
+    $this pc:hasForm ?value ; pc:inState ?st .
+    FILTER NOT EXISTS { ?ap a pc:FormApproval ; pc:approvalOfForm ?value ; pc:approvalInState ?st ; pc:approvalStatus pcd:Approved }
+}""" ] ;
+    sh:targetClass pc:Policy ;
+    pc:compiledFrom pcd:MM-UW-CP-2025_SECTION-4_4.6 ;
+    pc:ruleStatus "active" .
+
